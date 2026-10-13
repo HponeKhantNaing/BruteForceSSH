@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "collection_phase": "P3",
+  "collection_batch_id": "P3_BASELINE_20260927T071200Z",
+  "scenario_id": "B01_SHORT_FAILURE_BURST",
+  "run_id": "B01_SHORT_FAILURE_BURST_20260927T071911Z_002",
+  "scenario_intent": "brute_force",
+  "description": "Short concentrated burst of failed passwords (one user)",
+  "started_at": "2026-09-27T07:19:11.408355+00:00",
+  "ended_at": "2026-09-27T07:19:48.228963+00:00",
+  "target_host": "127.0.0.1",
+  "target_port": 2222,
+  "service": "ssh",
+  "auth_method": "password",
+  "data_source": "local_lab",
+  "lab_container": "ai-security-ubuntu-lab",
+  "configured_attempt_count": 10,
+  "executed_attempt_count": 10,
+  "planned_failed_attempts": 10,
+  "actual_failed_attempts": 10,
+  "planned_successes": 0,
+  "actual_successes": 0,
+  "configured_user_count": 1,
+  "configured_usernames": [
+    "testuser"
+  ],
+  "configured_gap_seconds": 0.8,
+  "observed_duration_seconds": 35.795,
+  "safety_ceilings": {
+    "MAX_AUTH_ATTEMPTS_PER_RUN": 30,
+    "MAX_USERNAMES_PER_RUN": 6,
+    "MAX_SCENARIO_SECONDS": 120,
+    "MIN_INTER_ATTEMPT_DELAY": 0.25
+  },
+  "actions": [
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 0,
+      "at": "2026-09-27T07:19:14.969413+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 1,
+      "at": "2026-09-27T07:19:17.570072+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 2,
+      "at": "2026-09-27T07:19:21.931584+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 0,
+      "at": "2026-09-27T07:19:24.538456+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 1,
+      "at": "2026-09-27T07:19:28.898145+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 2,
+      "at": "2026-09-27T07:19:33.269769+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 0,
+      "at": "2026-09-27T07:19:35.879202+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 1,
+      "at": "2026-09-27T07:19:40.231201+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 2,
+      "at": "2026-09-27T07:19:44.598031+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 0,
+      "at": "2026-09-27T07:19:47.204704+00:00"
+    }
+  ],
+  "result": "success",
+  "raw_log_file": "auth.log",
+  "raw_log_line_count": 40,
+  "raw_log_sha256": "ccd83df6a55da6286ea0da3a595015cb0f95af5a4db315b5b380971e7b514f4b",
+  "master_log_start_offset": 135969,
+  "master_log_end_offset": 141569,
+  "event_summary": {
+    "contains_accepted_password": false,
+    "contains_failed_password": true,
+    "contains_session_opened": false,
+    "contains_session_closed": false,
+    "accepted_password_count": 0,
+    "failed_password_count": 10,
+    "session_opened_count": 0,
+    "session_closed_count": 0,
+    "auth_failure_event_count": 10,
+    "accepted_event_count": 0,
+    "executed_failed_attempts": 10,
+    "executed_success_attempts": 0
+  },
+  "notes": ""
+}

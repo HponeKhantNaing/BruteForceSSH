@@ -1,0 +1,21 @@
+{
+  "release_id": "rf-behavior-lab-v1.1.0",
+  "samples": 3000,
+  "split": {
+    "train": 1800,
+    "val": 600,
+    "test": 600
+  },
+  "selected": "random_forest_behavior",
+  "test_accuracy": 1.0,
+  "test_macro_recall": 1.0,
+  "test_macro_f1": 1.0,
+  "per_class_f1": {
+    "NORMAL": 1.0,
+    "SUSPICIOUS": 1.0,
+    "BRUTE_FORCE": 1.0
+  },
+  "metrics_doc": "docs/TRAINING_METRICS_rf-behavior-lab-v1.1.0.md",
+  "registry": "artifacts/MODEL_REGISTRY.md",
+  "release_dir": "artifacts/p10/releases/rf-behavior-lab-v1.1.0"
+}

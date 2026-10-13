@@ -1,0 +1,266 @@
+{
+  "collection_phase": "P2",
+  "collection_batch_id": "P2_BASELINE_20260927T070000Z",
+  "started_at": "2026-09-27T06:58:12.291198+00:00",
+  "ended_at": "2026-09-27T07:01:24.659595+00:00",
+  "target_host": "127.0.0.1",
+  "target_port": 2222,
+  "master_auth_log": "data/raw/auth/auth.log",
+  "normal_output_dir": "data/raw/normal",
+  "runs_attempted": 30,
+  "runs_passed": 30,
+  "runs_failed": 0,
+  "runs_interrupted": 0,
+  "total_captured_log_lines": 420,
+  "by_scenario": {
+    "N01_SINGLE_SUCCESS": {
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "interrupted": 0
+    },
+    "N02_COMMAND_SESSION": {
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "interrupted": 0
+    },
+    "N03_SHORT_SESSION": {
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "interrupted": 0
+    },
+    "N04_LOW_FREQUENCY_REPEAT": {
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "interrupted": 0
+    },
+    "N05_SESSION_RECONNECT": {
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "interrupted": 0
+    },
+    "N06_ISOLATED_PASSWORD_MISTAKE": {
+      "attempted": 5,
+      "passed": 5,
+      "failed": 0,
+      "interrupted": 0
+    }
+  },
+  "runs": [
+    {
+      "run_id": "N01_SINGLE_SUCCESS_20260927T065812Z_001",
+      "scenario_id": "N01_SINGLE_SUCCESS",
+      "result": "success",
+      "path": "data/raw/normal/N01_SINGLE_SUCCESS/N01_SINGLE_SUCCESS_20260927T065812Z_001",
+      "notes": ""
+    },
+    {
+      "run_id": "N01_SINGLE_SUCCESS_20260927T065813Z_002",
+      "scenario_id": "N01_SINGLE_SUCCESS",
+      "result": "success",
+      "path": "data/raw/normal/N01_SINGLE_SUCCESS/N01_SINGLE_SUCCESS_20260927T065813Z_002",
+      "notes": ""
+    },
+    {
+      "run_id": "N01_SINGLE_SUCCESS_20260927T065814Z_003",
+      "scenario_id": "N01_SINGLE_SUCCESS",
+      "result": "success",
+      "path": "data/raw/normal/N01_SINGLE_SUCCESS/N01_SINGLE_SUCCESS_20260927T065814Z_003",
+      "notes": ""
+    },
+    {
+      "run_id": "N01_SINGLE_SUCCESS_20260927T065815Z_004",
+      "scenario_id": "N01_SINGLE_SUCCESS",
+      "result": "success",
+      "path": "data/raw/normal/N01_SINGLE_SUCCESS/N01_SINGLE_SUCCESS_20260927T065815Z_004",
+      "notes": ""
+    },
+    {
+      "run_id": "N01_SINGLE_SUCCESS_20260927T065816Z_005",
+      "scenario_id": "N01_SINGLE_SUCCESS",
+      "result": "success",
+      "path": "data/raw/normal/N01_SINGLE_SUCCESS/N01_SINGLE_SUCCESS_20260927T065816Z_005",
+      "notes": ""
+    },
+    {
+      "run_id": "N02_COMMAND_SESSION_20260927T065817Z_001",
+      "scenario_id": "N02_COMMAND_SESSION",
+      "result": "success",
+      "path": "data/raw/normal/N02_COMMAND_SESSION/N02_COMMAND_SESSION_20260927T065817Z_001",
+      "notes": ""
+    },
+    {
+      "run_id": "N02_COMMAND_SESSION_20260927T065818Z_002",
+      "scenario_id": "N02_COMMAND_SESSION",
+      "result": "success",
+      "path": "data/raw/normal/N02_COMMAND_SESSION/N02_COMMAND_SESSION_20260927T065818Z_002",
+      "notes": ""
+    },
+    {
+      "run_id": "N02_COMMAND_SESSION_20260927T065820Z_003",
+      "scenario_id": "N02_COMMAND_SESSION",
+      "result": "success",
+      "path": "data/raw/normal/N02_COMMAND_SESSION/N02_COMMAND_SESSION_20260927T065820Z_003",
+      "notes": ""
+    },
+    {
+      "run_id": "N02_COMMAND_SESSION_20260927T065821Z_004",
+      "scenario_id": "N02_COMMAND_SESSION",
+      "result": "success",
+      "path": "data/raw/normal/N02_COMMAND_SESSION/N02_COMMAND_SESSION_20260927T065821Z_004",
+      "notes": ""
+    },
+    {
+      "run_id": "N02_COMMAND_SESSION_20260927T065822Z_005",
+      "scenario_id": "N02_COMMAND_SESSION",
+      "result": "success",
+      "path": "data/raw/normal/N02_COMMAND_SESSION/N02_COMMAND_SESSION_20260927T065822Z_005",
+      "notes": ""
+    },
+    {
+      "run_id": "N03_SHORT_SESSION_20260927T065823Z_001",
+      "scenario_id": "N03_SHORT_SESSION",
+      "result": "success",
+      "path": "data/raw/normal/N03_SHORT_SESSION/N03_SHORT_SESSION_20260927T065823Z_001",
+      "notes": ""
+    },
+    {
+      "run_id": "N03_SHORT_SESSION_20260927T065827Z_002",
+      "scenario_id": "N03_SHORT_SESSION",
+      "result": "success",
+      "path": "data/raw/normal/N03_SHORT_SESSION/N03_SHORT_SESSION_20260927T065827Z_002",
+      "notes": ""
+    },
+    {
+      "run_id": "N03_SHORT_SESSION_20260927T065831Z_003",
+      "scenario_id": "N03_SHORT_SESSION",
+      "result": "success",
+      "path": "data/raw/normal/N03_SHORT_SESSION/N03_SHORT_SESSION_20260927T065831Z_003",
+      "notes": ""
+    },
+    {
+      "run_id": "N03_SHORT_SESSION_20260927T065836Z_004",
+      "scenario_id": "N03_SHORT_SESSION",
+      "result": "success",
+      "path": "data/raw/normal/N03_SHORT_SESSION/N03_SHORT_SESSION_20260927T065836Z_004",
+      "notes": ""
+    },
+    {
+      "run_id": "N03_SHORT_SESSION_20260927T065840Z_005",
+      "scenario_id": "N03_SHORT_SESSION",
+      "result": "success",
+      "path": "data/raw/normal/N03_SHORT_SESSION/N03_SHORT_SESSION_20260927T065840Z_005",
+      "notes": ""
+    },
+    {
+      "run_id": "N04_LOW_FREQUENCY_REPEAT_20260927T065844Z_001",
+      "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+      "result": "success",
+      "path": "data/raw/normal/N04_LOW_FREQUENCY_REPEAT/N04_LOW_FREQUENCY_REPEAT_20260927T065844Z_001",
+      "notes": ""
+    },
+    {
+      "run_id": "N04_LOW_FREQUENCY_REPEAT_20260927T065855Z_002",
+      "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+      "result": "success",
+      "path": "data/raw/normal/N04_LOW_FREQUENCY_REPEAT/N04_LOW_FREQUENCY_REPEAT_20260927T065855Z_002",
+      "notes": ""
+    },
+    {
+      "run_id": "N04_LOW_FREQUENCY_REPEAT_20260927T065907Z_003",
+      "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+      "result": "success",
+      "path": "data/raw/normal/N04_LOW_FREQUENCY_REPEAT/N04_LOW_FREQUENCY_REPEAT_20260927T065907Z_003",
+      "notes": ""
+    },
+    {
+      "run_id": "N04_LOW_FREQUENCY_REPEAT_20260927T065918Z_004",
+      "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+      "result": "success",
+      "path": "data/raw/normal/N04_LOW_FREQUENCY_REPEAT/N04_LOW_FREQUENCY_REPEAT_20260927T065918Z_004",
+      "notes": ""
+    },
+    {
+      "run_id": "N04_LOW_FREQUENCY_REPEAT_20260927T065929Z_005",
+      "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+      "result": "success",
+      "path": "data/raw/normal/N04_LOW_FREQUENCY_REPEAT/N04_LOW_FREQUENCY_REPEAT_20260927T065929Z_005",
+      "notes": ""
+    },
+    {
+      "run_id": "N05_SESSION_RECONNECT_20260927T065941Z_001",
+      "scenario_id": "N05_SESSION_RECONNECT",
+      "result": "success",
+      "path": "data/raw/normal/N05_SESSION_RECONNECT/N05_SESSION_RECONNECT_20260927T065941Z_001",
+      "notes": ""
+    },
+    {
+      "run_id": "N05_SESSION_RECONNECT_20260927T065952Z_002",
+      "scenario_id": "N05_SESSION_RECONNECT",
+      "result": "success",
+      "path": "data/raw/normal/N05_SESSION_RECONNECT/N05_SESSION_RECONNECT_20260927T065952Z_002",
+      "notes": ""
+    },
+    {
+      "run_id": "N05_SESSION_RECONNECT_20260927T070003Z_003",
+      "scenario_id": "N05_SESSION_RECONNECT",
+      "result": "success",
+      "path": "data/raw/normal/N05_SESSION_RECONNECT/N05_SESSION_RECONNECT_20260927T070003Z_003",
+      "notes": ""
+    },
+    {
+      "run_id": "N05_SESSION_RECONNECT_20260927T070015Z_004",
+      "scenario_id": "N05_SESSION_RECONNECT",
+      "result": "success",
+      "path": "data/raw/normal/N05_SESSION_RECONNECT/N05_SESSION_RECONNECT_20260927T070015Z_004",
+      "notes": ""
+    },
+    {
+      "run_id": "N05_SESSION_RECONNECT_20260927T070026Z_005",
+      "scenario_id": "N05_SESSION_RECONNECT",
+      "result": "success",
+      "path": "data/raw/normal/N05_SESSION_RECONNECT/N05_SESSION_RECONNECT_20260927T070026Z_005",
+      "notes": ""
+    },
+    {
+      "run_id": "N06_ISOLATED_PASSWORD_MISTAKE_20260927T070037Z_001",
+      "scenario_id": "N06_ISOLATED_PASSWORD_MISTAKE",
+      "result": "success",
+      "path": "data/raw/normal/N06_ISOLATED_PASSWORD_MISTAKE/N06_ISOLATED_PASSWORD_MISTAKE_20260927T070037Z_001",
+      "notes": ""
+    },
+    {
+      "run_id": "N06_ISOLATED_PASSWORD_MISTAKE_20260927T070047Z_002",
+      "scenario_id": "N06_ISOLATED_PASSWORD_MISTAKE",
+      "result": "success",
+      "path": "data/raw/normal/N06_ISOLATED_PASSWORD_MISTAKE/N06_ISOLATED_PASSWORD_MISTAKE_20260927T070047Z_002",
+      "notes": ""
+    },
+    {
+      "run_id": "N06_ISOLATED_PASSWORD_MISTAKE_20260927T070057Z_003",
+      "scenario_id": "N06_ISOLATED_PASSWORD_MISTAKE",
+      "result": "success",
+      "path": "data/raw/normal/N06_ISOLATED_PASSWORD_MISTAKE/N06_ISOLATED_PASSWORD_MISTAKE_20260927T070057Z_003",
+      "notes": ""
+    },
+    {
+      "run_id": "N06_ISOLATED_PASSWORD_MISTAKE_20260927T070106Z_004",
+      "scenario_id": "N06_ISOLATED_PASSWORD_MISTAKE",
+      "result": "success",
+      "path": "data/raw/normal/N06_ISOLATED_PASSWORD_MISTAKE/N06_ISOLATED_PASSWORD_MISTAKE_20260927T070106Z_004",
+      "notes": ""
+    },
+    {
+      "run_id": "N06_ISOLATED_PASSWORD_MISTAKE_20260927T070116Z_005",
+      "scenario_id": "N06_ISOLATED_PASSWORD_MISTAKE",
+      "result": "success",
+      "path": "data/raw/normal/N06_ISOLATED_PASSWORD_MISTAKE/N06_ISOLATED_PASSWORD_MISTAKE_20260927T070116Z_005",
+      "notes": ""
+    }
+  ],
+  "issues": []
+}

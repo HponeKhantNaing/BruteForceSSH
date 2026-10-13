@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0",
+  "feature_engineering_version": "p7-v1",
+  "behavioral_features": [
+    {
+      "name": "total_attempts",
+      "dtype": "float64",
+      "description": "Logical authentication attempts in the run",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "failed_attempts",
+      "dtype": "float64",
+      "description": "Logical attempts with outcome=FAILURE",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "successful_attempts",
+      "dtype": "float64",
+      "description": "Logical attempts with outcome=SUCCESS",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "failure_ratio",
+      "dtype": "float64",
+      "description": "failed_attempts / total_attempts (0 if none)",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "duration_seconds",
+      "dtype": "float64",
+      "description": "Run/sequence duration in seconds",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "attempt_rate_per_second",
+      "dtype": "float64",
+      "description": "total_attempts / max(duration, eps)",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "failed_count_30s_max",
+      "dtype": "float64",
+      "description": "Max FAILURE attempts in any inclusive 30s historical window",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "failed_count_60s_max",
+      "dtype": "float64",
+      "description": "Max FAILURE attempts in any inclusive 60s historical window",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "failed_count_5m_max",
+      "dtype": "float64",
+      "description": "Max FAILURE attempts in any inclusive 5m historical window",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "success_count_5m_max",
+      "dtype": "float64",
+      "description": "Max SUCCESS attempts in any inclusive 5m historical window",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "unique_users_total",
+      "dtype": "float64",
+      "description": "Unique user_id values in the run",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "unique_users_60s_max",
+      "dtype": "float64",
+      "description": "Max unique user_id in any inclusive 60s window",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "has_multiple_attempts",
+      "dtype": "float64",
+      "description": "1 if total_attempts > 1 else 0",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "min_inter_attempt_gap_seconds",
+      "dtype": "float64",
+      "description": "Minimum gap between consecutive attempts (0 if single)",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "mean_inter_attempt_gap_seconds",
+      "dtype": "float64",
+      "description": "Mean inter-attempt gap (0 if single)",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "median_inter_attempt_gap_seconds",
+      "dtype": "float64",
+      "description": "Median inter-attempt gap (0 if single)",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "std_inter_attempt_gap_seconds",
+      "dtype": "float64",
+      "description": "Population stdev of gaps (0 if <2 gaps)",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "max_failure_streak",
+      "dtype": "float64",
+      "description": "Longest consecutive FAILURE streak",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "success_after_failure",
+      "dtype": "float64",
+      "description": "1 if a SUCCESS occurs after at least one FAILURE",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "failures_before_first_success",
+      "dtype": "float64",
+      "description": "FAILURE count before first SUCCESS; else all failures",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "first_attempt_failed",
+      "dtype": "float64",
+      "description": "1 if first attempt outcome is FAILURE",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "last_attempt_success",
+      "dtype": "float64",
+      "description": "1 if last attempt outcome is SUCCESS",
+      "source": "canonical_attempts",
+      "unit": "count_or_ratio_or_seconds",
+      "default_enabled": true,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "scenario_generation_artifact_risk"
+    },
+    {
+      "name": "unique_sources_total",
+      "dtype": "float64",
+      "description": "Diagnostic: unique source_id (often constant in lab)",
+      "source": "diagnostic",
+      "default_enabled": false,
+      "leakage_risk": "medium",
+      "online_reproducible": true,
+      "known_risk": "lab_environment_limitation"
+    },
+    {
+      "name": "text_char_count",
+      "dtype": "float64",
+      "description": "diagnostic",
+      "source": "diagnostic",
+      "default_enabled": false,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "lab_environment_limitation"
+    },
+    {
+      "name": "text_token_count",
+      "dtype": "float64",
+      "description": "diagnostic",
+      "source": "diagnostic",
+      "default_enabled": false,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "lab_environment_limitation"
+    },
+    {
+      "name": "text_line_count",
+      "dtype": "float64",
+      "description": "diagnostic",
+      "source": "diagnostic",
+      "default_enabled": false,
+      "leakage_risk": "low",
+      "online_reproducible": true,
+      "known_risk": "lab_environment_limitation"
+    }
+  ],
+  "text_features": {
+    "method": "tfidf",
+    "fitted_in_p7": false,
+    "source_field": "canonical_text",
+    "config": {
+      "method": "tfidf",
+      "lowercase": true,
+      "ngram_range": {
+        "min": 1,
+        "max": 2
+      },
+      "min_df": 2,
+      "max_df": 0.95,
+      "max_features": 1000,
+      "sublinear_tf": true,
+      "norm": "l2",
+      "fitted_in_p7": false
+    }
+  },
+  "targets": {
+    "fields": [
+      "sample_id",
+      "target_label",
+      "split_group_run",
+      "split_group_batch",
+      "scenario_id"
+    ],
+    "scenario_id_is_feature": false
+  }
+}

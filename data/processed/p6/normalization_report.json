@@ -1,0 +1,11 @@
+{
+  "timestamps_normalized": 1860,
+  "usernames_replaced": 1315,
+  "ips_replaced": 2055,
+  "ports_replaced": 1710,
+  "pids_replaced": 1860,
+  "hostnames_normalized": 1860,
+  "unique_user_ids": 4,
+  "unique_source_ids": 1,
+  "lowercase_normalized_message": true
+}

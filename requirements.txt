@@ -1,0 +1,19 @@
+# Planned / used dependencies. Pin exact versions when a phase begins using them.
+
+# P2 collection
+paramiko>=3.4
+python-dotenv>=1.0
+PyYAML>=6.0
+
+# Core ML / data (P6–P10) — not required for P2 runtime
+numpy
+pandas
+scikit-learn
+joblib
+
+# API / presentation (P12)
+flask>=3.0
+requests
+
+# Testing
+pytest

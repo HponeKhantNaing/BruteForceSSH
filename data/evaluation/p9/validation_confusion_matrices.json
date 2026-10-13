@@ -1,0 +1,158 @@
+{
+  "logistic_regression_hybrid": {
+    "class_order": [
+      "NORMAL",
+      "SUSPICIOUS",
+      "BRUTE_FORCE"
+    ],
+    "matrix": [
+      [
+        200,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0
+      ],
+      [
+        0,
+        200,
+        0
+      ]
+    ],
+    "rows": "actual",
+    "columns": "predicted"
+  },
+  "logistic_regression_text": {
+    "class_order": [
+      "NORMAL",
+      "SUSPICIOUS",
+      "BRUTE_FORCE"
+    ],
+    "matrix": [
+      [
+        200,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        200
+      ],
+      [
+        0,
+        200,
+        0
+      ]
+    ],
+    "rows": "actual",
+    "columns": "predicted"
+  },
+  "logistic_regression_behavior": {
+    "class_order": [
+      "NORMAL",
+      "SUSPICIOUS",
+      "BRUTE_FORCE"
+    ],
+    "matrix": [
+      [
+        200,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0
+      ],
+      [
+        0,
+        200,
+        0
+      ]
+    ],
+    "rows": "actual",
+    "columns": "predicted"
+  },
+  "linear_svm_hybrid": {
+    "class_order": [
+      "NORMAL",
+      "SUSPICIOUS",
+      "BRUTE_FORCE"
+    ],
+    "matrix": [
+      [
+        200,
+        0,
+        0
+      ],
+      [
+        200,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0
+      ]
+    ],
+    "rows": "actual",
+    "columns": "predicted"
+  },
+  "multinomial_nb_text": {
+    "class_order": [
+      "NORMAL",
+      "SUSPICIOUS",
+      "BRUTE_FORCE"
+    ],
+    "matrix": [
+      [
+        200,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        200
+      ],
+      [
+        0,
+        200,
+        0
+      ]
+    ],
+    "rows": "actual",
+    "columns": "predicted"
+  },
+  "random_forest_behavior": {
+    "class_order": [
+      "NORMAL",
+      "SUSPICIOUS",
+      "BRUTE_FORCE"
+    ],
+    "matrix": [
+      [
+        200,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0
+      ],
+      [
+        0,
+        2,
+        198
+      ]
+    ],
+    "rows": "actual",
+    "columns": "predicted"
+  }
+}

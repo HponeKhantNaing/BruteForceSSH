@@ -1,0 +1,17 @@
+{
+  "serialization_format": "joblib (sklearn estimator inside dict payload)",
+  "tested_python_version": "3.12.3",
+  "tested_scikit_learn_version": "1.5.1",
+  "tested_numpy_version": "1.26.2",
+  "tested_scipy_version": "1.14.0",
+  "tested_joblib_version": "1.4.2",
+  "supported_architecture_assumptions": [
+    "arm64",
+    "Load with matching major sklearn version where possible"
+  ],
+  "untested_versions_claimed": false,
+  "notes": [
+    "Do not claim compatibility with untested sklearn/python versions.",
+    "joblib/sklearn pickle compatibility can break across major upgrades."
+  ]
+}

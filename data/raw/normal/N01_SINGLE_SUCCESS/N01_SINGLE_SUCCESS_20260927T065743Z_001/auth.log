@@ -1,0 +1,8 @@
+2026-09-27T06:57:43.195084+00:00 dd9a612cdd6b sshd[809]: Connection from 172.18.0.1 port 64054 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:57:43.269965+00:00 dd9a612cdd6b sshd[809]: Accepted password for testuser from 172.18.0.1 port 64054 ssh2
+2026-09-27T06:57:43.270962+00:00 dd9a612cdd6b sshd[809]: pam_unix(sshd:session): session opened for user testuser(uid=1001) by testuser(uid=0)
+2026-09-27T06:57:43.275538+00:00 dd9a612cdd6b sshd[809]: User child is on pid 820
+2026-09-27T06:57:43.276056+00:00 dd9a612cdd6b sshd[820]: Connection closed by 172.18.0.1 port 64054
+2026-09-27T06:57:43.276074+00:00 dd9a612cdd6b sshd[820]: Transferred: sent 2272, received 1304 bytes
+2026-09-27T06:57:43.276079+00:00 dd9a612cdd6b sshd[820]: Closing connection to 172.18.0.1 port 64054
+2026-09-27T06:57:43.276172+00:00 dd9a612cdd6b sshd[809]: pam_unix(sshd:session): session closed for user testuser

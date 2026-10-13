@@ -1,0 +1,11 @@
+{
+  "python_version": "3.12.3",
+  "scikit_learn_version": "1.5.1",
+  "numpy_version": "1.26.2",
+  "scipy_version": "1.14.0",
+  "joblib_version": "1.4.2",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "architecture": "arm64",
+  "p8_recorded_scikit_learn_version": "1.5.1",
+  "p8_recorded_python_version": "3.12.3"
+}

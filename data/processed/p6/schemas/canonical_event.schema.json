@@ -1,0 +1,34 @@
+{
+  "title": "CanonicalEvent",
+  "type": "object",
+  "required": [
+    "event_id",
+    "run_id",
+    "line_number",
+    "event_role",
+    "normalized_message"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "line_number": {
+      "type": "integer"
+    },
+    "event_role": {
+      "type": "string"
+    },
+    "normalized_message": {
+      "type": "string"
+    },
+    "attempt_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

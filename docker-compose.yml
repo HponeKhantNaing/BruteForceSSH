@@ -1,0 +1,37 @@
+# Project-owned Ubuntu SSH authentication lab (P1).
+# Localhost-only SSH exposure. No cloud. No external targets.
+
+name: ai-security-log-monitor
+
+services:
+  ubuntu-test-server:
+    build:
+      context: ./ubuntu-server
+      dockerfile: Dockerfile
+    image: ai-security-ubuntu-lab:p1
+    container_name: ai-security-ubuntu-lab
+    env_file:
+      - .env
+    environment:
+      LAB_SSH_USER: ${LAB_SSH_USER:-testuser}
+      LAB_SSH_PASSWORD: ${LAB_SSH_PASSWORD:-change_me_for_local_lab}
+    ports:
+      # Bind to loopback only — do not expose SSH to the LAN/internet.
+      - "127.0.0.1:${LAB_SSH_PORT:-2222}:22"
+    volumes:
+      # Host-visible auth log for P2+ collection (persists across restarts).
+      - ./data/raw/auth:/var/log/auth-lab
+    networks:
+      - labnet
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -x sshd >/dev/null || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 15s
+
+networks:
+  labnet:
+    driver: bridge
+    name: ai-security-labnet

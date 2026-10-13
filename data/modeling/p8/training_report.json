@@ -1,0 +1,136 @@
+{
+  "models": [
+    {
+      "model_id": "logistic_regression_hybrid",
+      "representation": "hybrid",
+      "status": "TRAINED",
+      "train_samples": 1800,
+      "feature_dimension": 137,
+      "fit_duration_seconds": 0.05,
+      "convergence_warning": false,
+      "artifact_path": "artifacts/p8/models/logistic_regression_hybrid.joblib",
+      "artifact_sha256": "680dcf7e54f7c6ed4291ba766953525af63fee62b3c43b4f68d3318b8a12cca7",
+      "classes": [
+        "BRUTE_FORCE",
+        "NORMAL",
+        "SUSPICIOUS"
+      ],
+      "supports": {
+        "predict_proba": true,
+        "decision_function": true
+      },
+      "roundtrip_ok": true,
+      "test_metrics_computed": false
+    },
+    {
+      "model_id": "logistic_regression_text",
+      "representation": "text",
+      "status": "TRAINED",
+      "train_samples": 1800,
+      "feature_dimension": 115,
+      "fit_duration_seconds": 0.0156,
+      "convergence_warning": false,
+      "artifact_path": "artifacts/p8/models/logistic_regression_text.joblib",
+      "artifact_sha256": "76eb7f0048d65cc8188b91a9c2e2b43e08284f904faba7081a53d821f5bd635b",
+      "classes": [
+        "BRUTE_FORCE",
+        "NORMAL",
+        "SUSPICIOUS"
+      ],
+      "supports": {
+        "predict_proba": true,
+        "decision_function": true
+      },
+      "roundtrip_ok": true,
+      "test_metrics_computed": false
+    },
+    {
+      "model_id": "logistic_regression_behavior",
+      "representation": "behavior",
+      "status": "TRAINED",
+      "train_samples": 1800,
+      "feature_dimension": 22,
+      "fit_duration_seconds": 0.0089,
+      "convergence_warning": false,
+      "artifact_path": "artifacts/p8/models/logistic_regression_behavior.joblib",
+      "artifact_sha256": "06349a2d144984a3d37dad5ae24aa87dbb73667413d70340270fee368ee9fa65",
+      "classes": [
+        "BRUTE_FORCE",
+        "NORMAL",
+        "SUSPICIOUS"
+      ],
+      "supports": {
+        "predict_proba": true,
+        "decision_function": true
+      },
+      "roundtrip_ok": true,
+      "test_metrics_computed": false
+    },
+    {
+      "model_id": "linear_svm_hybrid",
+      "representation": "hybrid",
+      "status": "TRAINED",
+      "train_samples": 1800,
+      "feature_dimension": 137,
+      "fit_duration_seconds": 0.0156,
+      "convergence_warning": false,
+      "artifact_path": "artifacts/p8/models/linear_svm_hybrid.joblib",
+      "artifact_sha256": "82c1290342d5249b98a83055b5710dab6e36e26b51721aeefbf1287abdf4a4ce",
+      "classes": [
+        "BRUTE_FORCE",
+        "NORMAL",
+        "SUSPICIOUS"
+      ],
+      "supports": {
+        "predict_proba": false,
+        "decision_function": true
+      },
+      "roundtrip_ok": true,
+      "test_metrics_computed": false
+    },
+    {
+      "model_id": "multinomial_nb_text",
+      "representation": "text",
+      "status": "TRAINED",
+      "train_samples": 1800,
+      "feature_dimension": 115,
+      "fit_duration_seconds": 0.0045,
+      "convergence_warning": false,
+      "artifact_path": "artifacts/p8/models/multinomial_nb_text.joblib",
+      "artifact_sha256": "377496235a557ae2d4f3cb05b2fa6bc0844b8e2f1e2f8c1bfa07ba17f012ca1e",
+      "classes": [
+        "BRUTE_FORCE",
+        "NORMAL",
+        "SUSPICIOUS"
+      ],
+      "supports": {
+        "predict_proba": true,
+        "decision_function": false
+      },
+      "roundtrip_ok": true,
+      "test_metrics_computed": false
+    },
+    {
+      "model_id": "random_forest_behavior",
+      "representation": "behavior",
+      "status": "TRAINED",
+      "train_samples": 1800,
+      "feature_dimension": 22,
+      "fit_duration_seconds": 0.4827,
+      "convergence_warning": false,
+      "artifact_path": "artifacts/p8/models/random_forest_behavior.joblib",
+      "artifact_sha256": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d",
+      "classes": [
+        "BRUTE_FORCE",
+        "NORMAL",
+        "SUSPICIOUS"
+      ],
+      "supports": {
+        "predict_proba": true,
+        "decision_function": false
+      },
+      "roundtrip_ok": true,
+      "test_metrics_computed": false
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+2026-09-27T06:48:05.369823+00:00 dd9a612cdd6b sshd[1]: Received signal 15; terminating.
+2026-09-27T06:48:06.660034+00:00 dd9a612cdd6b sshd[1]: Server listening on 0.0.0.0 port 22.
+2026-09-27T06:48:06.660082+00:00 dd9a612cdd6b sshd[1]: Server listening on :: port 22.
+2026-09-27T06:48:11.782382+00:00 dd9a612cdd6b sshd[32]: Connection from 172.18.0.1 port 55354 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:48:11.873121+00:00 dd9a612cdd6b sshd[32]: Accepted password for testuser from 172.18.0.1 port 55354 ssh2
+2026-09-27T06:48:11.874951+00:00 dd9a612cdd6b sshd[32]: pam_unix(sshd:session): session opened for user testuser(uid=1001) by testuser(uid=0)
+2026-09-27T06:48:11.886372+00:00 dd9a612cdd6b sshd[32]: User child is on pid 43
+2026-09-27T06:48:11.929304+00:00 dd9a612cdd6b sshd[43]: Starting session: command for testuser from 172.18.0.1 port 55354 id 0
+2026-09-27T06:48:11.933000+00:00 dd9a612cdd6b sshd[43]: Received disconnect from 172.18.0.1 port 55354:11: disconnected by user
+2026-09-27T06:48:11.933096+00:00 dd9a612cdd6b sshd[43]: Disconnected from user testuser 172.18.0.1 port 55354
+2026-09-27T06:48:11.933350+00:00 dd9a612cdd6b sshd[32]: pam_unix(sshd:session): session closed for user testuser
+2026-09-27T06:48:13.011590+00:00 dd9a612cdd6b sshd[45]: Connection from 172.18.0.1 port 55364 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:48:13.077875+00:00 dd9a612cdd6b sshd[45]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T06:48:15.459857+00:00 dd9a612cdd6b sshd[45]: Failed password for testuser from 172.18.0.1 port 55364 ssh2
+2026-09-27T06:48:20.446004+00:00 dd9a612cdd6b sshd[45]: message repeated 2 times: [ Failed password for testuser from 172.18.0.1 port 55364 ssh2]
+2026-09-27T06:48:21.862808+00:00 dd9a612cdd6b sshd[45]: Connection closed by authenticating user testuser 172.18.0.1 port 55364 [preauth]
+2026-09-27T06:48:21.862903+00:00 dd9a612cdd6b sshd[45]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T06:48:29.304978+00:00 dd9a612cdd6b sshd[1]: Received signal 15; terminating.
+2026-09-27T06:48:30.593827+00:00 dd9a612cdd6b sshd[1]: Server listening on 0.0.0.0 port 22.
+2026-09-27T06:48:30.593879+00:00 dd9a612cdd6b sshd[1]: Server listening on :: port 22.
+2026-09-27T06:48:35.672421+00:00 dd9a612cdd6b sshd[32]: Connection from 172.18.0.1 port 63274 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:48:35.733203+00:00 dd9a612cdd6b sshd[32]: Accepted password for testuser from 172.18.0.1 port 63274 ssh2
+2026-09-27T06:48:35.734060+00:00 dd9a612cdd6b sshd[32]: pam_unix(sshd:session): session opened for user testuser(uid=1001) by testuser(uid=0)
+2026-09-27T06:48:35.737976+00:00 dd9a612cdd6b sshd[32]: User child is on pid 43
+2026-09-27T06:48:35.780051+00:00 dd9a612cdd6b sshd[43]: Starting session: command for testuser from 172.18.0.1 port 63274 id 0
+2026-09-27T06:48:35.782059+00:00 dd9a612cdd6b sshd[43]: Received disconnect from 172.18.0.1 port 63274:11: disconnected by user
+2026-09-27T06:48:35.782167+00:00 dd9a612cdd6b sshd[43]: Disconnected from user testuser 172.18.0.1 port 63274
+2026-09-27T06:48:35.782394+00:00 dd9a612cdd6b sshd[32]: pam_unix(sshd:session): session closed for user testuser

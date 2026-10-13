@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "P10BehaviorRawInput",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "features"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "features": {
+      "type": "object",
+      "required": [
+        "total_attempts",
+        "failed_attempts",
+        "successful_attempts",
+        "failure_ratio",
+        "duration_seconds",
+        "attempt_rate_per_second",
+        "failed_count_30s_max",
+        "failed_count_60s_max",
+        "failed_count_5m_max",
+        "success_count_5m_max",
+        "unique_users_total",
+        "unique_users_60s_max",
+        "has_multiple_attempts",
+        "min_inter_attempt_gap_seconds",
+        "mean_inter_attempt_gap_seconds",
+        "median_inter_attempt_gap_seconds",
+        "std_inter_attempt_gap_seconds",
+        "max_failure_streak",
+        "success_after_failure",
+        "failures_before_first_success",
+        "first_attempt_failed",
+        "last_attempt_success"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "total_attempts": {
+          "type": "number",
+          "minimum": 0
+        },
+        "failed_attempts": {
+          "type": "number",
+          "minimum": 0
+        },
+        "successful_attempts": {
+          "type": "number",
+          "minimum": 0
+        },
+        "failure_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "duration_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "attempt_rate_per_second": {
+          "type": "number",
+          "minimum": 0
+        },
+        "failed_count_30s_max": {
+          "type": "number",
+          "minimum": 0
+        },
+        "failed_count_60s_max": {
+          "type": "number",
+          "minimum": 0
+        },
+        "failed_count_5m_max": {
+          "type": "number",
+          "minimum": 0
+        },
+        "success_count_5m_max": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unique_users_total": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unique_users_60s_max": {
+          "type": "number",
+          "minimum": 0
+        },
+        "has_multiple_attempts": {
+          "type": "number",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "min_inter_attempt_gap_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "mean_inter_attempt_gap_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "median_inter_attempt_gap_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "std_inter_attempt_gap_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_failure_streak": {
+          "type": "number",
+          "minimum": 0
+        },
+        "success_after_failure": {
+          "type": "number",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "failures_before_first_success": {
+          "type": "number",
+          "minimum": 0
+        },
+        "first_attempt_failed": {
+          "type": "number",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "last_attempt_success": {
+          "type": "number",
+          "enum": [
+            0,
+            1
+          ]
+        }
+      }
+    }
+  }
+}

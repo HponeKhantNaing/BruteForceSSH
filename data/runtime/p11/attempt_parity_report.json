@@ -1,0 +1,13 @@
+{
+  "expected_failures": 345,
+  "actual_failures": 345,
+  "expected_successes": 50,
+  "actual_successes": 50,
+  "expected_unknown": 0,
+  "actual_unknown": 0,
+  "expected_total": 395,
+  "actual_total": 395,
+  "per_run_mismatches": [],
+  "mismatch_count": 0,
+  "ok": true
+}

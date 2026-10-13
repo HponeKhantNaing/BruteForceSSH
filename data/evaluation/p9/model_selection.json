@@ -1,0 +1,34 @@
+{
+  "selected_model_id": "random_forest_behavior",
+  "selected_artifact_path": "artifacts/p8/models/random_forest_behavior.joblib",
+  "selected_artifact_sha256": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d",
+  "selected_representation": "behavior_raw",
+  "primary_metric": "macro_f1",
+  "primary_metric_value": 0.9966665833312499,
+  "minimum_class_recall": 0.99,
+  "tie_break_values": {
+    "minimum_class_recall": 0.99,
+    "balanced_accuracy": 0.9966666666666667,
+    "accuracy": 0.9966666666666667
+  },
+  "tie_break_used": false,
+  "selection_reason": "highest validation macro_f1",
+  "selection_rule_version": "p9-selection-v1",
+  "ranked_model_ids": [
+    "random_forest_behavior",
+    "logistic_regression_hybrid",
+    "logistic_regression_behavior",
+    "logistic_regression_text",
+    "multinomial_nb_text",
+    "linear_svm_hybrid"
+  ],
+  "validation_scenarios": {
+    "BRUTE_FORCE": "B04_FAILURE_BURST_THEN_SUCCESS",
+    "NORMAL": "N04_LOW_FREQUENCY_REPEAT",
+    "SUSPICIOUS": "S03_MULTI_USERNAME_LOW_RATE"
+  },
+  "selected_at": "2026-10-08T13:21:08.243207+00:00",
+  "test_evaluated": false,
+  "split_manifest_sha256": "cef4dda39dc0996117ccc1fcd4980c46849a15f031f361fc27a1e1644726d8a3",
+  "evaluation_version": "p9-v1"
+}

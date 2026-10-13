@@ -1,0 +1,71 @@
+# P7 feature engineering configuration.
+# TF-IDF and scalers remain UNFITTED in P7 (fit in P8 on TRAIN only).
+
+schema_version: "1.0"
+feature_engineering_version: "p7-v1"
+
+inputs:
+  canonical_runs: "data/processed/p6/canonical_runs.jsonl"
+  canonical_attempts: "data/processed/p6/canonical_attempts.jsonl"
+  canonical_sequences: "data/processed/p6/canonical_sequences.jsonl"
+  dataset_manifest: "data/processed/p6/dataset_manifest.json"
+  class_distribution: "data/processed/p6/class_distribution.json"
+
+output:
+  root: "data/features/p7"
+
+external_supervised_data:
+  enabled: false
+
+text_features:
+  method: tfidf
+  lowercase: true
+  ngram_range:
+    min: 1
+    max: 2
+  min_df: 2
+  max_df: 0.95
+  max_features: 1000
+  sublinear_tf: true
+  norm: l2
+  fitted_in_p7: false
+
+behavioral_features:
+  windows_seconds:
+    short: 30
+    medium: 60
+    long: 300
+  window_policy: inclusive_closed  # [t - W, t] inclusive on both ends
+  min_duration_seconds: 1.0e-3
+  default_enabled:
+    - total_attempts
+    - failed_attempts
+    - successful_attempts
+    - failure_ratio
+    - duration_seconds
+    - attempt_rate_per_second
+    - failed_count_30s_max
+    - failed_count_60s_max
+    - failed_count_5m_max
+    - success_count_5m_max
+    - unique_users_total
+    - unique_users_60s_max
+    - has_multiple_attempts
+    - min_inter_attempt_gap_seconds
+    - mean_inter_attempt_gap_seconds
+    - median_inter_attempt_gap_seconds
+    - std_inter_attempt_gap_seconds
+    - max_failure_streak
+    - success_after_failure
+    - failures_before_first_success
+    - first_attempt_failed
+    - last_attempt_success
+  diagnostic_only:
+    - unique_sources_total
+    - text_char_count
+    - text_token_count
+    - text_line_count
+
+numeric_scaler:
+  method: standard
+  fitted_in_p7: false

@@ -1,0 +1,18 @@
+{
+  "derivation_source": "TRAIN_ONLY",
+  "train_sample_count": 1800,
+  "train_gap_count": 210,
+  "training_max_inter_attempt_gap": 15.563426,
+  "training_median_inter_attempt_gap": 4.8909685,
+  "training_p95_inter_attempt_gap": 8.5934,
+  "training_max_of_per_run_max_gaps": 15.563426,
+  "safety_margin_seconds": 14.436574,
+  "idle_timeout_seconds": 30.0,
+  "max_episode_duration_seconds": 300.0,
+  "test_used_to_tune_context": false,
+  "notes": [
+    "The P9 model was evaluated with known bounded scenario-run boundaries.",
+    "The P11 live episode segmentation policy is a deployment integration heuristic.",
+    "P9's 15/15 TEST result does NOT validate this live segmentation policy."
+  ]
+}

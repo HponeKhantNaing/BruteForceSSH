@@ -1,0 +1,91 @@
+{
+  "training_version": "p8-v1",
+  "created_at": "2026-10-08T13:21:03.973459+00:00",
+  "python_version": "3.12.3",
+  "scikit_learn_version": "1.5.1",
+  "scipy_version": "1.14.0",
+  "p7_feature_version": "p7-v1",
+  "p7_feature_manifest_sha256": "46da0ea9eed8c34703d24894ce96d47d8215c1a13bb78db37004393e4d486502",
+  "p7_source_hashes": {
+    "behavioral_features": "2cc43b65b82e0f576237c1aca8a5ecea19f9c30570e8601b2c9452f4c2baaf89",
+    "text_samples": "a84c4ae51580b1a07f2e3181fd88efb7352d89df42839c460acf43760670fca4",
+    "targets": "a2a0bbcf61c1e5015556a9b0e085e17a051e187b43f7b2d06b17b390b3ff63cf",
+    "feature_schema": "911e8bad444603dbaeb0830a5e3c5bf4922d4aa46fd8494f7d7dd888efb07083",
+    "feature_manifest": "46da0ea9eed8c34703d24894ce96d47d8215c1a13bb78db37004393e4d486502"
+  },
+  "split_version": "p8-split-v1",
+  "split_manifest_sha256": "cef4dda39dc0996117ccc1fcd4980c46849a15f031f361fc27a1e1644726d8a3",
+  "random_seed": 42,
+  "grouping_strategy": "scenario_id",
+  "train_sample_count": 1800,
+  "validation_sample_count": 600,
+  "test_sample_count": 600,
+  "train_class_distribution": {
+    "BRUTE_FORCE": 600,
+    "NORMAL": 800,
+    "SUSPICIOUS": 400
+  },
+  "validation_class_distribution": {
+    "BRUTE_FORCE": 200,
+    "NORMAL": 200,
+    "SUSPICIOUS": 200
+  },
+  "test_class_distribution": {
+    "BRUTE_FORCE": 200,
+    "NORMAL": 200,
+    "SUSPICIOUS": 200
+  },
+  "tfidf_config": {
+    "method": "tfidf",
+    "lowercase": true,
+    "ngram_range": {
+      "min": 1,
+      "max": 2
+    },
+    "min_df": 2,
+    "max_df": 0.95,
+    "max_features": 1000,
+    "sublinear_tf": true,
+    "norm": "l2",
+    "fitted_in_p7": false
+  },
+  "tfidf_vocabulary_size": 115,
+  "behavior_feature_count": 22,
+  "behavior_feature_names": [
+    "total_attempts",
+    "failed_attempts",
+    "successful_attempts",
+    "failure_ratio",
+    "duration_seconds",
+    "attempt_rate_per_second",
+    "failed_count_30s_max",
+    "failed_count_60s_max",
+    "failed_count_5m_max",
+    "success_count_5m_max",
+    "unique_users_total",
+    "unique_users_60s_max",
+    "has_multiple_attempts",
+    "min_inter_attempt_gap_seconds",
+    "mean_inter_attempt_gap_seconds",
+    "median_inter_attempt_gap_seconds",
+    "std_inter_attempt_gap_seconds",
+    "max_failure_streak",
+    "success_after_failure",
+    "failures_before_first_success",
+    "first_attempt_failed",
+    "last_attempt_success"
+  ],
+  "hybrid_dimension": 137,
+  "text_dimension": 115,
+  "models_trained": [
+    "logistic_regression_hybrid",
+    "logistic_regression_text",
+    "logistic_regression_behavior",
+    "linear_svm_hybrid",
+    "multinomial_nb_text",
+    "random_forest_behavior"
+  ],
+  "test_metrics_computed": false,
+  "primary_baseline": "logistic_regression_hybrid",
+  "declared_best_model": false
+}

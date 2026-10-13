@@ -1,0 +1,26 @@
+{
+  "class_order": [
+    "NORMAL",
+    "SUSPICIOUS",
+    "BRUTE_FORCE"
+  ],
+  "matrix": [
+    [
+      200,
+      0,
+      0
+    ],
+    [
+      0,
+      200,
+      0
+    ],
+    [
+      0,
+      0,
+      200
+    ]
+  ],
+  "rows": "actual",
+  "columns": "predicted"
+}

@@ -1,0 +1,66 @@
+2026-09-27T06:45:00.577720+00:00 e5b7e341ab1e sshd[1]: Server listening on 0.0.0.0 port 22.
+2026-09-27T06:45:00.577778+00:00 e5b7e341ab1e sshd[1]: Server listening on :: port 22.
+2026-09-27T06:45:04.544026+00:00 e5b7e341ab1e sshd[39]: Connection from 127.0.0.1 port 47934 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:45:04.544078+00:00 e5b7e341ab1e sshd[39]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:45:04.544098+00:00 e5b7e341ab1e sshd[39]: error: send_error: write: Broken pipe
+2026-09-27T06:45:04.544121+00:00 e5b7e341ab1e sshd[39]: banner exchange: Connection from 127.0.0.1 port 47934: invalid format
+2026-09-27T06:45:09.584201+00:00 e5b7e341ab1e sshd[47]: Connection from 127.0.0.1 port 59886 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:45:09.584248+00:00 e5b7e341ab1e sshd[47]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:45:09.584258+00:00 e5b7e341ab1e sshd[47]: error: send_error: write: Broken pipe
+2026-09-27T06:45:09.584265+00:00 e5b7e341ab1e sshd[47]: banner exchange: Connection from 127.0.0.1 port 59886: invalid format
+2026-09-27T06:45:14.640302+00:00 e5b7e341ab1e sshd[55]: Connection from 127.0.0.1 port 59898 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:45:14.640366+00:00 e5b7e341ab1e sshd[55]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:45:14.640382+00:00 e5b7e341ab1e sshd[55]: error: send_error: write: Broken pipe
+2026-09-27T06:45:14.640393+00:00 e5b7e341ab1e sshd[55]: banner exchange: Connection from 127.0.0.1 port 59898: invalid format
+2026-09-27T06:45:15.811453+00:00 e5b7e341ab1e sshd[67]: Connection from 172.18.0.1 port 56248 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:45:15.887604+00:00 e5b7e341ab1e sshd[67]: Accepted password for testuser from 172.18.0.1 port 56248 ssh2
+2026-09-27T06:45:15.888435+00:00 e5b7e341ab1e sshd[67]: pam_unix(sshd:session): session opened for user testuser(uid=1001) by testuser(uid=0)
+2026-09-27T06:45:15.893510+00:00 e5b7e341ab1e sshd[67]: User child is on pid 78
+2026-09-27T06:45:15.938617+00:00 e5b7e341ab1e sshd[78]: Starting session: command for testuser from 172.18.0.1 port 56248 id 0
+2026-09-27T06:45:15.941168+00:00 e5b7e341ab1e sshd[78]: Received disconnect from 172.18.0.1 port 56248:11: disconnected by user
+2026-09-27T06:45:15.941283+00:00 e5b7e341ab1e sshd[78]: Disconnected from user testuser 172.18.0.1 port 56248
+2026-09-27T06:45:15.941543+00:00 e5b7e341ab1e sshd[67]: pam_unix(sshd:session): session closed for user testuser
+2026-09-27T06:45:17.009511+00:00 e5b7e341ab1e sshd[80]: Connection from 172.18.0.1 port 56260 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:45:17.080988+00:00 e5b7e341ab1e sshd[80]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T06:45:18.634581+00:00 e5b7e341ab1e sshd[80]: Failed password for testuser from 172.18.0.1 port 56260 ssh2
+2026-09-27T06:45:19.685989+00:00 e5b7e341ab1e sshd[89]: Connection from 127.0.0.1 port 58868 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:45:19.686034+00:00 e5b7e341ab1e sshd[89]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:45:19.686051+00:00 e5b7e341ab1e sshd[89]: error: send_error: write: Broken pipe
+2026-09-27T06:45:19.686065+00:00 e5b7e341ab1e sshd[89]: banner exchange: Connection from 127.0.0.1 port 58868: invalid format
+2026-09-27T06:45:24.738499+00:00 e5b7e341ab1e sshd[97]: Connection from 127.0.0.1 port 58880 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:45:24.738553+00:00 e5b7e341ab1e sshd[97]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:45:24.738564+00:00 e5b7e341ab1e sshd[97]: error: send_error: write: Broken pipe
+2026-09-27T06:45:24.738580+00:00 e5b7e341ab1e sshd[97]: banner exchange: Connection from 127.0.0.1 port 58880: invalid format
+2026-09-27T06:45:29.788989+00:00 e5b7e341ab1e sshd[105]: Connection from 127.0.0.1 port 58448 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:45:29.789034+00:00 e5b7e341ab1e sshd[105]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:45:29.789044+00:00 e5b7e341ab1e sshd[105]: error: send_error: write: Broken pipe
+2026-09-27T06:45:29.789055+00:00 e5b7e341ab1e sshd[105]: banner exchange: Connection from 127.0.0.1 port 58448: invalid format
+2026-09-27T06:45:34.799167+00:00 e5b7e341ab1e sshd[80]: Connection closed by authenticating user testuser 172.18.0.1 port 56260 [preauth]
+2026-09-27T06:45:34.840891+00:00 e5b7e341ab1e sshd[113]: Connection from 127.0.0.1 port 58456 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:45:34.840937+00:00 e5b7e341ab1e sshd[113]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:45:34.840946+00:00 e5b7e341ab1e sshd[113]: error: send_error: write: Broken pipe
+2026-09-27T06:45:34.840959+00:00 e5b7e341ab1e sshd[113]: banner exchange: Connection from 127.0.0.1 port 58456: invalid format
+2026-09-27T06:45:39.898628+00:00 e5b7e341ab1e sshd[121]: Connection from 127.0.0.1 port 38330 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:45:39.898709+00:00 e5b7e341ab1e sshd[121]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:45:39.898720+00:00 e5b7e341ab1e sshd[121]: error: send_error: write: Broken pipe
+2026-09-27T06:45:39.898729+00:00 e5b7e341ab1e sshd[121]: banner exchange: Connection from 127.0.0.1 port 38330: invalid format
+2026-09-27T06:45:44.953363+00:00 e5b7e341ab1e sshd[128]: Connection from 127.0.0.1 port 38342 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:45:44.953417+00:00 e5b7e341ab1e sshd[128]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:45:44.953428+00:00 e5b7e341ab1e sshd[128]: error: send_error: write: Broken pipe
+2026-09-27T06:45:44.953436+00:00 e5b7e341ab1e sshd[128]: banner exchange: Connection from 127.0.0.1 port 38342: invalid format
+2026-09-27T06:45:50.006423+00:00 e5b7e341ab1e sshd[136]: Connection from 127.0.0.1 port 53480 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:45:50.006491+00:00 e5b7e341ab1e sshd[136]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:45:50.006522+00:00 e5b7e341ab1e sshd[136]: error: send_error: write: Broken pipe
+2026-09-27T06:45:50.006537+00:00 e5b7e341ab1e sshd[136]: banner exchange: Connection from 127.0.0.1 port 53480: invalid format
+2026-09-27T06:45:55.062366+00:00 e5b7e341ab1e sshd[144]: Connection from 127.0.0.1 port 53494 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:45:55.062432+00:00 e5b7e341ab1e sshd[144]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:45:55.062452+00:00 e5b7e341ab1e sshd[144]: error: send_error: write: Broken pipe
+2026-09-27T06:45:55.062476+00:00 e5b7e341ab1e sshd[144]: banner exchange: Connection from 127.0.0.1 port 53494: invalid format
+2026-09-27T06:46:00.125794+00:00 e5b7e341ab1e sshd[152]: Connection from 127.0.0.1 port 38606 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:46:00.125912+00:00 e5b7e341ab1e sshd[152]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:46:00.125931+00:00 e5b7e341ab1e sshd[152]: error: send_error: write: Broken pipe
+2026-09-27T06:46:00.125955+00:00 e5b7e341ab1e sshd[152]: banner exchange: Connection from 127.0.0.1 port 38606: invalid format
+2026-09-27T06:46:05.178309+00:00 e5b7e341ab1e sshd[160]: Connection from 127.0.0.1 port 38614 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:46:05.178381+00:00 e5b7e341ab1e sshd[160]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:46:05.178397+00:00 e5b7e341ab1e sshd[160]: error: send_error: write: Broken pipe
+2026-09-27T06:46:05.178406+00:00 e5b7e341ab1e sshd[160]: banner exchange: Connection from 127.0.0.1 port 38614: invalid format

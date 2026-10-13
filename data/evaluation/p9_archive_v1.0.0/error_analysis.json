@@ -1,0 +1,597 @@
+{
+  "validation_errors": [
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073221Z_001",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "logistic_regression_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073254Z_002",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "logistic_regression_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073330Z_003",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "logistic_regression_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073403Z_004",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "logistic_regression_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073441Z_005",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "logistic_regression_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071504Z_001",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "BRUTE_FORCE",
+      "model_id": "logistic_regression_text",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071522Z_002",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "BRUTE_FORCE",
+      "model_id": "logistic_regression_text",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071541Z_003",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "BRUTE_FORCE",
+      "model_id": "logistic_regression_text",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071600Z_004",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "BRUTE_FORCE",
+      "model_id": "logistic_regression_text",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071617Z_005",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "BRUTE_FORCE",
+      "model_id": "logistic_regression_text",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073221Z_001",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "logistic_regression_behavior",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073254Z_002",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "logistic_regression_behavior",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073330Z_003",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "logistic_regression_behavior",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073403Z_004",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "logistic_regression_behavior",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073441Z_005",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "logistic_regression_behavior",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073221Z_001",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "linear_svm_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073254Z_002",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "linear_svm_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073330Z_003",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "linear_svm_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073403Z_004",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "linear_svm_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073441Z_005",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "predicted_label": "SUSPICIOUS",
+      "model_id": "linear_svm_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 9.0,
+        "failed_attempts": 8.0,
+        "successful_attempts": 1.0,
+        "failure_ratio": 0.8888888888888888,
+        "max_failure_streak": 8.0,
+        "success_after_failure": 1.0,
+        "unique_users_total": 1.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071504Z_001",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "NORMAL",
+      "model_id": "linear_svm_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071522Z_002",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "NORMAL",
+      "model_id": "linear_svm_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071541Z_003",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "NORMAL",
+      "model_id": "linear_svm_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071600Z_004",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "NORMAL",
+      "model_id": "linear_svm_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071617Z_005",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "NORMAL",
+      "model_id": "linear_svm_hybrid",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071504Z_001",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "BRUTE_FORCE",
+      "model_id": "multinomial_nb_text",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071522Z_002",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "BRUTE_FORCE",
+      "model_id": "multinomial_nb_text",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071541Z_003",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "BRUTE_FORCE",
+      "model_id": "multinomial_nb_text",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071600Z_004",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "BRUTE_FORCE",
+      "model_id": "multinomial_nb_text",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071617Z_005",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "predicted_label": "BRUTE_FORCE",
+      "model_id": "multinomial_nb_text",
+      "behavioral_feature_snapshot": {
+        "total_attempts": 3.0,
+        "failed_attempts": 3.0,
+        "successful_attempts": 0.0,
+        "failure_ratio": 1.0,
+        "max_failure_streak": 3.0,
+        "success_after_failure": 0.0,
+        "unique_users_total": 3.0
+      },
+      "text_summary_reference": "canonical_text from P7 text_samples (normalized; no raw IP/username)"
+    }
+  ],
+  "validation_disagreements_text_behavior_hybrid": [
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073221Z_001",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "logistic_regression_text": "BRUTE_FORCE",
+      "logistic_regression_behavior": "SUSPICIOUS",
+      "logistic_regression_hybrid": "SUSPICIOUS"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073254Z_002",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "logistic_regression_text": "BRUTE_FORCE",
+      "logistic_regression_behavior": "SUSPICIOUS",
+      "logistic_regression_hybrid": "SUSPICIOUS"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073330Z_003",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "logistic_regression_text": "BRUTE_FORCE",
+      "logistic_regression_behavior": "SUSPICIOUS",
+      "logistic_regression_hybrid": "SUSPICIOUS"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073403Z_004",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "logistic_regression_text": "BRUTE_FORCE",
+      "logistic_regression_behavior": "SUSPICIOUS",
+      "logistic_regression_hybrid": "SUSPICIOUS"
+    },
+    {
+      "sample_id": "P6_B04_FAILURE_BURST_THEN_SUCCESS_20260927T073441Z_005",
+      "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "true_label": "BRUTE_FORCE",
+      "logistic_regression_text": "BRUTE_FORCE",
+      "logistic_regression_behavior": "SUSPICIOUS",
+      "logistic_regression_hybrid": "SUSPICIOUS"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071504Z_001",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "logistic_regression_text": "BRUTE_FORCE",
+      "logistic_regression_behavior": "SUSPICIOUS",
+      "logistic_regression_hybrid": "SUSPICIOUS"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071522Z_002",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "logistic_regression_text": "BRUTE_FORCE",
+      "logistic_regression_behavior": "SUSPICIOUS",
+      "logistic_regression_hybrid": "SUSPICIOUS"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071541Z_003",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "logistic_regression_text": "BRUTE_FORCE",
+      "logistic_regression_behavior": "SUSPICIOUS",
+      "logistic_regression_hybrid": "SUSPICIOUS"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071600Z_004",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "logistic_regression_text": "BRUTE_FORCE",
+      "logistic_regression_behavior": "SUSPICIOUS",
+      "logistic_regression_hybrid": "SUSPICIOUS"
+    },
+    {
+      "sample_id": "P6_S03_MULTI_USERNAME_LOW_RATE_20260927T071617Z_005",
+      "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+      "true_label": "SUSPICIOUS",
+      "logistic_regression_text": "BRUTE_FORCE",
+      "logistic_regression_behavior": "SUSPICIOUS",
+      "logistic_regression_hybrid": "SUSPICIOUS"
+    }
+  ],
+  "test_errors_selected": []
+}

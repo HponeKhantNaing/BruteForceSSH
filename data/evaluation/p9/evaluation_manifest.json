@@ -1,0 +1,57 @@
+{
+  "evaluation_version": "p9-v1",
+  "created_at": "2026-10-08T13:21:09.951216+00:00",
+  "p8_training_version": "p8-v1",
+  "p8_split_version": "p8-split-v1",
+  "split_manifest_sha256": "cef4dda39dc0996117ccc1fcd4980c46849a15f031f361fc27a1e1644726d8a3",
+  "training_manifest_sha256": "6ba30ce4fc34a94a7a7bc2bf36aaecc8c434b3eb763c7be4bbca66f4c5db77b4",
+  "tfidf_sha256": "1ee2b606e3885c133ca4e57a477552bafff4c715150d0d64436eb4fdbc1a69fe",
+  "scaler_sha256": "c234237a822b5b6603437d9a7d5ff13b80e02527199a7f85e5b89800ba3ee30d",
+  "p8_model_sha256": {
+    "logistic_regression_hybrid": "680dcf7e54f7c6ed4291ba766953525af63fee62b3c43b4f68d3318b8a12cca7",
+    "logistic_regression_text": "76eb7f0048d65cc8188b91a9c2e2b43e08284f904faba7081a53d821f5bd635b",
+    "logistic_regression_behavior": "06349a2d144984a3d37dad5ae24aa87dbb73667413d70340270fee368ee9fa65",
+    "linear_svm_hybrid": "82c1290342d5249b98a83055b5710dab6e36e26b51721aeefbf1287abdf4a4ce",
+    "multinomial_nb_text": "377496235a557ae2d4f3cb05b2fa6bc0844b8e2f1e2f8c1bfa07ba17f012ca1e",
+    "random_forest_behavior": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d"
+  },
+  "selected_model_id": "random_forest_behavior",
+  "selected_model_sha256": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d",
+  "validation_sample_count": 600,
+  "test_sample_count": 600,
+  "validation_scenarios": {
+    "BRUTE_FORCE": "B04_FAILURE_BURST_THEN_SUCCESS",
+    "NORMAL": "N04_LOW_FREQUENCY_REPEAT",
+    "SUSPICIOUS": "S03_MULTI_USERNAME_LOW_RATE"
+  },
+  "test_scenarios": {
+    "BRUTE_FORCE": "B01_SHORT_FAILURE_BURST",
+    "NORMAL": "N03_SHORT_SESSION",
+    "SUSPICIOUS": "S01_FEW_REPEATED_FAILURES"
+  },
+  "selection_policy": {
+    "partition": "validation",
+    "primary_metric": "macro_f1",
+    "tie_breakers": [
+      "minimum_class_recall",
+      "balanced_accuracy",
+      "accuracy"
+    ],
+    "exact_tie_preference": [
+      "logistic_regression_hybrid",
+      "logistic_regression_behavior",
+      "logistic_regression_text",
+      "linear_svm_hybrid",
+      "multinomial_nb_text",
+      "random_forest_behavior"
+    ]
+  },
+  "test_evaluated_once": true,
+  "known_limitations": [
+    "Validation/test each have only 15 samples (5 per class)",
+    "Each class represented by one held-out scenario group",
+    "Controlled lab scenario bias",
+    "Single source environment / limited user diversity",
+    "Results do not establish real-world production accuracy"
+  ]
+}

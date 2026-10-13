@@ -1,0 +1,12 @@
+{
+  "running": true,
+  "release_id": "rf-behavior-lab-v1.1.0",
+  "log_source": "data/raw/auth/auth.log",
+  "started_at": "2026-10-08T13:54:47.914638+00:00",
+  "last_log_timestamp": "2026-10-08T14:04:40.723291+00:00",
+  "last_prediction_timestamp": "2026-10-08T14:05:10.830724+00:00",
+  "active_episode_count": 0,
+  "logical_attempts_processed": 41,
+  "predictions_emitted": 45,
+  "errors": 0
+}

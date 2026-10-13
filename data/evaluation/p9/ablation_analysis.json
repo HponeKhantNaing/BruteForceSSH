@@ -1,0 +1,105 @@
+{
+  "partition": "validation",
+  "models": {
+    "logistic_regression_text": {
+      "macro_f1": 0.3333333333333333,
+      "accuracy": 0.3333333333333333,
+      "balanced_accuracy": 0.3333333333333333,
+      "minimum_class_recall": 0.0,
+      "per_class": {
+        "NORMAL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 200,
+          "correct": 200,
+          "correct_over_support": "200/200"
+        },
+        "SUSPICIOUS": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 200,
+          "correct": 0,
+          "correct_over_support": "0/200"
+        },
+        "BRUTE_FORCE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 200,
+          "correct": 0,
+          "correct_over_support": "0/200"
+        }
+      }
+    },
+    "logistic_regression_behavior": {
+      "macro_f1": 0.5555555555555555,
+      "accuracy": 0.6666666666666666,
+      "balanced_accuracy": 0.6666666666666666,
+      "minimum_class_recall": 0.0,
+      "per_class": {
+        "NORMAL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 200,
+          "correct": 200,
+          "correct_over_support": "200/200"
+        },
+        "SUSPICIOUS": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "support": 200,
+          "correct": 200,
+          "correct_over_support": "200/200"
+        },
+        "BRUTE_FORCE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 200,
+          "correct": 0,
+          "correct_over_support": "0/200"
+        }
+      }
+    },
+    "logistic_regression_hybrid": {
+      "macro_f1": 0.5555555555555555,
+      "accuracy": 0.6666666666666666,
+      "balanced_accuracy": 0.6666666666666666,
+      "minimum_class_recall": 0.0,
+      "per_class": {
+        "NORMAL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 200,
+          "correct": 200,
+          "correct_over_support": "200/200"
+        },
+        "SUSPICIOUS": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "support": 200,
+          "correct": 200,
+          "correct_over_support": "200/200"
+        },
+        "BRUTE_FORCE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 200,
+          "correct": 0,
+          "correct_over_support": "0/200"
+        }
+      }
+    }
+  },
+  "notes": [
+    "VALIDATION-only ablation; same Logistic Regression family",
+    "Do not interpret as causal proof"
+  ]
+}

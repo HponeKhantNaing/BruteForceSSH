@@ -1,0 +1,41 @@
+{
+  "collection_phase": "P3",
+  "collection_batch_id": "LIVE_DEMO2",
+  "started_at": "2026-09-27T10:50:45.402747+00:00",
+  "ended_at": "2026-09-27T10:51:22.350569+00:00",
+  "target_host": "127.0.0.1",
+  "target_port": 2222,
+  "suspicious_runs_attempted": 0,
+  "suspicious_runs_passed": 0,
+  "suspicious_runs_failed": 0,
+  "brute_force_runs_attempted": 1,
+  "brute_force_runs_passed": 1,
+  "brute_force_runs_failed": 0,
+  "total_ssh_auth_attempts": 10,
+  "total_captured_log_lines": 40,
+  "by_scenario": {
+    "B01_SHORT_FAILURE_BURST": {
+      "attempted": 1,
+      "passed": 1,
+      "failed": 0,
+      "interrupted": 0
+    }
+  },
+  "runs": [
+    {
+      "run_id": "B01_SHORT_FAILURE_BURST_20260927T105045Z_001",
+      "scenario_id": "B01_SHORT_FAILURE_BURST",
+      "scenario_intent": "brute_force",
+      "result": "success",
+      "path": "data/raw/security/brute_force/B01_SHORT_FAILURE_BURST/B01_SHORT_FAILURE_BURST_20260927T105045Z_001",
+      "notes": ""
+    }
+  ],
+  "issues": [],
+  "safety_ceilings": {
+    "MAX_AUTH_ATTEMPTS_PER_RUN": 30,
+    "MAX_USERNAMES_PER_RUN": 6,
+    "MAX_SCENARIO_SECONDS": 120,
+    "MIN_INTER_ATTEMPT_DELAY": 0.25
+  }
+}

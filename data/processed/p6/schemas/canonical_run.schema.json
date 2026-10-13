@@ -1,0 +1,40 @@
+{
+  "title": "CanonicalRun",
+  "type": "object",
+  "required": [
+    "sample_id",
+    "run_id",
+    "target_label",
+    "preprocessing_version"
+  ],
+  "properties": {
+    "sample_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "target_label": {
+      "enum": [
+        "NORMAL",
+        "SUSPICIOUS",
+        "BRUTE_FORCE"
+      ]
+    },
+    "canonical_text": {
+      "type": "string"
+    },
+    "event_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "attempt_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

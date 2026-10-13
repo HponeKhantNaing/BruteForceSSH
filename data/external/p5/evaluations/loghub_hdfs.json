@@ -1,0 +1,25 @@
+{
+  "dataset_id": "loghub_hdfs",
+  "evaluated_at": "2026-09-27T08:00:00+00:00",
+  "official_source": "https://github.com/logpai/loghub",
+  "data_domain": "distributed_filesystem_log",
+  "platform": "HDFS",
+  "labeled": true,
+  "label_type": "normal_anomaly",
+  "label_compatibility": "INCOMPATIBLE",
+  "ssh_relevance": "none",
+  "auth_relevance": "none",
+  "normal_coverage": "hdfs_normal_not_auth",
+  "suspicious_coverage": "none",
+  "brute_force_coverage": "none",
+  "forbidden_shortcut_check": {
+    "anomaly_to_suspicious": "REJECTED — anomaly ≠ SUSPICIOUS"
+  },
+  "decision": "REJECT",
+  "p6_disposition": "REJECT",
+  "decision_reason": "Wrong domain despite labels. HDFS anomaly detection is not OpenSSH authentication behavior.",
+  "download": {
+    "status": "METADATA_ONLY",
+    "download_approved": false
+  }
+}

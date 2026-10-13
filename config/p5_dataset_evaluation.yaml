@@ -1,0 +1,75 @@
+# P5 dataset evaluation rubric.
+# Numeric scores inform review; required-domain failures override score-only decisions.
+
+schema_version: "1.0"
+evaluation_policy_version: "p5-eval-policy-v1"
+
+project_domain:
+  detection_scope: "Linux / OpenSSH authentication activity"
+  contextual_targets:
+    - NORMAL
+    - SUSPICIOUS
+    - BRUTE_FORCE
+  primary_supervised_source: "data/interim/p4/run_labels.jsonl"
+  public_data_optional: true
+
+required_gates:
+  - source_authority
+  - academic_usage_documented
+  - no_invented_labels
+
+criteria:
+  source_authority:
+    required: true
+  academic_usage_allowed:
+    required: true
+  contains_authentication_behavior:
+    weight: 5
+  host_log_similarity:
+    weight: 5
+  ssh_relevance:
+    weight: 5
+  normal_behavior_available:
+    weight: 4
+  brute_force_behavior_available:
+    weight: 4
+  suspicious_intermediate_behavior:
+    weight: 3
+  label_quality:
+    weight: 5
+  provenance_quality:
+    weight: 5
+  schema_compatibility:
+    weight: 4
+  manageable_size:
+    weight: 2
+  reproducible_download:
+    weight: 3
+
+decisions:
+  - DIRECT_INTEGRATION_CANDIDATE
+  - EXTERNAL_LABELED_EVALUATION
+  - EXTERNAL_UNLABELED_CORPUS
+  - REJECT
+
+label_compatibility_levels:
+  - EXACT
+  - PARTIAL
+  - INCOMPATIBLE
+  - UNLABELED
+
+download_policy:
+  auto_download: false
+  require_download_approved: true
+  large_file_warn_bytes: 500000000  # 500 MB
+  max_auto_download_bytes: 0        # never auto-download in evaluate
+
+paths:
+  registry: "data/external/p5/registry.json"
+  evaluations_dir: "data/external/p5/evaluations"
+  downloads_dir: "data/external/p5/downloads"
+  samples_dir: "data/external/p5/samples"
+  external_files: "data/external/p5/external_files.jsonl"
+  integration_candidates: "data/external/p5/integration_candidates.jsonl"
+  source_snapshot: "data/external/p5/source_snapshot.json"
+  p4_hash_snapshot: "data/external/p5/audit/p4_pre_p5_hashes.json"

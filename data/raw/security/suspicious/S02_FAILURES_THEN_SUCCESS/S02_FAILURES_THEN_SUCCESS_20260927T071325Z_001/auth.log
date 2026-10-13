@@ -1,0 +1,20 @@
+2026-09-27T07:13:25.256687+00:00 dd9a612cdd6b sshd[3157]: Connection from 172.18.0.1 port 56380 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:13:25.299751+00:00 dd9a612cdd6b sshd[3157]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:13:27.591303+00:00 dd9a612cdd6b sshd[3157]: Failed password for testuser from 172.18.0.1 port 56380 ssh2
+2026-09-27T07:13:28.895770+00:00 dd9a612cdd6b sshd[3157]: Connection closed by authenticating user testuser 172.18.0.1 port 56380 [preauth]
+2026-09-27T07:13:31.920875+00:00 dd9a612cdd6b sshd[3173]: Connection from 172.18.0.1 port 60640 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:13:31.969416+00:00 dd9a612cdd6b sshd[3173]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:13:34.080772+00:00 dd9a612cdd6b sshd[3173]: Failed password for testuser from 172.18.0.1 port 60640 ssh2
+2026-09-27T07:13:35.466302+00:00 dd9a612cdd6b sshd[3173]: Connection closed by authenticating user testuser 172.18.0.1 port 60640 [preauth]
+2026-09-27T07:13:38.491792+00:00 dd9a612cdd6b sshd[3182]: Connection from 172.18.0.1 port 60648 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:13:38.539918+00:00 dd9a612cdd6b sshd[3182]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:13:39.945214+00:00 dd9a612cdd6b sshd[3182]: Failed password for testuser from 172.18.0.1 port 60648 ssh2
+2026-09-27T07:13:40.274769+00:00 dd9a612cdd6b sshd[3182]: Connection closed by authenticating user testuser 172.18.0.1 port 60648 [preauth]
+2026-09-27T07:13:43.298650+00:00 dd9a612cdd6b sshd[3191]: Connection from 172.18.0.1 port 59018 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:13:43.373655+00:00 dd9a612cdd6b sshd[3191]: Accepted password for testuser from 172.18.0.1 port 59018 ssh2
+2026-09-27T07:13:43.374895+00:00 dd9a612cdd6b sshd[3191]: pam_unix(sshd:session): session opened for user testuser(uid=1001) by testuser(uid=0)
+2026-09-27T07:13:43.380717+00:00 dd9a612cdd6b sshd[3191]: User child is on pid 3202
+2026-09-27T07:13:43.381183+00:00 dd9a612cdd6b sshd[3202]: Connection closed by 172.18.0.1 port 59018
+2026-09-27T07:13:43.381199+00:00 dd9a612cdd6b sshd[3202]: Transferred: sent 2272, received 1304 bytes
+2026-09-27T07:13:43.381204+00:00 dd9a612cdd6b sshd[3202]: Closing connection to 172.18.0.1 port 59018
+2026-09-27T07:13:43.381311+00:00 dd9a612cdd6b sshd[3191]: pam_unix(sshd:session): session closed for user testuser

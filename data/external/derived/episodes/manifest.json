@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-08T13:35:05.976609+00:00",
+  "episode_count": 4091,
+  "label_counts": {
+    "SUSPICIOUS": 762,
+    "NORMAL": 2665,
+    "BRUTE_FORCE": 664
+  },
+  "label_policy": {
+    "BRUTE_FORCE": "failed_count_60s_max>=10 OR (fails>=10 within ~120s) OR (unique_users_60s>=5 & fails>=5)",
+    "SUSPICIOUS": "failed_count_60s_max>=5 OR 3-9 fails in short window OR (unique_users_60s>=3 & fails>=3)",
+    "NORMAL": "otherwise (incl. low-fail / success sessions)",
+    "note": "Heuristic labels for research training \u2014 not human gold labels"
+  },
+  "sources": [
+    {
+      "id": "loghub_ssh_full",
+      "path": "data/external/corpora/loghub_ssh_full/SSH.log",
+      "events": 212391,
+      "lines": 655147,
+      "sha256": "89eee9e36c182722f9fadc6e5617a4818ffc66109e7e222b8f9e8b78fc3aa2f3",
+      "cite": "Zhu et al., Loghub (ISSRE 2023); Zenodo SSH.tar.gz",
+      "url": "https://zenodo.org/records/8196385/files/SSH.tar.gz?download=1"
+    },
+    {
+      "id": "loghub_openssh_2k",
+      "path": "data/external/corpora/loghub_openssh/OpenSSH_2k.log",
+      "events": 636,
+      "sha256": "1e4912727fa88245113d41b16a0cd25ceadba7f931e1c406542885b91254264f",
+      "cite": "logpai/loghub OpenSSH_2k",
+      "url": "https://github.com/logpai/loghub"
+    }
+  ],
+  "feature_order": [
+    "total_attempts",
+    "failed_attempts",
+    "successful_attempts",
+    "failure_ratio",
+    "duration_seconds",
+    "attempt_rate_per_second",
+    "failed_count_30s_max",
+    "failed_count_60s_max",
+    "failed_count_5m_max",
+    "success_count_5m_max",
+    "unique_users_total",
+    "unique_users_60s_max",
+    "has_multiple_attempts",
+    "min_inter_attempt_gap_seconds",
+    "mean_inter_attempt_gap_seconds",
+    "median_inter_attempt_gap_seconds",
+    "std_inter_attempt_gap_seconds",
+    "max_failure_streak",
+    "success_after_failure",
+    "failures_before_first_success",
+    "first_attempt_failed",
+    "last_attempt_success"
+  ]
+}

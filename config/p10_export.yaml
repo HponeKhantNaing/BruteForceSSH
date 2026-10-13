@@ -1,0 +1,60 @@
+# P10 — model export / versioning (packaging only; no retrain/reselect).
+schema_version: "1.0"
+export_version: "p10-v1"
+
+release:
+  model_id: random_forest_behavior
+  version: "1.1.0"
+  release_id: "rf-behavior-lab-v1.1.0"
+  channel: lab
+  maturity: CONTROLLED_LAB_VALIDATED
+
+source:
+  selected_model_from_p9: true
+  expected_model_id: random_forest_behavior
+  expected_representation: behavior_raw
+  p9_selection: data/evaluation/p9/model_selection.json
+  p9_selection_lock: data/evaluation/p9/model_selection.lock.json
+  p9_test_receipt: data/evaluation/p9/test_evaluation_receipt.json
+  p9_test_metrics: data/evaluation/p9/test_metrics_selected.json
+  p9_evaluation_report: data/evaluation/p9/evaluation_report.json
+  p9_leakage_audit: data/evaluation/p9/leakage_audit.json
+  p9_evaluation_manifest: data/evaluation/p9/evaluation_manifest.json
+  p8_training_manifest: data/modeling/p8/training_manifest.json
+  p8_artifact_checksums: data/modeling/p8/artifact_checksums.json
+  p8_split_manifest: data/modeling/p8/split_manifest.json
+  p8_feature_order: artifacts/p8/preprocessing/behavior_feature_order.json
+  p7_feature_manifest: data/features/p7/feature_manifest.json
+
+bundle:
+  include_tfidf: false
+  include_scaler: false
+  include_feature_order: true
+  create_archive: true
+  archive_format: tar.gz
+
+paths:
+  releases_root: artifacts/p10/releases
+  dist_root: artifacts/p10/dist
+
+validation:
+  strict_features: true
+  reject_non_finite: true
+  reject_unknown_features: true
+  require_byte_identity: true
+  expected_feature_count: 22
+  expected_class_set:
+    - NORMAL
+    - SUSPICIOUS
+    - BRUTE_FORCE
+
+window_policy:
+  short_seconds: 30
+  medium_seconds: 60
+  long_seconds: 300
+  boundary: inclusive_closed  # [t-W, t]
+  note: "Must match P7 inclusive closed windows for train-serving parity."
+
+context_policy:
+  training_unit: "one contextual run = one sample"
+  realtime_session_policy: "P11_DECISION_REQUIRED"

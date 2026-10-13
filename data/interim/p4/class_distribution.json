@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "unit": "contextual_run",
+  "label_policy_version": "p4-label-policy-v1",
+  "counts": {
+    "NORMAL": 30,
+    "SUSPICIOUS": 20,
+    "BRUTE_FORCE": 25
+  },
+  "shares": {
+    "NORMAL": 0.4,
+    "SUSPICIOUS": 0.2667,
+    "BRUTE_FORCE": 0.3333
+  },
+  "exclusions": {
+    "unknown_collection_role": 1,
+    "smoke_excluded": 7
+  },
+  "event_role_counts": {
+    "CONNECTION_EVENT": 840,
+    "AUTH_SUCCESS": 50,
+    "SESSION_OPEN": 50,
+    "OTHER_AUTH": 140,
+    "SESSION_CLOSE": 50,
+    "UNCLASSIFIED": 40,
+    "PAM_AUTH_FAILURE": 345,
+    "AUTH_FAILURE": 345
+  },
+  "note": "Counts are contextual run samples, not raw log line samples."
+}

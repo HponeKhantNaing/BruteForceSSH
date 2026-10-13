@@ -1,0 +1,181 @@
+{
+  "evaluation_version": "p9-v1",
+  "validation": {
+    "sample_count": 600,
+    "scenarios": {
+      "BRUTE_FORCE": "B04_FAILURE_BURST_THEN_SUCCESS",
+      "NORMAL": "N04_LOW_FREQUENCY_REPEAT",
+      "SUSPICIOUS": "S03_MULTI_USERNAME_LOW_RATE"
+    },
+    "all_model_metrics": {
+      "logistic_regression_hybrid": {
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.6666666666666666,
+        "macro_f1": 0.5555555555555555,
+        "minimum_class_recall": 0.0
+      },
+      "logistic_regression_text": {
+        "accuracy": 0.3333333333333333,
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.3333333333333333,
+        "minimum_class_recall": 0.0
+      },
+      "logistic_regression_behavior": {
+        "accuracy": 0.6666666666666666,
+        "balanced_accuracy": 0.6666666666666666,
+        "macro_f1": 0.5555555555555555,
+        "minimum_class_recall": 0.0
+      },
+      "linear_svm_hybrid": {
+        "accuracy": 0.3333333333333333,
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.2222222222222222,
+        "minimum_class_recall": 0.0
+      },
+      "multinomial_nb_text": {
+        "accuracy": 0.3333333333333333,
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.3333333333333333,
+        "minimum_class_recall": 0.0
+      },
+      "random_forest_behavior": {
+        "accuracy": 0.9966666666666667,
+        "balanced_accuracy": 0.9966666666666667,
+        "macro_f1": 0.9966665833312499,
+        "minimum_class_recall": 0.99
+      }
+    }
+  },
+  "selection": {
+    "selected_model": "random_forest_behavior",
+    "selection_reason": "highest validation macro_f1",
+    "selected_model_sha256": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d",
+    "primary_metric": "macro_f1",
+    "primary_metric_value": 0.9966665833312499
+  },
+  "test": {
+    "selected_model_only": true,
+    "sample_count": 600,
+    "scenarios": {
+      "BRUTE_FORCE": "B01_SHORT_FAILURE_BURST",
+      "NORMAL": "N03_SHORT_SESSION",
+      "SUSPICIOUS": "S01_FEW_REPEATED_FAILURES"
+    },
+    "metrics": {
+      "correct_count": 600,
+      "total_count": 600,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "minimum_class_recall": 1.0,
+      "per_class": {
+        "NORMAL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 200,
+          "correct": 200,
+          "correct_over_support": "200/200"
+        },
+        "SUSPICIOUS": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 200,
+          "correct": 200,
+          "correct_over_support": "200/200"
+        },
+        "BRUTE_FORCE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 200,
+          "correct": 200,
+          "correct_over_support": "200/200"
+        }
+      },
+      "confusion_matrix": {
+        "class_order": [
+          "NORMAL",
+          "SUSPICIOUS",
+          "BRUTE_FORCE"
+        ],
+        "matrix": [
+          [
+            200,
+            0,
+            0
+          ],
+          [
+            0,
+            200,
+            0
+          ],
+          [
+            0,
+            0,
+            200
+          ]
+        ],
+        "rows": "actual",
+        "columns": "predicted"
+      },
+      "normal_recall": 1.0,
+      "suspicious_recall": 1.0,
+      "brute_force_recall": 1.0,
+      "model_id": "random_forest_behavior",
+      "representation": "behavior_raw",
+      "correct_over_total": "600/600"
+    },
+    "confusion_matrix": {
+      "class_order": [
+        "NORMAL",
+        "SUSPICIOUS",
+        "BRUTE_FORCE"
+      ],
+      "matrix": [
+        [
+          200,
+          0,
+          0
+        ],
+        [
+          0,
+          200,
+          0
+        ],
+        [
+          0,
+          0,
+          200
+        ]
+      ],
+      "rows": "actual",
+      "columns": "predicted"
+    }
+  },
+  "limitations": {
+    "small_dataset": true,
+    "scenario_holdout": true,
+    "lab_bias": true,
+    "single_source": true,
+    "limited_user_diversity": true,
+    "one_error_accuracy_delta": 0.0667,
+    "one_class_error_recall_delta": 0.2
+  },
+  "receipt": {
+    "selected_model_id": "random_forest_behavior",
+    "selected_model_sha256": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d",
+    "selection_lock_sha256": "c335ed891af31d1986c6ffa339b0396ddad4979f86329a162a17f31f9c61d4ef",
+    "split_manifest_sha256": "cef4dda39dc0996117ccc1fcd4980c46849a15f031f361fc27a1e1644726d8a3",
+    "test_sample_count": 600,
+    "evaluated_at": "2026-10-08T13:21:09.950107+00:00",
+    "metrics_sha256": "81e0b03a4b9f4db66eb299483d54a8bf3eca3b968ab0490170ac63c416421c8e",
+    "evaluation_version": "p9-v1",
+    "models_evaluated_on_test": 1
+  },
+  "fit_calls": 0
+}

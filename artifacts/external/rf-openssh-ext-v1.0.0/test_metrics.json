@@ -1,0 +1,59 @@
+{
+  "split": "test",
+  "n": 2096,
+  "accuracy": 1.0,
+  "balanced_accuracy": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "macro_f1": 1.0,
+  "weighted_f1": 1.0,
+  "per_class": {
+    "NORMAL": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 1652
+    },
+    "SUSPICIOUS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 326
+    },
+    "BRUTE_FORCE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 118
+    }
+  },
+  "confusion_matrix": {
+    "class_order": [
+      "NORMAL",
+      "SUSPICIOUS",
+      "BRUTE_FORCE"
+    ],
+    "matrix": [
+      [
+        1652,
+        0,
+        0
+      ],
+      [
+        0,
+        326,
+        0
+      ],
+      [
+        0,
+        0,
+        118
+      ]
+    ]
+  },
+  "origin_counts": {
+    "lab": 800,
+    "external": 1296
+  },
+  "report": "              precision    recall  f1-score   support\n\n      NORMAL       1.00      1.00      1.00      1652\n  SUSPICIOUS       1.00      1.00      1.00       326\n BRUTE_FORCE       1.00      1.00      1.00       118\n\n    accuracy                           1.00      2096\n   macro avg       1.00      1.00      1.00      2096\nweighted avg       1.00      1.00      1.00      2096\n"
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "collection_phase": "P2",
+  "collection_batch_id": "P2_BASELINE_20260927T070000Z",
+  "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+  "run_id": "N04_LOW_FREQUENCY_REPEAT_20260927T065929Z_005",
+  "scenario_intent": "normal",
+  "description": "Two successful sessions with a deliberate low-frequency gap",
+  "started_at": "2026-09-27T06:59:29.685274+00:00",
+  "ended_at": "2026-09-27T06:59:41.058823+00:00",
+  "target_host": "127.0.0.1",
+  "target_port": 2222,
+  "service": "ssh",
+  "auth_method": "password",
+  "username_alias": "testuser",
+  "expected_behavior": [
+    "Accepted password",
+    "session opened",
+    "session closed"
+  ],
+  "actions": [
+    {
+      "type": "ssh_connect",
+      "result": "accepted",
+      "at": "2026-09-27T06:59:29.767794+00:00"
+    },
+    {
+      "type": "exec",
+      "command": "whoami",
+      "exit_code": 0,
+      "at": "2026-09-27T06:59:29.822096+00:00"
+    },
+    {
+      "type": "ssh_close",
+      "at": "2026-09-27T06:59:29.822338+00:00"
+    },
+    {
+      "type": "gap",
+      "seconds": 10.0,
+      "at": "2026-09-27T06:59:39.832020+00:00"
+    },
+    {
+      "type": "ssh_connect",
+      "result": "accepted",
+      "at": "2026-09-27T06:59:39.973171+00:00"
+    },
+    {
+      "type": "exec",
+      "command": "whoami",
+      "exit_code": 0,
+      "at": "2026-09-27T06:59:40.035853+00:00"
+    },
+    {
+      "type": "ssh_close",
+      "at": "2026-09-27T06:59:40.036074+00:00"
+    }
+  ],
+  "result": "success",
+  "raw_log_file": "auth.log",
+  "raw_log_line_count": 20,
+  "raw_log_sha256": "3622563342f5ba7b4b3cdef5fe62d1c8c7df9e8692204cd2642f1978b691a186",
+  "master_log_start_offset": 37955,
+  "master_log_end_offset": 40247,
+  "data_source": "local_lab",
+  "lab_container": "ai-security-ubuntu-lab",
+  "event_summary": {
+    "contains_accepted_password": true,
+    "contains_failed_password": false,
+    "contains_session_opened": true,
+    "contains_session_closed": true,
+    "accepted_password_count": 2,
+    "failed_password_count": 0,
+    "session_opened_count": 2,
+    "session_closed_count": 2
+  },
+  "notes": ""
+}

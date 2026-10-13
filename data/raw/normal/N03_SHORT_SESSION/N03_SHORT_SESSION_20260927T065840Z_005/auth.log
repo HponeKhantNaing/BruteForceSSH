@@ -1,0 +1,10 @@
+2026-09-27T06:58:40.304667+00:00 dd9a612cdd6b sshd[1158]: Connection from 172.18.0.1 port 64628 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:58:40.375949+00:00 dd9a612cdd6b sshd[1158]: Accepted password for testuser from 172.18.0.1 port 64628 ssh2
+2026-09-27T06:58:40.376790+00:00 dd9a612cdd6b sshd[1158]: pam_unix(sshd:session): session opened for user testuser(uid=1001) by testuser(uid=0)
+2026-09-27T06:58:40.380849+00:00 dd9a612cdd6b sshd[1158]: User child is on pid 1169
+2026-09-27T06:58:40.423912+00:00 dd9a612cdd6b sshd[1169]: Starting session: command for testuser from 172.18.0.1 port 64628 id 0
+2026-09-27T06:58:40.426926+00:00 dd9a612cdd6b sshd[1169]: Close session: user testuser from 172.18.0.1 port 64628 id 0
+2026-09-27T06:58:43.429657+00:00 dd9a612cdd6b sshd[1169]: Connection closed by 172.18.0.1 port 64628
+2026-09-27T06:58:43.429782+00:00 dd9a612cdd6b sshd[1169]: Transferred: sent 2480, received 1416 bytes
+2026-09-27T06:58:43.429795+00:00 dd9a612cdd6b sshd[1169]: Closing connection to 172.18.0.1 port 64628
+2026-09-27T06:58:43.430333+00:00 dd9a612cdd6b sshd[1158]: pam_unix(sshd:session): session closed for user testuser

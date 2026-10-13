@@ -1,0 +1,70 @@
+# P6 cleaning / preprocessing / canonical dataset build.
+schema_version: "1.0"
+preprocessing_version: "p6-v1"
+
+inputs:
+  run_labels: "data/interim/p4/run_labels.jsonl"
+  event_annotations: "data/interim/p4/event_annotations.jsonl"
+  excluded_runs: "data/interim/p4/excluded_runs.jsonl"
+  class_distribution: "data/interim/p4/class_distribution.json"
+  p5_registry: "data/external/p5/registry.json"
+
+output:
+  root: "data/processed/p6"
+
+external_supervised_data:
+  enabled: false
+  expected_dispositions:
+    loghub_openssh: EXTERNAL_ONLY
+    cicids2017: EXTERNAL_ONLY
+    cam_lds: EXTERNAL_ONLY
+    loghub_hdfs: REJECT
+
+normalization:
+  normalize_timestamp: true
+  normalize_ip_in_text: true
+  normalize_port_in_text: true
+  normalize_username_in_text: true
+  normalize_pid_in_text: true
+  normalize_hostname_in_text: true
+  lowercase_normalized_message: true
+  collapse_whitespace: true
+
+attempt_reconstruction:
+  enabled: true
+  method: "sshd_pid_time_event_correlation"
+
+noise_policy:
+  preserve_events: true
+  mark_noise_instead_of_delete: true
+  noise_roles:
+    - OTHER_AUTH
+    - UNCLASSIFIED
+  auth_relevant_roles:
+    - AUTH_SUCCESS
+    - AUTH_FAILURE
+    - PAM_AUTH_FAILURE
+    - INVALID_USER
+    - SESSION_OPEN
+    - SESSION_CLOSE
+    - CONNECTION_EVENT
+
+sequence_policy:
+  include_roles_in_canonical_text:
+    - AUTH_SUCCESS
+    - AUTH_FAILURE
+    - PAM_AUTH_FAILURE
+    - INVALID_USER
+    - SESSION_OPEN
+    - SESSION_CLOSE
+
+anonymization:
+  user_id_prefix: "USR_"
+  source_id_prefix: "SRC_"
+  zero_pad: 3
+  persist_reversible_mapping: false
+
+quality:
+  require_primary_candidate: true
+  expected_primary_runs: null  # discovered from P4; do not hardcode
+  severe_mismatch_excludes: false  # flag REVIEW_REQUIRED; do not auto-drop unless broken

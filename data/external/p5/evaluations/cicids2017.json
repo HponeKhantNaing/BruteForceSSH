@@ -1,0 +1,85 @@
+{
+  "dataset_id": "cicids2017",
+  "evaluated_at": "2026-09-27T08:00:00+00:00",
+  "official_source": "https://www.unb.ca/cic/datasets/ids-2017.html",
+  "publisher": "Canadian Institute for Cybersecurity, University of New Brunswick",
+  "data_domain": "network_flow",
+  "platform": "PCAP + CICFlowMeter CSV",
+  "representation": "network_flows_and_pcap",
+  "host_authentication_logs": false,
+  "labeled": true,
+  "label_type": "attack_category_on_flows",
+  "label_compatibility": "INCOMPATIBLE",
+  "ssh_relevance": "medium",
+  "auth_relevance": "low",
+  "ssh_attack_coverage": {
+    "documented": "SSH-Patator brute-force activity on Tuesday (per CIC-IDS2017 documentation)",
+    "representation": "network traffic / flow features labeled as SSH-Patator / Brute Force class in ML CSV",
+    "host_auth_log": false
+  },
+  "normal_coverage": "benign_network_traffic_not_ssh_auth_behavior",
+  "suspicious_coverage": "none",
+  "brute_force_coverage": "ssh_patator_network_flows",
+  "sequence_context": {
+    "timestamps": "present_in_flows",
+    "ordering": "flow_records",
+    "session_grouping": "flow_based",
+    "source_identity": "src_dst_ip_ports"
+  },
+  "schema_vs_project": {
+    "scenario_id": "absent",
+    "run_id": "absent",
+    "timestamp": "flow_timestamps",
+    "source": "src_ip",
+    "username": "absent",
+    "raw_log": "absent_host_auth_log",
+    "event_role": "absent",
+    "contextual_target": "incompatible_flow_labels"
+  },
+  "domain_mismatches": {
+    "HOST_LOG_VS_NETWORK_FLOW": "HIGH",
+    "LABEL_SEMANTICS": "HIGH",
+    "TIMESTAMP_CONTEXT": "MEDIUM",
+    "SCHEMA": "HIGH",
+    "OPERATING_SYSTEM": "MEDIUM",
+    "AUTH_PROTOCOL": "MEDIUM",
+    "COLLECTION_ENVIRONMENT": "HIGH",
+    "CLASS_COVERAGE": "HIGH"
+  },
+  "leakage_risks": {
+    "fixed_source_ip": "HIGH — attacker/victim IPs often fixed in lab scenarios",
+    "time_window_shortcut": "HIGH — attacks scheduled in known day/time windows",
+    "scenario_leakage": "MEDIUM — pre-generated labeled CSVs encourage identity shortcuts",
+    "duplicate_data": "KNOWN_ISSUE_IN_LITERATURE — duplicate/correlated flows discussed in secondary analyses; verify if used later",
+    "label_leakage": "MEDIUM — label tied to attack schedule and hosts"
+  },
+  "license": {
+    "status": "ACADEMIC_RESEARCH_VIA_CIC_TERMS",
+    "redistribution": "not_assumed_permitted",
+    "citation_required": true
+  },
+  "download": {
+    "status": "METADATA_ONLY",
+    "download_approved": false,
+    "approx_size": "multi_GB",
+    "reason": "Large PCAP/CSV corpus; network-flow domain mismatch already decisive against direct merge; full download not justified for P5"
+  },
+  "sample_inspection": {
+    "mode": "official_documentation",
+    "sample_path": "data/external/p5/samples/cicids2017_format_notes.md",
+    "notes": "Official CIC page documents PCAP and machine-learning CSV with attack labels including SSH-Patator. Not host-side auth.log."
+  },
+  "forbidden_practices_checked": {
+    "attack_to_brute_force_shortcut": false,
+    "direct_row_concatenation_with_p4": false
+  },
+  "decision": "EXTERNAL_LABELED_EVALUATION",
+  "p6_disposition": "EXTERNAL_ONLY",
+  "planned_uses": [
+    "external network-domain reference",
+    "attack-timing conceptual comparison",
+    "future multimodal extension (not V1 host-log model)",
+    "NOT direct merge into P4/P6 host-log training table"
+  ],
+  "direct_merge": false
+}

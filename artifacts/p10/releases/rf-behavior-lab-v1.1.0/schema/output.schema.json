@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "P10PredictionOutput",
+  "type": "object",
+  "required": [
+    "model_version",
+    "predicted_label",
+    "class_probabilities",
+    "probability_type"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "model_version": {
+      "type": "string",
+      "const": "rf-behavior-lab-v1.1.0"
+    },
+    "predicted_label": {
+      "type": "string",
+      "enum": [
+        "BRUTE_FORCE",
+        "NORMAL",
+        "SUSPICIOUS"
+      ]
+    },
+    "class_probabilities": {
+      "type": "object",
+      "required": [
+        "BRUTE_FORCE",
+        "NORMAL",
+        "SUSPICIOUS"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "NORMAL": {
+          "type": "number"
+        },
+        "SUSPICIOUS": {
+          "type": "number"
+        },
+        "BRUTE_FORCE": {
+          "type": "number"
+        }
+      }
+    },
+    "probability_type": {
+      "type": "string",
+      "const": "uncalibrated"
+    }
+  },
+  "example": {
+    "model_version": "rf-behavior-lab-v1.1.0",
+    "predicted_label": "NORMAL",
+    "class_probabilities": {
+      "NORMAL": 0.0,
+      "SUSPICIOUS": 0.0,
+      "BRUTE_FORCE": 0.0
+    },
+    "probability_type": "uncalibrated"
+  }
+}

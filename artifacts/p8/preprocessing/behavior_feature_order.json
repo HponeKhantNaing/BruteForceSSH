@@ -1,0 +1,26 @@
+{
+  "feature_order": [
+    "total_attempts",
+    "failed_attempts",
+    "successful_attempts",
+    "failure_ratio",
+    "duration_seconds",
+    "attempt_rate_per_second",
+    "failed_count_30s_max",
+    "failed_count_60s_max",
+    "failed_count_5m_max",
+    "success_count_5m_max",
+    "unique_users_total",
+    "unique_users_60s_max",
+    "has_multiple_attempts",
+    "min_inter_attempt_gap_seconds",
+    "mean_inter_attempt_gap_seconds",
+    "median_inter_attempt_gap_seconds",
+    "std_inter_attempt_gap_seconds",
+    "max_failure_streak",
+    "success_after_failure",
+    "failures_before_first_success",
+    "first_attempt_failed",
+    "last_attempt_success"
+  ]
+}

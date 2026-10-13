@@ -1,0 +1,64 @@
+# P9 evaluation + validation-based selection + locked final TEST.
+# Selection criteria are FIXED before metrics are used.
+
+schema_version: "1.0"
+evaluation_version: "p9-v1"
+
+inputs:
+  split_manifest: "data/modeling/p8/split_manifest.json"
+  training_manifest: "data/modeling/p8/training_manifest.json"
+  artifact_checksums: "data/modeling/p8/artifact_checksums.json"
+  behavioral_features: "data/features/p7/behavioral_features.jsonl"
+  text_samples: "data/features/p7/text_samples.jsonl"
+  targets: "data/features/p7/targets.jsonl"
+  tfidf: "artifacts/p8/preprocessing/tfidf_vectorizer.joblib"
+  scaler: "artifacts/p8/preprocessing/behavior_scaler.joblib"
+  feature_order: "artifacts/p8/preprocessing/behavior_feature_order.json"
+  models_dir: "artifacts/p8/models"
+
+output:
+  root: "data/evaluation/p9"
+
+expected_split_sha256_canonical: "cef4dda39dc0996117ccc1fcd4980c46849a15f031f361fc27a1e1644726d8a3"
+
+class_order:
+  - NORMAL
+  - SUSPICIOUS
+  - BRUTE_FORCE
+
+candidates:
+  - logistic_regression_hybrid
+  - logistic_regression_text
+  - logistic_regression_behavior
+  - linear_svm_hybrid
+  - multinomial_nb_text
+  - random_forest_behavior
+
+selection:
+  partition: validation
+  primary_metric: macro_f1
+  tie_breakers:
+    - minimum_class_recall
+    - balanced_accuracy
+    - accuracy
+  exact_tie_preference:
+    - logistic_regression_hybrid
+    - logistic_regression_behavior
+    - logistic_regression_text
+    - linear_svm_hybrid
+    - multinomial_nb_text
+    - random_forest_behavior
+
+test:
+  selected_model_only: true
+  allow_repeat_test_evaluation: true
+
+metrics:
+  accuracy: true
+  balanced_accuracy: true
+  macro_precision: true
+  macro_recall: true
+  macro_f1: true
+  weighted_f1: true
+  per_class: true
+  confusion_matrix: true

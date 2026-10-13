@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "collection_phase": "P3",
+  "collection_batch_id": "P3_BASELINE_20260927T071200Z",
+  "scenario_id": "B05_TWO_SMALL_BURSTS",
+  "run_id": "B05_TWO_SMALL_BURSTS_20260927T073516Z_001",
+  "scenario_intent": "brute_force",
+  "description": "Two small failure bursts separated by a pause",
+  "started_at": "2026-09-27T07:35:16.685004+00:00",
+  "ended_at": "2026-09-27T07:36:04.635020+00:00",
+  "target_host": "127.0.0.1",
+  "target_port": 2222,
+  "service": "ssh",
+  "auth_method": "password",
+  "data_source": "local_lab",
+  "lab_container": "ai-security-ubuntu-lab",
+  "configured_attempt_count": 10,
+  "executed_attempt_count": 10,
+  "planned_failed_attempts": 10,
+  "actual_failed_attempts": 10,
+  "planned_successes": 0,
+  "actual_successes": 0,
+  "configured_user_count": 1,
+  "configured_usernames": [
+    "testuser"
+  ],
+  "configured_gap_seconds": 0.8,
+  "observed_duration_seconds": 46.928,
+  "safety_ceilings": {
+    "MAX_AUTH_ATTEMPTS_PER_RUN": 30,
+    "MAX_USERNAMES_PER_RUN": 6,
+    "MAX_SCENARIO_SECONDS": 120,
+    "MIN_INTER_ATTEMPT_DELAY": 0.25
+  },
+  "actions": [
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 0,
+      "at": "2026-09-27T07:35:20.239746+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 0,
+      "at": "2026-09-27T07:35:22.839581+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 0,
+      "at": "2026-09-27T07:35:25.438685+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 0,
+      "at": "2026-09-27T07:35:29.800789+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 0,
+      "at": "2026-09-27T07:35:34.156227+00:00"
+    },
+    {
+      "type": "between_bursts_pause",
+      "seconds": 12.0,
+      "at": "2026-09-27T07:35:46.160975+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 1,
+      "at": "2026-09-27T07:35:47.957253+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 1,
+      "at": "2026-09-27T07:35:52.301220+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 1,
+      "at": "2026-09-27T07:35:56.657478+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 1,
+      "at": "2026-09-27T07:35:59.258216+00:00"
+    },
+    {
+      "type": "ssh_auth_attempt",
+      "username_alias": "testuser",
+      "intended": "failure",
+      "outcome": "failed",
+      "wrong_password_index": 1,
+      "at": "2026-09-27T07:36:03.614115+00:00"
+    }
+  ],
+  "result": "success",
+  "raw_log_file": "auth.log",
+  "raw_log_line_count": 40,
+  "raw_log_sha256": "29534de0e0180f40f9bcb11a37076c93b8c9dd6b6a07771a63b9f0b0ec1303e2",
+  "master_log_start_offset": 258059,
+  "master_log_end_offset": 263659,
+  "event_summary": {
+    "contains_accepted_password": false,
+    "contains_failed_password": true,
+    "contains_session_opened": false,
+    "contains_session_closed": false,
+    "accepted_password_count": 0,
+    "failed_password_count": 10,
+    "session_opened_count": 0,
+    "session_closed_count": 0,
+    "auth_failure_event_count": 10,
+    "accepted_event_count": 0,
+    "executed_failed_attempts": 10,
+    "executed_success_attempts": 0
+  },
+  "notes": ""
+}

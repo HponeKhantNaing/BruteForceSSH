@@ -1,0 +1,32 @@
+{
+  "release_id": "rf-behavior-lab-v1.0.0",
+  "model_id": "random_forest_behavior",
+  "model_version": "1.0.0",
+  "release_channel": "lab",
+  "maturity": "CONTROLLED_LAB_VALIDATED",
+  "model_file": "model/random_forest_behavior.joblib",
+  "model_sha256": "6176bded24585a1599ee7644cbe15eb426fb3cd7ea803c4ed5f5f038cbd4ce69",
+  "representation": "behavior_raw",
+  "feature_contract": "schema/feature_contract.json",
+  "feature_count": 22,
+  "feature_order_hash": "98041f0723b059a348be80b82f1726753506d44b8e532ba8063aaf06706d477f",
+  "class_labels": [
+    "NORMAL",
+    "SUSPICIOUS",
+    "BRUTE_FORCE"
+  ],
+  "model_class_order": [
+    "BRUTE_FORCE",
+    "NORMAL",
+    "SUSPICIOUS"
+  ],
+  "tfidf_required": false,
+  "scaler_required": false,
+  "p8_training_version": "p8-v1",
+  "p9_evaluation_version": "p9-v1",
+  "selection_lock_hash": "7493454d1f937e18f82effe5bdc79f42e0f3760c87ba67aff174f658867ee582",
+  "test_receipt_hash": "71248ace741c28eccafae1ccf9fe68cb024a2c8b18ada2e0bd126240c3395882",
+  "created_at": "2026-09-27T09:48:39.359491+00:00",
+  "byte_identity": true,
+  "source_artifact_sha256": "6176bded24585a1599ee7644cbe15eb426fb3cd7ea803c4ed5f5f038cbd4ce69"
+}

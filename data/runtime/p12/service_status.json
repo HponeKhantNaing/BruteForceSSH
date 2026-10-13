@@ -1,0 +1,28 @@
+{
+  "running": true,
+  "started_at": "2026-10-08T13:55:31.704228+00:00",
+  "health": "HEALTHY",
+  "discord_status": "ENABLED",
+  "predictions_ingested": 45,
+  "alerts_created": 6,
+  "alerts_sent": 7,
+  "errors": 0,
+  "last_ingest": {
+    "read": 0,
+    "inserted": 0,
+    "errors": 0
+  },
+  "counts": {
+    "predictions": 62,
+    "by_label": {
+      "BRUTE_FORCE": 27,
+      "NORMAL": 9,
+      "SUSPICIOUS": 26
+    },
+    "alerts": 62,
+    "alerts_sent": 7,
+    "alerts_pending": 0,
+    "alerts_failed": 0
+  },
+  "updated_at": "2026-10-08T14:05:53.739371+00:00"
+}

@@ -1,0 +1,14 @@
+2026-09-27T07:01:16.709593+00:00 dd9a612cdd6b sshd[1708]: Connection from 172.18.0.1 port 64898 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:01:16.758370+00:00 dd9a612cdd6b sshd[1708]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:01:18.297573+00:00 dd9a612cdd6b sshd[1708]: Failed password for testuser from 172.18.0.1 port 64898 ssh2
+2026-09-27T07:01:18.493200+00:00 dd9a612cdd6b sshd[1708]: Connection closed by authenticating user testuser 172.18.0.1 port 64898 [preauth]
+2026-09-27T07:01:23.512676+00:00 dd9a612cdd6b sshd[1717]: Connection from 172.18.0.1 port 55968 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:01:23.586864+00:00 dd9a612cdd6b sshd[1717]: Accepted password for testuser from 172.18.0.1 port 55968 ssh2
+2026-09-27T07:01:23.587708+00:00 dd9a612cdd6b sshd[1717]: pam_unix(sshd:session): session opened for user testuser(uid=1001) by testuser(uid=0)
+2026-09-27T07:01:23.591959+00:00 dd9a612cdd6b sshd[1717]: User child is on pid 1728
+2026-09-27T07:01:23.637402+00:00 dd9a612cdd6b sshd[1728]: Starting session: command for testuser from 172.18.0.1 port 55968 id 0
+2026-09-27T07:01:23.640097+00:00 dd9a612cdd6b sshd[1728]: Connection closed by 172.18.0.1 port 55968
+2026-09-27T07:01:23.640117+00:00 dd9a612cdd6b sshd[1728]: Close session: user testuser from 172.18.0.1 port 55968 id 0
+2026-09-27T07:01:23.640127+00:00 dd9a612cdd6b sshd[1728]: Transferred: sent 2464, received 1400 bytes
+2026-09-27T07:01:23.640132+00:00 dd9a612cdd6b sshd[1728]: Closing connection to 172.18.0.1 port 55968
+2026-09-27T07:01:23.640338+00:00 dd9a612cdd6b sshd[1717]: pam_unix(sshd:session): session closed for user testuser

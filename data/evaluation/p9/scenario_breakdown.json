@@ -1,0 +1,235 @@
+{
+  "validation": {
+    "logistic_regression_hybrid": {
+      "B04_FAILURE_BURST_THEN_SUCCESS": {
+        "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+        "true_class": "BRUTE_FORCE",
+        "correct": 0,
+        "total": 200,
+        "predicted_labels": {
+          "SUSPICIOUS": 200
+        },
+        "accuracy": 0.0
+      },
+      "N04_LOW_FREQUENCY_REPEAT": {
+        "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+        "true_class": "NORMAL",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "NORMAL": 200
+        },
+        "accuracy": 1.0
+      },
+      "S03_MULTI_USERNAME_LOW_RATE": {
+        "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+        "true_class": "SUSPICIOUS",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "SUSPICIOUS": 200
+        },
+        "accuracy": 1.0
+      }
+    },
+    "logistic_regression_text": {
+      "B04_FAILURE_BURST_THEN_SUCCESS": {
+        "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+        "true_class": "BRUTE_FORCE",
+        "correct": 0,
+        "total": 200,
+        "predicted_labels": {
+          "SUSPICIOUS": 200
+        },
+        "accuracy": 0.0
+      },
+      "N04_LOW_FREQUENCY_REPEAT": {
+        "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+        "true_class": "NORMAL",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "NORMAL": 200
+        },
+        "accuracy": 1.0
+      },
+      "S03_MULTI_USERNAME_LOW_RATE": {
+        "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+        "true_class": "SUSPICIOUS",
+        "correct": 0,
+        "total": 200,
+        "predicted_labels": {
+          "BRUTE_FORCE": 200
+        },
+        "accuracy": 0.0
+      }
+    },
+    "logistic_regression_behavior": {
+      "B04_FAILURE_BURST_THEN_SUCCESS": {
+        "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+        "true_class": "BRUTE_FORCE",
+        "correct": 0,
+        "total": 200,
+        "predicted_labels": {
+          "SUSPICIOUS": 200
+        },
+        "accuracy": 0.0
+      },
+      "N04_LOW_FREQUENCY_REPEAT": {
+        "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+        "true_class": "NORMAL",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "NORMAL": 200
+        },
+        "accuracy": 1.0
+      },
+      "S03_MULTI_USERNAME_LOW_RATE": {
+        "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+        "true_class": "SUSPICIOUS",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "SUSPICIOUS": 200
+        },
+        "accuracy": 1.0
+      }
+    },
+    "linear_svm_hybrid": {
+      "B04_FAILURE_BURST_THEN_SUCCESS": {
+        "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+        "true_class": "BRUTE_FORCE",
+        "correct": 0,
+        "total": 200,
+        "predicted_labels": {
+          "SUSPICIOUS": 200
+        },
+        "accuracy": 0.0
+      },
+      "N04_LOW_FREQUENCY_REPEAT": {
+        "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+        "true_class": "NORMAL",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "NORMAL": 200
+        },
+        "accuracy": 1.0
+      },
+      "S03_MULTI_USERNAME_LOW_RATE": {
+        "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+        "true_class": "SUSPICIOUS",
+        "correct": 0,
+        "total": 200,
+        "predicted_labels": {
+          "NORMAL": 200
+        },
+        "accuracy": 0.0
+      }
+    },
+    "multinomial_nb_text": {
+      "B04_FAILURE_BURST_THEN_SUCCESS": {
+        "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+        "true_class": "BRUTE_FORCE",
+        "correct": 0,
+        "total": 200,
+        "predicted_labels": {
+          "SUSPICIOUS": 200
+        },
+        "accuracy": 0.0
+      },
+      "N04_LOW_FREQUENCY_REPEAT": {
+        "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+        "true_class": "NORMAL",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "NORMAL": 200
+        },
+        "accuracy": 1.0
+      },
+      "S03_MULTI_USERNAME_LOW_RATE": {
+        "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+        "true_class": "SUSPICIOUS",
+        "correct": 0,
+        "total": 200,
+        "predicted_labels": {
+          "BRUTE_FORCE": 200
+        },
+        "accuracy": 0.0
+      }
+    },
+    "random_forest_behavior": {
+      "B04_FAILURE_BURST_THEN_SUCCESS": {
+        "scenario_id": "B04_FAILURE_BURST_THEN_SUCCESS",
+        "true_class": "BRUTE_FORCE",
+        "correct": 198,
+        "total": 200,
+        "predicted_labels": {
+          "BRUTE_FORCE": 198,
+          "SUSPICIOUS": 2
+        },
+        "accuracy": 0.99
+      },
+      "N04_LOW_FREQUENCY_REPEAT": {
+        "scenario_id": "N04_LOW_FREQUENCY_REPEAT",
+        "true_class": "NORMAL",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "NORMAL": 200
+        },
+        "accuracy": 1.0
+      },
+      "S03_MULTI_USERNAME_LOW_RATE": {
+        "scenario_id": "S03_MULTI_USERNAME_LOW_RATE",
+        "true_class": "SUSPICIOUS",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "SUSPICIOUS": 200
+        },
+        "accuracy": 1.0
+      }
+    }
+  },
+  "test": {
+    "selected_model_id": "random_forest_behavior",
+    "scenarios": {
+      "B01_SHORT_FAILURE_BURST": {
+        "scenario_id": "B01_SHORT_FAILURE_BURST",
+        "true_class": "BRUTE_FORCE",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "BRUTE_FORCE": 200
+        },
+        "misclassifications": [],
+        "accuracy": 1.0
+      },
+      "N03_SHORT_SESSION": {
+        "scenario_id": "N03_SHORT_SESSION",
+        "true_class": "NORMAL",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "NORMAL": 200
+        },
+        "misclassifications": [],
+        "accuracy": 1.0
+      },
+      "S01_FEW_REPEATED_FAILURES": {
+        "scenario_id": "S01_FEW_REPEATED_FAILURES",
+        "true_class": "SUSPICIOUS",
+        "correct": 200,
+        "total": 200,
+        "predicted_labels": {
+          "SUSPICIOUS": 200
+        },
+        "misclassifications": [],
+        "accuracy": 1.0
+      }
+    }
+  }
+}

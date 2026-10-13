@@ -1,0 +1,96 @@
+{
+  "split_version": "p8-split-v1",
+  "split_manifest_sha256": "cef4dda39dc0996117ccc1fcd4980c46849a15f031f361fc27a1e1644726d8a3",
+  "group_key": "scenario_id",
+  "random_seed": 42,
+  "train_samples": 1800,
+  "validation_samples": 600,
+  "test_samples": 600,
+  "train_class_counts": {
+    "BRUTE_FORCE": 600,
+    "NORMAL": 800,
+    "SUSPICIOUS": 400
+  },
+  "validation_class_counts": {
+    "BRUTE_FORCE": 200,
+    "NORMAL": 200,
+    "SUSPICIOUS": 200
+  },
+  "test_class_counts": {
+    "BRUTE_FORCE": 200,
+    "NORMAL": 200,
+    "SUSPICIOUS": 200
+  },
+  "train_scenarios": [
+    "B02_SUSTAINED_FAILURE_WINDOW",
+    "B03_MULTI_USERNAME_BURST",
+    "B05_TWO_SMALL_BURSTS",
+    "N01_SINGLE_SUCCESS",
+    "N02_COMMAND_SESSION",
+    "N05_SESSION_RECONNECT",
+    "N06_ISOLATED_PASSWORD_MISTAKE",
+    "S02_FAILURES_THEN_SUCCESS",
+    "S04_SMALL_FAILURE_CLUSTER"
+  ],
+  "validation_scenarios": [
+    "B04_FAILURE_BURST_THEN_SUCCESS",
+    "N04_LOW_FREQUENCY_REPEAT",
+    "S03_MULTI_USERNAME_LOW_RATE"
+  ],
+  "test_scenarios": [
+    "B01_SHORT_FAILURE_BURST",
+    "N03_SHORT_SESSION",
+    "S01_FEW_REPEATED_FAILURES"
+  ],
+  "scenario_overlap": 0,
+  "sample_overlap": 0,
+  "scenario_audit": {
+    "unique_scenario_ids": 15,
+    "scenario_ids_per_target": {
+      "BRUTE_FORCE": [
+        "B01_SHORT_FAILURE_BURST",
+        "B02_SUSTAINED_FAILURE_WINDOW",
+        "B03_MULTI_USERNAME_BURST",
+        "B04_FAILURE_BURST_THEN_SUCCESS",
+        "B05_TWO_SMALL_BURSTS"
+      ],
+      "NORMAL": [
+        "N01_SINGLE_SUCCESS",
+        "N02_COMMAND_SESSION",
+        "N03_SHORT_SESSION",
+        "N04_LOW_FREQUENCY_REPEAT",
+        "N05_SESSION_RECONNECT",
+        "N06_ISOLATED_PASSWORD_MISTAKE"
+      ],
+      "SUSPICIOUS": [
+        "S01_FEW_REPEATED_FAILURES",
+        "S02_FAILURES_THEN_SUCCESS",
+        "S03_MULTI_USERNAME_LOW_RATE",
+        "S04_SMALL_FAILURE_CLUSTER"
+      ]
+    },
+    "runs_per_scenario": {
+      "B01_SHORT_FAILURE_BURST": 200,
+      "B02_SUSTAINED_FAILURE_WINDOW": 200,
+      "B03_MULTI_USERNAME_BURST": 200,
+      "B04_FAILURE_BURST_THEN_SUCCESS": 200,
+      "B05_TWO_SMALL_BURSTS": 200,
+      "N01_SINGLE_SUCCESS": 200,
+      "N02_COMMAND_SESSION": 200,
+      "N03_SHORT_SESSION": 200,
+      "N04_LOW_FREQUENCY_REPEAT": 200,
+      "N05_SESSION_RECONNECT": 200,
+      "N06_ISOLATED_PASSWORD_MISTAKE": 200,
+      "S01_FEW_REPEATED_FAILURES": 200,
+      "S02_FAILURES_THEN_SUCCESS": 200,
+      "S03_MULTI_USERNAME_LOW_RATE": 200,
+      "S04_SMALL_FAILURE_CLUSTER": 200
+    },
+    "unique_batch_groups": 2,
+    "batch_counts": {
+      "P3_BASELINE_20260927T071200Z": 1800,
+      "P2_BASELINE_20260927T070000Z": 1200
+    },
+    "scenario_single_label_ok": true
+  }
+}

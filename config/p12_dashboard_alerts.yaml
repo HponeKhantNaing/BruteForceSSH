@@ -1,0 +1,52 @@
+# P12 — dashboard + Discord alerts (consumes P11 structured outputs only).
+schema_version: "1.0"
+p12_version: "p12-v1"
+
+p11:
+  predictions_path: "data/runtime/p11/predictions.jsonl"
+  runtime_events_path: "data/runtime/p11/runtime_events.jsonl"
+  status_path: "data/runtime/p11/status.json"
+  stale_after_seconds: 120
+
+ingestion:
+  poll_interval_ms: 250
+  first_start_policy: "backfill_no_alert"
+
+dashboard:
+  host: "127.0.0.1"
+  port: 8080
+  refresh_interval_ms: 1000
+  history_limit: 500
+  max_api_limit: 500
+
+alert_policy:
+  version: "p12-alert-v1"
+  discord_mode: "final_non_normal"
+  cooldown_seconds: 60
+  early_brute_force:
+    enabled: true
+    consecutive_prefix_required: 2
+
+discord:
+  enabled_env_var: "P12_DISCORD_ENABLED"
+  webhook_env_var: "DISCORD_WEBHOOK_URL"
+  timeout_seconds: 5
+  max_attempts: 3
+  retry_backoff_seconds: [1, 2, 4]
+
+storage:
+  sqlite_path: "data/runtime/p12/p12_state.sqlite3"
+  service_status_path: "data/runtime/p12/service_status.json"
+
+privacy:
+  allow_raw_ip: false
+  allow_raw_username: false
+  allow_raw_log_line: false
+
+model_info:
+  release_id: "rf-behavior-lab-v1.1.0"
+  model: "random_forest_behavior"
+  representation: "behavior_raw"
+  feature_count: 22
+  maturity: "CONTROLLED_LAB_VALIDATED"
+  probability_type: "uncalibrated"

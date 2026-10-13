@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-09-27T08:00:00+00:00",
+  "phase": "P5",
+  "snapshots": [
+    {
+      "dataset_id": "loghub_openssh",
+      "official_url": "https://github.com/logpai/loghub",
+      "alternate_url": "https://doi.org/10.5281/zenodo.1144100",
+      "access_date": "2026-09-27",
+      "version_identifier": "Loghub OpenSSH subset (Zenodo 1144100 family)",
+      "publication_year": 2018,
+      "collection_year_note": "OpenSSH logs collected earlier; Loghub aggregation published ~2018+"
+    },
+    {
+      "dataset_id": "cicids2017",
+      "official_url": "https://www.unb.ca/cic/datasets/ids-2017.html",
+      "access_date": "2026-09-27",
+      "version_identifier": "CIC-IDS2017 (UNB CIC official page)",
+      "publication_year": 2018,
+      "collection_year": 2017
+    },
+    {
+      "dataset_id": "cam_lds",
+      "official_url": "https://zenodo.org/records/10124280",
+      "doi": "10.5281/zenodo.10124280",
+      "access_date": "2026-09-27",
+      "version_identifier": "Zenodo record 10124280",
+      "publication_year": 2023
+    },
+    {
+      "dataset_id": "loghub_hdfs",
+      "official_url": "https://github.com/logpai/loghub",
+      "access_date": "2026-09-27",
+      "version_identifier": "Loghub HDFS subset",
+      "note": "Rejected domain example; not acquired"
+    }
+  ]
+}

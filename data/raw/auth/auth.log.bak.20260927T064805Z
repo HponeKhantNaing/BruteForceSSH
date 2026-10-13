@@ -1,0 +1,34 @@
+2026-09-27T06:46:10.233737+00:00 e5b7e341ab1e sshd[168]: Connection from 127.0.0.1 port 50034 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:46:10.233797+00:00 e5b7e341ab1e sshd[168]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:46:10.233814+00:00 e5b7e341ab1e sshd[168]: error: send_error: write: Broken pipe
+2026-09-27T06:46:10.233822+00:00 e5b7e341ab1e sshd[168]: banner exchange: Connection from 127.0.0.1 port 50034: invalid format
+2026-09-27T06:46:15.288001+00:00 e5b7e341ab1e sshd[176]: Connection from 127.0.0.1 port 50036 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:46:15.288064+00:00 e5b7e341ab1e sshd[176]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:46:15.288086+00:00 e5b7e341ab1e sshd[176]: error: send_error: write: Broken pipe
+2026-09-27T06:46:15.288112+00:00 e5b7e341ab1e sshd[176]: banner exchange: Connection from 127.0.0.1 port 50036: invalid format
+2026-09-27T06:46:20.322510+00:00 e5b7e341ab1e sshd[184]: Connection from 127.0.0.1 port 51044 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:46:20.322546+00:00 e5b7e341ab1e sshd[184]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:46:20.322555+00:00 e5b7e341ab1e sshd[184]: error: send_error: write: Broken pipe
+2026-09-27T06:46:20.322562+00:00 e5b7e341ab1e sshd[184]: banner exchange: Connection from 127.0.0.1 port 51044: invalid format
+2026-09-27T06:46:25.386233+00:00 e5b7e341ab1e sshd[192]: Connection from 127.0.0.1 port 51060 on 127.0.0.1 port 22 rdomain ""
+2026-09-27T06:46:25.386300+00:00 e5b7e341ab1e sshd[192]: kex_exchange_identification: client sent invalid protocol identifier ""
+2026-09-27T06:46:25.386312+00:00 e5b7e341ab1e sshd[192]: error: send_error: write: Broken pipe
+2026-09-27T06:46:25.386327+00:00 e5b7e341ab1e sshd[192]: banner exchange: Connection from 127.0.0.1 port 51060: invalid format
+2026-09-27T06:46:29.442393+00:00 e5b7e341ab1e sshd[1]: Received signal 15; terminating.
+2026-09-27T06:46:30.842258+00:00 dd9a612cdd6b sshd[1]: Server listening on 0.0.0.0 port 22.
+2026-09-27T06:46:30.842308+00:00 dd9a612cdd6b sshd[1]: Server listening on :: port 22.
+2026-09-27T06:46:40.103714+00:00 dd9a612cdd6b sshd[47]: Connection from 172.18.0.1 port 59804 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:47:39.023380+00:00 dd9a612cdd6b sshd[126]: Connection from 172.18.0.1 port 55644 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:47:39.338310+00:00 dd9a612cdd6b sshd[126]: kex_exchange_identification: client sent invalid protocol identifier "GET / HTTP/1.1"
+2026-09-27T06:47:39.338623+00:00 dd9a612cdd6b sshd[126]: banner exchange: Connection from 172.18.0.1 port 55644: invalid format
+2026-09-27T06:47:39.365794+00:00 dd9a612cdd6b sshd[127]: Connection from 172.18.0.1 port 55908 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:47:39.365903+00:00 dd9a612cdd6b sshd[127]: kex_exchange_identification: client sent invalid protocol identifier "GET / HTTP/1.1"
+2026-09-27T06:47:39.365927+00:00 dd9a612cdd6b sshd[127]: banner exchange: Connection from 172.18.0.1 port 55908: invalid format
+2026-09-27T06:47:39.372920+00:00 dd9a612cdd6b sshd[128]: Connection from 172.18.0.1 port 55922 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:47:39.373063+00:00 dd9a612cdd6b sshd[128]: kex_exchange_identification: client sent invalid protocol identifier "GET / HTTP/1.1"
+2026-09-27T06:47:39.373106+00:00 dd9a612cdd6b sshd[128]: banner exchange: Connection from 172.18.0.1 port 55922: invalid format
+2026-09-27T06:47:39.380222+00:00 dd9a612cdd6b sshd[129]: Connection from 172.18.0.1 port 55938 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:47:39.380260+00:00 dd9a612cdd6b sshd[129]: kex_exchange_identification: client sent invalid protocol identifier "GET / HTTP/1.1"
+2026-09-27T06:47:39.380281+00:00 dd9a612cdd6b sshd[129]: banner exchange: Connection from 172.18.0.1 port 55938: invalid format
+2026-09-27T06:47:41.333230+00:00 dd9a612cdd6b sshd[137]: Connection from 172.18.0.1 port 55940 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:47:58.890744+00:00 dd9a612cdd6b sshd[137]: Connection closed by authenticating user testuser 172.18.0.1 port 55940 [preauth]

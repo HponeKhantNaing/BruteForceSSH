@@ -1,0 +1,12 @@
+{
+  "split_manifest": "3faa779acb9bb783bd4c0f3175c80dc6f412faa79c1161e616867fd992c3d5f5",
+  "tfidf_vectorizer": "1ee2b606e3885c133ca4e57a477552bafff4c715150d0d64436eb4fdbc1a69fe",
+  "behavior_scaler": "c234237a822b5b6603437d9a7d5ff13b80e02527199a7f85e5b89800ba3ee30d",
+  "behavior_feature_order": "f31a7336778bca15db8ae93872ca913fb5820a1fa72bed35968b9fe9eb070f79",
+  "logistic_regression_hybrid": "680dcf7e54f7c6ed4291ba766953525af63fee62b3c43b4f68d3318b8a12cca7",
+  "logistic_regression_text": "76eb7f0048d65cc8188b91a9c2e2b43e08284f904faba7081a53d821f5bd635b",
+  "logistic_regression_behavior": "06349a2d144984a3d37dad5ae24aa87dbb73667413d70340270fee368ee9fa65",
+  "linear_svm_hybrid": "82c1290342d5249b98a83055b5710dab6e36e26b51721aeefbf1287abdf4a4ce",
+  "multinomial_nb_text": "377496235a557ae2d4f3cb05b2fa6bc0844b8e2f1e2f8c1bfa07ba17f012ca1e",
+  "random_forest_behavior": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d"
+}

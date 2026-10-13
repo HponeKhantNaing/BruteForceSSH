@@ -1,0 +1,84 @@
+{
+  "dataset_id": "loghub_openssh",
+  "evaluated_at": "2026-09-27T08:00:00+00:00",
+  "official_source": "https://github.com/logpai/loghub",
+  "doi": "10.5281/zenodo.1144100",
+  "publisher": "LogPAI / Loghub",
+  "data_domain": "host_log",
+  "platform": "OpenSSH",
+  "format": "syslog-style OpenSSH authentication / sshd lines",
+  "labeled": false,
+  "label_compatibility": "UNLABELED",
+  "ssh_relevance": "high",
+  "auth_relevance": "high",
+  "normal_coverage": "unknown_unlabeled",
+  "suspicious_coverage": "none_labeled",
+  "brute_force_coverage": "unknown_unlabeled",
+  "sequence_context": {
+    "timestamps": "present_in_syslog_lines",
+    "ordering": "file_order_assumed",
+    "session_grouping": "partial_via_pid_and_fields",
+    "source_identity": "present_as_source_ip_in_many_lines"
+  },
+  "schema_vs_project": {
+    "scenario_id": "absent",
+    "run_id": "absent",
+    "timestamp": "reconstructable_from_syslog",
+    "source": "partial",
+    "username": "often_present",
+    "raw_log": "present",
+    "event_role": "absent",
+    "contextual_target": "absent"
+  },
+  "domain_mismatches": {
+    "HOST_LOG_VS_NETWORK_FLOW": "LOW",
+    "LABEL_SEMANTICS": "HIGH",
+    "TIMESTAMP_CONTEXT": "LOW",
+    "SCHEMA": "MEDIUM",
+    "OPERATING_SYSTEM": "LOW",
+    "AUTH_PROTOCOL": "LOW",
+    "COLLECTION_ENVIRONMENT": "MEDIUM",
+    "CLASS_COVERAGE": "HIGH"
+  },
+  "leakage_risks": {
+    "fixed_source_ip": "MEDIUM — source IPs appear in lines; must not become identity features later",
+    "time_window_shortcut": "LOW — unlabeled continuous logs",
+    "scenario_leakage": "N/A — unlabeled",
+    "duplicate_data": "UNKNOWN without full download",
+    "label_leakage": "N/A"
+  },
+  "license": {
+    "status": "RESEARCH_USE_WITH_CITATION",
+    "redistribution": "not_assumed_unrestricted",
+    "citation_required": true
+  },
+  "download": {
+    "status": "METADATA_ONLY",
+    "download_approved": false,
+    "reason": "Full OpenSSH corpus not required for P5 decision; unlabeled status already decisive against supervised integration"
+  },
+  "sample_inspection": {
+    "mode": "documentation_and_format_notes",
+    "sample_path": "data/external/p5/samples/loghub_openssh_format_notes.md",
+    "notes": "Official Loghub docs describe OpenSSH as raw sshd/syslog lines without ground-truth class labels for NORMAL/SUSPICIOUS/BRUTE_FORCE."
+  },
+  "forbidden_practices_checked": {
+    "invented_labels_from_failed_password": false,
+    "anomaly_to_suspicious": false,
+    "attack_to_brute_force": false
+  },
+  "scores_informational": {
+    "contains_authentication_behavior": 5,
+    "host_log_similarity": 5,
+    "ssh_relevance": 5,
+    "label_quality": 0,
+    "schema_compatibility": 2
+  },
+  "decision": "EXTERNAL_UNLABELED_CORPUS",
+  "p6_disposition": "EXTERNAL_ONLY",
+  "planned_uses": [
+    "parser robustness corpus (future)",
+    "format-diversity / UNCLASSIFIED rate analysis (future)",
+    "NOT supervised ground truth"
+  ]
+}

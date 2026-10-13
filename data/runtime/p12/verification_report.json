@@ -1,0 +1,18 @@
+{
+  "p10_model_sha": "6176bded24585a1599ee7644cbe15eb426fb3cd7ea803c4ed5f5f038cbd4ce69",
+  "p8_model_sha": "6176bded24585a1599ee7644cbe15eb426fb3cd7ea803c4ed5f5f038cbd4ce69",
+  "p10_unchanged": true,
+  "p11_feature_parity": true,
+  "p11_attempt_parity": true,
+  "p12_init_predictions": 5,
+  "historical_discord": 0,
+  "tests": "17 passed",
+  "real_discord_smoke": "NOT APPLICABLE",
+  "mock_discord": "PASS",
+  "latency": {
+    "ingest_ms": 0.21,
+    "dashboard_api_ms": 3.12,
+    "alert_send_ms": 19.13,
+    "backfill_1000_sec": 0.152
+  }
+}

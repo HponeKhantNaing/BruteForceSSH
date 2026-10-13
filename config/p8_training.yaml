@@ -1,0 +1,66 @@
+# P8 leakage-safe ML training configuration.
+# Test partition is LOCKED — no fit, no metrics, no model selection on TEST.
+
+schema_version: "1.0"
+training_version: "p8-v1"
+random_seed: 42
+
+inputs:
+  behavioral_features: "data/features/p7/behavioral_features.jsonl"
+  text_samples: "data/features/p7/text_samples.jsonl"
+  targets: "data/features/p7/targets.jsonl"
+  feature_schema: "data/features/p7/feature_schema.json"
+  feature_manifest: "data/features/p7/feature_manifest.json"
+  p7_features_config: "config/p7_features.yaml"
+
+output:
+  modeling_root: "data/modeling/p8"
+  artifacts_root: "artifacts/p8"
+
+split:
+  group_key: scenario_id
+  train_fraction: 0.60
+  validation_fraction: 0.20
+  test_fraction: 0.20
+  require_all_classes_each_split: true
+  min_groups_per_class: 3
+  version: "p8-split-v1"
+
+text:
+  use_p7_tfidf_config: true
+
+numeric:
+  use_default_enabled_p7_features: true
+  scaler: standard
+
+models:
+  logistic_regression_hybrid:
+    enabled: true
+    representation: hybrid
+    C: 1.0
+    max_iter: 2000
+  logistic_regression_text:
+    enabled: true
+    representation: text
+    C: 1.0
+    max_iter: 2000
+  logistic_regression_behavior:
+    enabled: true
+    representation: behavior
+    C: 1.0
+    max_iter: 2000
+  linear_svm_hybrid:
+    enabled: true
+    representation: hybrid
+    C: 1.0
+    max_iter: 2000
+  multinomial_nb_text:
+    enabled: true
+    representation: text
+    alpha: 1.0
+  random_forest_behavior:
+    enabled: true
+    representation: behavior
+    n_estimators: 500
+    max_depth: 12
+    min_samples_leaf: 2

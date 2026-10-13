@@ -1,0 +1,18 @@
+{
+  "sample_overlap": 0,
+  "scenario_overlap": 0,
+  "test_used_for_fit": false,
+  "validation_used_for_fit": false,
+  "tfidf_fit_scope": "TRAIN_ONLY",
+  "scaler_fit_scope": "TRAIN_ONLY",
+  "classifier_fit_scope": "TRAIN_ONLY",
+  "tfidf_fit_sample_ids_subset_of_train": true,
+  "scaler_fit_sample_ids_subset_of_train": true,
+  "target_in_feature": false,
+  "scenario_in_feature": false,
+  "raw_ip_leakage": false,
+  "raw_username_leakage": false,
+  "class_bearing_path_leakage": false,
+  "test_metrics_computed": false,
+  "pass": true
+}

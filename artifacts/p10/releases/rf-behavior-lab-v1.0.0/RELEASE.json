@@ -1,0 +1,22 @@
+{
+  "name": "RF Behavior Lab Release",
+  "version": "1.0.0",
+  "release_id": "rf-behavior-lab-v1.0.0",
+  "status": "RELEASED",
+  "model": "random_forest_behavior",
+  "representation": "behavior_raw",
+  "labels": [
+    "NORMAL",
+    "SUSPICIOUS",
+    "BRUTE_FORCE"
+  ],
+  "intended_use": "controlled-lab SSH authentication behavior classification for the project's real-time threat-monitoring prototype",
+  "limitations": [
+    "CONTROLLED_LAB_VALIDATED only",
+    "small held-out TEST (15 runs / 3 scenarios)",
+    "uncalibrated probabilities",
+    "run-level training context vs continuous-stream P11 context gap"
+  ],
+  "channel": "lab",
+  "maturity": "CONTROLLED_LAB_VALIDATED"
+}

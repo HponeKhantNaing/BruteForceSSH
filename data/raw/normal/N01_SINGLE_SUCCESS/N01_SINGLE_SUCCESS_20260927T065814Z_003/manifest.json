@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "collection_phase": "P2",
+  "collection_batch_id": "P2_BASELINE_20260927T070000Z",
+  "scenario_id": "N01_SINGLE_SUCCESS",
+  "run_id": "N01_SINGLE_SUCCESS_20260927T065814Z_003",
+  "scenario_intent": "normal",
+  "description": "Single successful SSH login and immediate clean logout",
+  "started_at": "2026-09-27T06:58:14.511796+00:00",
+  "ended_at": "2026-09-27T06:58:15.606474+00:00",
+  "target_host": "127.0.0.1",
+  "target_port": 2222,
+  "service": "ssh",
+  "auth_method": "password",
+  "username_alias": "testuser",
+  "expected_behavior": [
+    "Accepted password",
+    "session opened",
+    "session closed"
+  ],
+  "actions": [
+    {
+      "type": "ssh_connect",
+      "result": "accepted",
+      "at": "2026-09-27T06:58:14.593188+00:00"
+    },
+    {
+      "type": "ssh_close",
+      "at": "2026-09-27T06:58:14.593264+00:00"
+    }
+  ],
+  "result": "success",
+  "raw_log_file": "auth.log",
+  "raw_log_line_count": 8,
+  "raw_log_sha256": "dacdb11d420a7c076bc9b9c1af3223ef4fa4c3438443404d51c63e04de312312",
+  "master_log_start_offset": 13416,
+  "master_log_end_offset": 14305,
+  "data_source": "local_lab",
+  "lab_container": "ai-security-ubuntu-lab",
+  "event_summary": {
+    "contains_accepted_password": true,
+    "contains_failed_password": false,
+    "contains_session_opened": true,
+    "contains_session_closed": true,
+    "accepted_password_count": 1,
+    "failed_password_count": 0,
+    "session_opened_count": 1,
+    "session_closed_count": 1
+  },
+  "notes": ""
+}

@@ -1,0 +1,12 @@
+{
+  "scenario_overlap": 0,
+  "target_leakage": false,
+  "raw_ip_leakage": false,
+  "raw_username_leakage": false,
+  "fit_calls": 0,
+  "tfidf_refitted": false,
+  "scaler_refitted": false,
+  "classifier_refitted": false,
+  "test_used_for_selection": false,
+  "pass": true
+}

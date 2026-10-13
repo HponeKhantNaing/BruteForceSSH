@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-09-27T08:12:32.787483+00:00",
+  "policy_version": "p5-eval-policy-v1",
+  "summary": {
+    "dataset_count": 4,
+    "by_decision": {
+      "EXTERNAL_UNLABELED_CORPUS": [
+        "loghub_openssh"
+      ],
+      "EXTERNAL_LABELED_EVALUATION": [
+        "cicids2017",
+        "cam_lds"
+      ],
+      "REJECT": [
+        "loghub_hdfs"
+      ]
+    },
+    "direct_integration": [],
+    "external_only": [
+      "cicids2017",
+      "cam_lds",
+      "loghub_openssh"
+    ],
+    "rejected": [
+      "loghub_hdfs"
+    ]
+  },
+  "disk_free_bytes": 30484422656,
+  "disk_free_gb": 28.39,
+  "p4_regression": {
+    "ok": true,
+    "files": {
+      "data/interim/p4/run_labels.jsonl": {
+        "status": "MATCH",
+        "expected": "a810db78149c9c5e076a50acc2bb79becbdfc7a0b44532fcc61d6bc130ec1f88",
+        "actual": "a810db78149c9c5e076a50acc2bb79becbdfc7a0b44532fcc61d6bc130ec1f88"
+      },
+      "data/interim/p4/event_annotations.jsonl": {
+        "status": "MATCH",
+        "expected": "46cf21a7658a22fe7cd19e87e0d421778c9cd0b6efe01f965b2393d18a124da7",
+        "actual": "46cf21a7658a22fe7cd19e87e0d421778c9cd0b6efe01f965b2393d18a124da7"
+      },
+      "data/interim/p4/class_distribution.json": {
+        "status": "MATCH",
+        "expected": "d814679346a7d3ec58f2ef6728c61c622cd413434a52fdc8aa7c8c687bf1790d",
+        "actual": "d814679346a7d3ec58f2ef6728c61c622cd413434a52fdc8aa7c8c687bf1790d"
+      }
+    }
+  },
+  "integration_candidates_exist": false,
+  "external_files_manifest_exists": false,
+  "downloads_present": false
+}

@@ -1,0 +1,23 @@
+{
+  "purpose": "packaging regression verification (not accuracy evidence)",
+  "predicted_label": "SUSPICIOUS",
+  "probability_vector_shape": [
+    3
+  ],
+  "class_labels": [
+    "NORMAL",
+    "SUSPICIOUS",
+    "BRUTE_FORCE"
+  ],
+  "model_class_order": [
+    "BRUTE_FORCE",
+    "NORMAL",
+    "SUSPICIOUS"
+  ],
+  "class_probabilities": {
+    "NORMAL": 0.098,
+    "SUSPICIOUS": 0.8420000000000001,
+    "BRUTE_FORCE": 0.06
+  },
+  "probability_type": "uncalibrated"
+}

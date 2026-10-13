@@ -1,0 +1,56 @@
+2026-09-27T07:25:54.393824+00:00 dd9a612cdd6b sshd[4554]: Connection from 172.18.0.1 port 57338 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:25:54.434879+00:00 dd9a612cdd6b sshd[4554]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:25:56.545033+00:00 dd9a612cdd6b sshd[4554]: Failed password for testuser from 172.18.0.1 port 57338 ssh2
+2026-09-27T07:25:57.931370+00:00 dd9a612cdd6b sshd[4554]: Connection closed by authenticating user testuser 172.18.0.1 port 57338 [preauth]
+2026-09-27T07:26:00.457327+00:00 dd9a612cdd6b sshd[4563]: Connection from 172.18.0.1 port 62836 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:26:00.508799+00:00 dd9a612cdd6b sshd[4563]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:26:02.104655+00:00 dd9a612cdd6b sshd[4563]: Failed password for testuser from 172.18.0.1 port 62836 ssh2
+2026-09-27T07:26:02.240165+00:00 dd9a612cdd6b sshd[4563]: Connection closed by authenticating user testuser 172.18.0.1 port 62836 [preauth]
+2026-09-27T07:26:04.758248+00:00 dd9a612cdd6b sshd[4572]: Connection from 172.18.0.1 port 62842 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:26:04.810085+00:00 dd9a612cdd6b sshd[4572]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:26:06.961204+00:00 dd9a612cdd6b sshd[4572]: Failed password for testuser from 172.18.0.1 port 62842 ssh2
+2026-09-27T07:26:08.301914+00:00 dd9a612cdd6b sshd[4572]: Connection closed by authenticating user testuser 172.18.0.1 port 62842 [preauth]
+2026-09-27T07:26:10.821470+00:00 dd9a612cdd6b sshd[4581]: Connection from 172.18.0.1 port 57880 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:26:10.865796+00:00 dd9a612cdd6b sshd[4581]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:26:12.500873+00:00 dd9a612cdd6b sshd[4581]: Failed password for testuser from 172.18.0.1 port 57880 ssh2
+2026-09-27T07:26:12.598200+00:00 dd9a612cdd6b sshd[4581]: Connection closed by authenticating user testuser 172.18.0.1 port 57880 [preauth]
+2026-09-27T07:26:15.117883+00:00 dd9a612cdd6b sshd[4590]: Connection from 172.18.0.1 port 57888 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:26:15.165923+00:00 dd9a612cdd6b sshd[4590]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:26:17.164661+00:00 dd9a612cdd6b sshd[4590]: Failed password for testuser from 172.18.0.1 port 57888 ssh2
+2026-09-27T07:26:18.658099+00:00 dd9a612cdd6b sshd[4590]: Connection closed by authenticating user testuser 172.18.0.1 port 57888 [preauth]
+2026-09-27T07:26:21.177091+00:00 dd9a612cdd6b sshd[4599]: Connection from 172.18.0.1 port 58124 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:26:21.229028+00:00 dd9a612cdd6b sshd[4599]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:26:22.710356+00:00 dd9a612cdd6b sshd[4599]: Failed password for testuser from 172.18.0.1 port 58124 ssh2
+2026-09-27T07:26:22.963105+00:00 dd9a612cdd6b sshd[4599]: Connection closed by authenticating user testuser 172.18.0.1 port 58124 [preauth]
+2026-09-27T07:26:25.486599+00:00 dd9a612cdd6b sshd[4608]: Connection from 172.18.0.1 port 58136 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:26:25.534975+00:00 dd9a612cdd6b sshd[4608]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:26:27.896179+00:00 dd9a612cdd6b sshd[4608]: Failed password for testuser from 172.18.0.1 port 58136 ssh2
+2026-09-27T07:26:29.031336+00:00 dd9a612cdd6b sshd[4608]: Connection closed by authenticating user testuser 172.18.0.1 port 58136 [preauth]
+2026-09-27T07:26:31.550818+00:00 dd9a612cdd6b sshd[4617]: Connection from 172.18.0.1 port 57968 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:26:31.599888+00:00 dd9a612cdd6b sshd[4617]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:26:33.787666+00:00 dd9a612cdd6b sshd[4617]: Failed password for testuser from 172.18.0.1 port 57968 ssh2
+2026-09-27T07:26:35.090010+00:00 dd9a612cdd6b sshd[4617]: Connection closed by authenticating user testuser 172.18.0.1 port 57968 [preauth]
+2026-09-27T07:26:37.615678+00:00 dd9a612cdd6b sshd[4626]: Connection from 172.18.0.1 port 57978 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:26:37.662575+00:00 dd9a612cdd6b sshd[4626]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:26:39.677082+00:00 dd9a612cdd6b sshd[4626]: Failed password for testuser from 172.18.0.1 port 57978 ssh2
+2026-09-27T07:26:41.154195+00:00 dd9a612cdd6b sshd[4626]: Connection closed by authenticating user testuser 172.18.0.1 port 57978 [preauth]
+2026-09-27T07:26:43.670994+00:00 dd9a612cdd6b sshd[4635]: Connection from 172.18.0.1 port 59558 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:26:43.717728+00:00 dd9a612cdd6b sshd[4635]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:26:45.885339+00:00 dd9a612cdd6b sshd[4635]: Failed password for testuser from 172.18.0.1 port 59558 ssh2
+2026-09-27T07:26:47.207102+00:00 dd9a612cdd6b sshd[4635]: Connection closed by authenticating user testuser 172.18.0.1 port 59558 [preauth]
+2026-09-27T07:26:49.725191+00:00 dd9a612cdd6b sshd[4644]: Connection from 172.18.0.1 port 59660 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:26:49.775302+00:00 dd9a612cdd6b sshd[4644]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:26:51.770565+00:00 dd9a612cdd6b sshd[4644]: Failed password for testuser from 172.18.0.1 port 59660 ssh2
+2026-09-27T07:26:53.266468+00:00 dd9a612cdd6b sshd[4644]: Connection closed by authenticating user testuser 172.18.0.1 port 59660 [preauth]
+2026-09-27T07:26:55.788756+00:00 dd9a612cdd6b sshd[4660]: Connection from 172.18.0.1 port 59666 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:26:55.839645+00:00 dd9a612cdd6b sshd[4660]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:26:57.985595+00:00 dd9a612cdd6b sshd[4660]: Failed password for testuser from 172.18.0.1 port 59666 ssh2
+2026-09-27T07:26:59.330912+00:00 dd9a612cdd6b sshd[4660]: Connection closed by authenticating user testuser 172.18.0.1 port 59666 [preauth]
+2026-09-27T07:27:01.849548+00:00 dd9a612cdd6b sshd[4669]: Connection from 172.18.0.1 port 58620 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:27:01.900244+00:00 dd9a612cdd6b sshd[4669]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:27:03.875859+00:00 dd9a612cdd6b sshd[4669]: Failed password for testuser from 172.18.0.1 port 58620 ssh2
+2026-09-27T07:27:05.390524+00:00 dd9a612cdd6b sshd[4669]: Connection closed by authenticating user testuser 172.18.0.1 port 58620 [preauth]
+2026-09-27T07:27:07.912907+00:00 dd9a612cdd6b sshd[4678]: Connection from 172.18.0.1 port 58636 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T07:27:07.962934+00:00 dd9a612cdd6b sshd[4678]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T07:27:10.427939+00:00 dd9a612cdd6b sshd[4678]: Failed password for testuser from 172.18.0.1 port 58636 ssh2
+2026-09-27T07:27:11.452657+00:00 dd9a612cdd6b sshd[4678]: Connection closed by authenticating user testuser 172.18.0.1 port 58636 [preauth]

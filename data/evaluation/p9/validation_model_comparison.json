@@ -1,0 +1,90 @@
+{
+  "partition": "validation",
+  "primary_metric": "macro_f1",
+  "rows": [
+    {
+      "model_id": "logistic_regression_hybrid",
+      "representation": "hybrid",
+      "accuracy": 0.6666666666666666,
+      "balanced_accuracy": 0.6666666666666666,
+      "macro_precision": 0.5,
+      "macro_recall": 0.6666666666666666,
+      "macro_f1": 0.5555555555555555,
+      "weighted_f1": 0.5555555555555555,
+      "minimum_class_recall": 0.0,
+      "normal_recall": 1.0,
+      "suspicious_recall": 1.0,
+      "brute_force_recall": 0.0
+    },
+    {
+      "model_id": "logistic_regression_text",
+      "representation": "text",
+      "accuracy": 0.3333333333333333,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_precision": 0.3333333333333333,
+      "macro_recall": 0.3333333333333333,
+      "macro_f1": 0.3333333333333333,
+      "weighted_f1": 0.3333333333333333,
+      "minimum_class_recall": 0.0,
+      "normal_recall": 1.0,
+      "suspicious_recall": 0.0,
+      "brute_force_recall": 0.0
+    },
+    {
+      "model_id": "logistic_regression_behavior",
+      "representation": "behavior_scaled",
+      "accuracy": 0.6666666666666666,
+      "balanced_accuracy": 0.6666666666666666,
+      "macro_precision": 0.5,
+      "macro_recall": 0.6666666666666666,
+      "macro_f1": 0.5555555555555555,
+      "weighted_f1": 0.5555555555555555,
+      "minimum_class_recall": 0.0,
+      "normal_recall": 1.0,
+      "suspicious_recall": 1.0,
+      "brute_force_recall": 0.0
+    },
+    {
+      "model_id": "linear_svm_hybrid",
+      "representation": "hybrid",
+      "accuracy": 0.3333333333333333,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_precision": 0.16666666666666666,
+      "macro_recall": 0.3333333333333333,
+      "macro_f1": 0.2222222222222222,
+      "weighted_f1": 0.22222222222222218,
+      "minimum_class_recall": 0.0,
+      "normal_recall": 1.0,
+      "suspicious_recall": 0.0,
+      "brute_force_recall": 0.0
+    },
+    {
+      "model_id": "multinomial_nb_text",
+      "representation": "text",
+      "accuracy": 0.3333333333333333,
+      "balanced_accuracy": 0.3333333333333333,
+      "macro_precision": 0.3333333333333333,
+      "macro_recall": 0.3333333333333333,
+      "macro_f1": 0.3333333333333333,
+      "weighted_f1": 0.3333333333333333,
+      "minimum_class_recall": 0.0,
+      "normal_recall": 1.0,
+      "suspicious_recall": 0.0,
+      "brute_force_recall": 0.0
+    },
+    {
+      "model_id": "random_forest_behavior",
+      "representation": "behavior_raw",
+      "accuracy": 0.9966666666666667,
+      "balanced_accuracy": 0.9966666666666667,
+      "macro_precision": 0.9966996699669967,
+      "macro_recall": 0.9966666666666667,
+      "macro_f1": 0.9966665833312499,
+      "weighted_f1": 0.99666658333125,
+      "minimum_class_recall": 0.99,
+      "normal_recall": 1.0,
+      "suspicious_recall": 1.0,
+      "brute_force_recall": 0.99
+    }
+  ]
+}

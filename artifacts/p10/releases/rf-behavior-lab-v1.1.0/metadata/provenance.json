@@ -1,0 +1,41 @@
+{
+  "chain": [
+    "P2/P3 raw data",
+    "P4 labels",
+    "P6 canonical data",
+    "P7 features",
+    "P8 training",
+    "P9 selection/evaluation",
+    "P10 release"
+  ],
+  "hashes": {
+    "p7_feature_manifest": "46da0ea9eed8c34703d24894ce96d47d8215c1a13bb78db37004393e4d486502",
+    "p8_split_manifest": "3faa779acb9bb783bd4c0f3175c80dc6f412faa79c1161e616867fd992c3d5f5",
+    "p8_training_manifest": "6ba30ce4fc34a94a7a7bc2bf36aaecc8c434b3eb763c7be4bbca66f4c5db77b4",
+    "p8_selected_model": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d",
+    "p9_model_selection": "919ad6cc46ea297c72fabd4971d29f03842bfb86a0b9b9e0ac151c163644b810",
+    "p9_selection_lock": "43cb6e7669a96d7c1f81ce8d66165b688b2c10e4d0b1479a96a71cfe6fb93532",
+    "p9_test_receipt": "06c652f264a74a97d627c86803499d7bc12f92e200f281af15afb65ad5972d0d",
+    "p10_release_model": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d"
+  },
+  "identifiers": {
+    "p7_feature_version": "p7-v1",
+    "p8_training_version": "p8-v1",
+    "p8_split_version": "p8-split-v1",
+    "p9_evaluation_version": "p9-v1",
+    "p10_export_version": "p10-v1",
+    "release_id": "rf-behavior-lab-v1.1.0"
+  },
+  "byte_identity": {
+    "source_artifact_path": "artifacts/p8/models/random_forest_behavior.joblib",
+    "source_artifact_sha256": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d",
+    "release_artifact_path": "artifacts/p10/releases/rf-behavior-lab-v1.1.0/model/random_forest_behavior.joblib",
+    "release_artifact_sha256": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d",
+    "byte_identity": true
+  },
+  "selection_lock": {
+    "locked_at": "2026-10-08T13:21:08.243922+00:00",
+    "test_evaluated_at": "2026-10-08T13:21:09.950107+00:00",
+    "lock_before_test": true
+  }
+}

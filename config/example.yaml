@@ -1,0 +1,104 @@
+# Planning defaults only — not production-tuned.
+# Secrets must never be stored in this file.
+# Discord webhook URL comes from environment variable DISCORD_WEBHOOK_URL.
+
+project:
+  name: ai-security-log-monitor
+  phase: P4
+  version: 0.4.0
+
+detection:
+  classes:
+    - NORMAL
+    - SUSPICIOUS
+    - BRUTE_FORCE
+  # Baseline helpers for scenario design / policy — validate experimentally later.
+  brute_force_baselines:
+    failed_count_30s: 8
+    failed_count_60s: 12
+    failed_count_5m: 30
+    unique_users_60s: 5
+    attempt_rate_per_sec: 0.25
+  # Isolated failures remain eligible for NORMAL labeling/prediction.
+  treat_single_failed_password_as_brute_force: false
+
+windows:
+  short_seconds: 30
+  medium_seconds: 60
+  long_seconds: 300
+
+features:
+  text:
+    enabled: true
+    method: tfidf
+  behavioral:
+    - failed_count_30s
+    - failed_count_60s
+    - failed_count_5m
+    - success_count_5m
+    - unique_users_60s
+    - attempt_rate
+    - time_since_previous_attempt
+    - failure_ratio
+  # Use source_id for grouping; do not train on raw IP as a malice meme.
+  use_raw_ip_as_model_feature: false
+
+model:
+  type: logistic_regression
+  comparison_models:
+    - naive_bayes
+    - random_forest
+    - linear_svm
+  artifacts_dir: models
+
+monitoring:
+  poll_interval_ms: 250
+  # Training must not run when monitoring starts.
+  allow_training_during_monitoring: false
+
+alerts:
+  discord_enabled: false
+  # Classes that may trigger Discord when discord_enabled is true.
+  notify_on:
+    - BRUTE_FORCE
+  # Webhook must be provided via env: DISCORD_WEBHOOK_URL
+  discord_webhook_env_var: DISCORD_WEBHOOK_URL
+
+dashboard:
+  enabled: true
+  # Visual design deferred to Mobbin reference (P12).
+  ui_design: deferred_mobbin
+  # Frontend consumes API events; must not contain detection logic.
+  contains_detection_logic: false
+
+data:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  split_strategy: scenario_id
+
+collection:
+  # P2/P3 collection settings (scenario details in dedicated YAML files)
+  master_auth_log: "data/raw/auth/auth.log"
+  normal_output_dir: "data/raw/normal"
+  security_output_dir: "data/raw/security"
+  log_flush_timeout_seconds: 5
+  scenario_config_p2: "config/p2_normal_scenarios.yaml"
+  scenario_config_p3: "config/p3_security_scenarios.yaml"
+
+lab:
+  # Project-owned Docker Ubuntu SSH test server (P1). Localhost only.
+  target: docker_ubuntu_test_server
+  allow_external_targets: false
+  host: "127.0.0.1"
+  ssh_port: 2222
+  # Host-visible authentication log consumed by P2+.
+  auth_log_path: "data/raw/auth/auth.log"
+  container_name: ai-security-ubuntu-lab
+  compose_service: ubuntu-test-server
+  # Logs persist on the bind mount across restarts; reset via scripts/lab_reset_logs.sh
+  log_persistence: bind_mount_persist
+  # Credentials come from environment variables, never from this YAML file.
+  ssh_user_env_var: LAB_SSH_USER
+  ssh_password_env_var: LAB_SSH_PASSWORD
+  ssh_port_env_var: LAB_SSH_PORT

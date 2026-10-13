@@ -1,0 +1,82 @@
+{
+  "feature_engineering_version": "p7-v1",
+  "created_at": "2026-09-27T08:44:09.756510+00:00",
+  "p6_preprocessing_version": "p6-v1",
+  "p6_dataset_manifest_hash": "a4de231a7bf119ac9e3c2d7a5db70df3696a058ab0c99c5bb35b147281a3d9cf",
+  "p6_source_hashes": {
+    "canonical_runs": "bd44ae036cfea790462540acc259742b9d65f1e6e6b879ad08be77822b0be3f5",
+    "canonical_attempts": "bcffa87355364f26051a2ed3896bacc83ce102eaa93218fa1fbf7926bd5af272",
+    "canonical_sequences": "f126ac68d9260c6e2370ed9be3f6c3204d71899af94b08bc7a012638e96394bf",
+    "dataset_manifest": "a4de231a7bf119ac9e3c2d7a5db70df3696a058ab0c99c5bb35b147281a3d9cf",
+    "class_distribution": "0c65bf51abdefe6d693bded6ae9690d211739b0ff6ad49117a46de860de3daf4"
+  },
+  "sample_count": 3000,
+  "numeric_feature_count": 22,
+  "default_numeric_feature_names": [
+    "total_attempts",
+    "failed_attempts",
+    "successful_attempts",
+    "failure_ratio",
+    "duration_seconds",
+    "attempt_rate_per_second",
+    "failed_count_30s_max",
+    "failed_count_60s_max",
+    "failed_count_5m_max",
+    "success_count_5m_max",
+    "unique_users_total",
+    "unique_users_60s_max",
+    "has_multiple_attempts",
+    "min_inter_attempt_gap_seconds",
+    "mean_inter_attempt_gap_seconds",
+    "median_inter_attempt_gap_seconds",
+    "std_inter_attempt_gap_seconds",
+    "max_failure_streak",
+    "success_after_failure",
+    "failures_before_first_success",
+    "first_attempt_failed",
+    "last_attempt_success"
+  ],
+  "disabled_constant_features": [],
+  "text_method": "tfidf",
+  "tfidf_fitted": false,
+  "tfidf_config": {
+    "method": "tfidf",
+    "lowercase": true,
+    "ngram_range": {
+      "min": 1,
+      "max": 2
+    },
+    "min_df": 2,
+    "max_df": 0.95,
+    "max_features": 1000,
+    "sublinear_tf": true,
+    "norm": "l2",
+    "fitted_in_p7": false
+  },
+  "numeric_scaler_fitted": false,
+  "target_classes": {
+    "BRUTE_FORCE": 25,
+    "NORMAL": 30,
+    "SUSPICIOUS": 20
+  },
+  "external_supervised_data_included": false,
+  "known_limitations": [
+    "Small contextual sample count (~75)",
+    "Controlled scenario generation bias",
+    "Single source ID in lab (SRC_001)",
+    "Limited user diversity",
+    "TF-IDF vocabulary unknown until P8 fit on TRAIN",
+    "Text length kept diagnostic (not default model feature)"
+  ],
+  "window_policy": "inclusive_closed",
+  "augment": {
+    "synthetic_lab_augment": true,
+    "copies_per_sample": 39,
+    "seed": 42,
+    "original_samples": 75,
+    "total_samples": 3000,
+    "baseline_dir": "data/features/p7_baseline_75",
+    "created_at": "2026-10-08T13:20:45.239820+00:00",
+    "note": "Lab-only jittered copies; public datasets not merged (P5 Case B)."
+  }
+}

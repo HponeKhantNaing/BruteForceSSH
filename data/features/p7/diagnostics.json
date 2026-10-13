@@ -1,0 +1,57 @@
+{
+  "sample_count": 75,
+  "attempt_count": 395,
+  "feature_count_defined": 22,
+  "default_enabled_feature_count": 22,
+  "constant_features": [],
+  "near_constant_features": [
+    "unique_users_total",
+    "unique_users_60s_max",
+    "has_multiple_attempts",
+    "success_after_failure",
+    "first_attempt_failed",
+    "last_attempt_success"
+  ],
+  "text_length_summary": {
+    "count": 75,
+    "min": 252.0,
+    "max": 2785.0,
+    "mean": 1083.0666666666666,
+    "median": 596.0,
+    "std": 836.4330191686335,
+    "unique_value_count": 10,
+    "missing_count": 0,
+    "variance": 699620.1955555555
+  },
+  "text_token_summary": {
+    "count": 75,
+    "min": 29.0,
+    "max": 322.0,
+    "mean": 125.13333333333334,
+    "median": 69.0,
+    "std": 96.76767136922446,
+    "unique_value_count": 10,
+    "missing_count": 0,
+    "variance": 9363.982222222223
+  },
+  "class_distribution": {
+    "BRUTE_FORCE": 25,
+    "NORMAL": 30,
+    "SUSPICIOUS": 20
+  },
+  "samples_per_numeric_feature": 3.409090909090909,
+  "small_sample_warning": true,
+  "scenario_generation_artifact_warnings": [
+    "Features may strongly reflect controlled lab scenario design",
+    "Do not claim production traffic distributions"
+  ],
+  "single_source_warning": true,
+  "limited_user_diversity_warning": true,
+  "tfidf_fitted": false,
+  "scaler_fitted": false,
+  "vocabulary_size": "NOT_FITTED",
+  "max_features_configured": 1000,
+  "validation_error_count": 0,
+  "exclusion_count": 0,
+  "leakage_finding_count": 0
+}

@@ -1,0 +1,410 @@
+{
+  "logistic_regression_hybrid": {
+    "correct_count": 400,
+    "total_count": 600,
+    "accuracy": 0.6666666666666666,
+    "balanced_accuracy": 0.6666666666666666,
+    "macro_precision": 0.5,
+    "macro_recall": 0.6666666666666666,
+    "macro_f1": 0.5555555555555555,
+    "weighted_f1": 0.5555555555555555,
+    "minimum_class_recall": 0.0,
+    "per_class": {
+      "NORMAL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 200,
+        "correct": 200,
+        "correct_over_support": "200/200"
+      },
+      "SUSPICIOUS": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "support": 200,
+        "correct": 200,
+        "correct_over_support": "200/200"
+      },
+      "BRUTE_FORCE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 200,
+        "correct": 0,
+        "correct_over_support": "0/200"
+      }
+    },
+    "confusion_matrix": {
+      "class_order": [
+        "NORMAL",
+        "SUSPICIOUS",
+        "BRUTE_FORCE"
+      ],
+      "matrix": [
+        [
+          200,
+          0,
+          0
+        ],
+        [
+          0,
+          200,
+          0
+        ],
+        [
+          0,
+          200,
+          0
+        ]
+      ],
+      "rows": "actual",
+      "columns": "predicted"
+    },
+    "normal_recall": 1.0,
+    "suspicious_recall": 1.0,
+    "brute_force_recall": 0.0,
+    "model_id": "logistic_regression_hybrid",
+    "representation": "hybrid"
+  },
+  "logistic_regression_text": {
+    "correct_count": 200,
+    "total_count": 600,
+    "accuracy": 0.3333333333333333,
+    "balanced_accuracy": 0.3333333333333333,
+    "macro_precision": 0.3333333333333333,
+    "macro_recall": 0.3333333333333333,
+    "macro_f1": 0.3333333333333333,
+    "weighted_f1": 0.3333333333333333,
+    "minimum_class_recall": 0.0,
+    "per_class": {
+      "NORMAL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 200,
+        "correct": 200,
+        "correct_over_support": "200/200"
+      },
+      "SUSPICIOUS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 200,
+        "correct": 0,
+        "correct_over_support": "0/200"
+      },
+      "BRUTE_FORCE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 200,
+        "correct": 0,
+        "correct_over_support": "0/200"
+      }
+    },
+    "confusion_matrix": {
+      "class_order": [
+        "NORMAL",
+        "SUSPICIOUS",
+        "BRUTE_FORCE"
+      ],
+      "matrix": [
+        [
+          200,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          200
+        ],
+        [
+          0,
+          200,
+          0
+        ]
+      ],
+      "rows": "actual",
+      "columns": "predicted"
+    },
+    "normal_recall": 1.0,
+    "suspicious_recall": 0.0,
+    "brute_force_recall": 0.0,
+    "model_id": "logistic_regression_text",
+    "representation": "text"
+  },
+  "logistic_regression_behavior": {
+    "correct_count": 400,
+    "total_count": 600,
+    "accuracy": 0.6666666666666666,
+    "balanced_accuracy": 0.6666666666666666,
+    "macro_precision": 0.5,
+    "macro_recall": 0.6666666666666666,
+    "macro_f1": 0.5555555555555555,
+    "weighted_f1": 0.5555555555555555,
+    "minimum_class_recall": 0.0,
+    "per_class": {
+      "NORMAL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 200,
+        "correct": 200,
+        "correct_over_support": "200/200"
+      },
+      "SUSPICIOUS": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "support": 200,
+        "correct": 200,
+        "correct_over_support": "200/200"
+      },
+      "BRUTE_FORCE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 200,
+        "correct": 0,
+        "correct_over_support": "0/200"
+      }
+    },
+    "confusion_matrix": {
+      "class_order": [
+        "NORMAL",
+        "SUSPICIOUS",
+        "BRUTE_FORCE"
+      ],
+      "matrix": [
+        [
+          200,
+          0,
+          0
+        ],
+        [
+          0,
+          200,
+          0
+        ],
+        [
+          0,
+          200,
+          0
+        ]
+      ],
+      "rows": "actual",
+      "columns": "predicted"
+    },
+    "normal_recall": 1.0,
+    "suspicious_recall": 1.0,
+    "brute_force_recall": 0.0,
+    "model_id": "logistic_regression_behavior",
+    "representation": "behavior_scaled"
+  },
+  "linear_svm_hybrid": {
+    "correct_count": 200,
+    "total_count": 600,
+    "accuracy": 0.3333333333333333,
+    "balanced_accuracy": 0.3333333333333333,
+    "macro_precision": 0.16666666666666666,
+    "macro_recall": 0.3333333333333333,
+    "macro_f1": 0.2222222222222222,
+    "weighted_f1": 0.22222222222222218,
+    "minimum_class_recall": 0.0,
+    "per_class": {
+      "NORMAL": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "support": 200,
+        "correct": 200,
+        "correct_over_support": "200/200"
+      },
+      "SUSPICIOUS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 200,
+        "correct": 0,
+        "correct_over_support": "0/200"
+      },
+      "BRUTE_FORCE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 200,
+        "correct": 0,
+        "correct_over_support": "0/200"
+      }
+    },
+    "confusion_matrix": {
+      "class_order": [
+        "NORMAL",
+        "SUSPICIOUS",
+        "BRUTE_FORCE"
+      ],
+      "matrix": [
+        [
+          200,
+          0,
+          0
+        ],
+        [
+          200,
+          0,
+          0
+        ],
+        [
+          0,
+          200,
+          0
+        ]
+      ],
+      "rows": "actual",
+      "columns": "predicted"
+    },
+    "normal_recall": 1.0,
+    "suspicious_recall": 0.0,
+    "brute_force_recall": 0.0,
+    "model_id": "linear_svm_hybrid",
+    "representation": "hybrid"
+  },
+  "multinomial_nb_text": {
+    "correct_count": 200,
+    "total_count": 600,
+    "accuracy": 0.3333333333333333,
+    "balanced_accuracy": 0.3333333333333333,
+    "macro_precision": 0.3333333333333333,
+    "macro_recall": 0.3333333333333333,
+    "macro_f1": 0.3333333333333333,
+    "weighted_f1": 0.3333333333333333,
+    "minimum_class_recall": 0.0,
+    "per_class": {
+      "NORMAL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 200,
+        "correct": 200,
+        "correct_over_support": "200/200"
+      },
+      "SUSPICIOUS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 200,
+        "correct": 0,
+        "correct_over_support": "0/200"
+      },
+      "BRUTE_FORCE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 200,
+        "correct": 0,
+        "correct_over_support": "0/200"
+      }
+    },
+    "confusion_matrix": {
+      "class_order": [
+        "NORMAL",
+        "SUSPICIOUS",
+        "BRUTE_FORCE"
+      ],
+      "matrix": [
+        [
+          200,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          200
+        ],
+        [
+          0,
+          200,
+          0
+        ]
+      ],
+      "rows": "actual",
+      "columns": "predicted"
+    },
+    "normal_recall": 1.0,
+    "suspicious_recall": 0.0,
+    "brute_force_recall": 0.0,
+    "model_id": "multinomial_nb_text",
+    "representation": "text"
+  },
+  "random_forest_behavior": {
+    "correct_count": 598,
+    "total_count": 600,
+    "accuracy": 0.9966666666666667,
+    "balanced_accuracy": 0.9966666666666667,
+    "macro_precision": 0.9966996699669967,
+    "macro_recall": 0.9966666666666667,
+    "macro_f1": 0.9966665833312499,
+    "weighted_f1": 0.99666658333125,
+    "minimum_class_recall": 0.99,
+    "per_class": {
+      "NORMAL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 200,
+        "correct": 200,
+        "correct_over_support": "200/200"
+      },
+      "SUSPICIOUS": {
+        "precision": 0.9900990099009901,
+        "recall": 1.0,
+        "f1": 0.9950248756218906,
+        "support": 200,
+        "correct": 200,
+        "correct_over_support": "200/200"
+      },
+      "BRUTE_FORCE": {
+        "precision": 1.0,
+        "recall": 0.99,
+        "f1": 0.9949748743718593,
+        "support": 200,
+        "correct": 198,
+        "correct_over_support": "198/200"
+      }
+    },
+    "confusion_matrix": {
+      "class_order": [
+        "NORMAL",
+        "SUSPICIOUS",
+        "BRUTE_FORCE"
+      ],
+      "matrix": [
+        [
+          200,
+          0,
+          0
+        ],
+        [
+          0,
+          200,
+          0
+        ],
+        [
+          0,
+          2,
+          198
+        ]
+      ],
+      "rows": "actual",
+      "columns": "predicted"
+    },
+    "normal_recall": 1.0,
+    "suspicious_recall": 1.0,
+    "brute_force_recall": 0.99,
+    "model_id": "random_forest_behavior",
+    "representation": "behavior_raw"
+  }
+}

@@ -1,0 +1,20 @@
+2026-09-27T06:58:55.773988+00:00 dd9a612cdd6b sshd[1218]: Connection from 172.18.0.1 port 55454 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:58:55.849452+00:00 dd9a612cdd6b sshd[1218]: Accepted password for testuser from 172.18.0.1 port 55454 ssh2
+2026-09-27T06:58:55.850410+00:00 dd9a612cdd6b sshd[1218]: pam_unix(sshd:session): session opened for user testuser(uid=1001) by testuser(uid=0)
+2026-09-27T06:58:55.855124+00:00 dd9a612cdd6b sshd[1218]: User child is on pid 1229
+2026-09-27T06:58:55.903943+00:00 dd9a612cdd6b sshd[1229]: Starting session: command for testuser from 172.18.0.1 port 55454 id 0
+2026-09-27T06:58:55.950845+00:00 dd9a612cdd6b sshd[1229]: Close session: user testuser from 172.18.0.1 port 55454 id 0
+2026-09-27T06:58:55.951109+00:00 dd9a612cdd6b sshd[1229]: Connection closed by 172.18.0.1 port 55454
+2026-09-27T06:58:55.951119+00:00 dd9a612cdd6b sshd[1229]: Transferred: sent 2464, received 1432 bytes
+2026-09-27T06:58:55.951122+00:00 dd9a612cdd6b sshd[1229]: Closing connection to 172.18.0.1 port 55454
+2026-09-27T06:58:55.953926+00:00 dd9a612cdd6b sshd[1218]: pam_unix(sshd:session): session closed for user testuser
+2026-09-27T06:59:05.957461+00:00 dd9a612cdd6b sshd[1245]: Connection from 172.18.0.1 port 55946 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:59:05.998082+00:00 dd9a612cdd6b sshd[1245]: Accepted password for testuser from 172.18.0.1 port 55946 ssh2
+2026-09-27T06:59:05.998982+00:00 dd9a612cdd6b sshd[1245]: pam_unix(sshd:session): session opened for user testuser(uid=1001) by testuser(uid=0)
+2026-09-27T06:59:06.003037+00:00 dd9a612cdd6b sshd[1245]: User child is on pid 1256
+2026-09-27T06:59:06.045275+00:00 dd9a612cdd6b sshd[1256]: Starting session: command for testuser from 172.18.0.1 port 55946 id 0
+2026-09-27T06:59:06.048106+00:00 dd9a612cdd6b sshd[1256]: Connection closed by 172.18.0.1 port 55946
+2026-09-27T06:59:06.048121+00:00 dd9a612cdd6b sshd[1256]: Close session: user testuser from 172.18.0.1 port 55946 id 0
+2026-09-27T06:59:06.048131+00:00 dd9a612cdd6b sshd[1256]: Transferred: sent 2464, received 1400 bytes
+2026-09-27T06:59:06.048135+00:00 dd9a612cdd6b sshd[1256]: Closing connection to 172.18.0.1 port 55946
+2026-09-27T06:59:06.048361+00:00 dd9a612cdd6b sshd[1245]: pam_unix(sshd:session): session closed for user testuser

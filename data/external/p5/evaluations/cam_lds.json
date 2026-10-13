@@ -1,0 +1,80 @@
+{
+  "dataset_id": "cam_lds",
+  "evaluated_at": "2026-09-27T08:00:00+00:00",
+  "official_source": "https://zenodo.org/records/10124280",
+  "doi": "10.5281/zenodo.10124280",
+  "publisher": "AIT / CAM-LDS authors (Zenodo)",
+  "data_domain": "host_log_multi_source",
+  "platform": "Linux multi-source system logs",
+  "labeled": true,
+  "label_type": "mitre_attack_technique_and_scenario",
+  "label_compatibility": "INCOMPATIBLE",
+  "ssh_relevance": "medium",
+  "auth_relevance": "medium",
+  "normal_coverage": "background_linux_activity_present_per_docs",
+  "suspicious_coverage": "none_matching_project_suspicious",
+  "brute_force_coverage": "hydra_or_similar_documented_as_technique_not_project_class",
+  "original_label_semantics": "MITRE ATT&CK technique IDs / attack steps / scenario annotations",
+  "mapping_review": {
+    "mitre_to_brute_force": "NOT_AUTO_MAPPED — technique presence alone is not semantic equivalence to project BRUTE_FORCE contextual class",
+    "mitre_to_suspicious": "NOT_AUTO_MAPPED — forbidden anomaly/technique shortcuts",
+    "mapping_status": "incompatible_for_direct_supervised_merge"
+  },
+  "sequence_context": {
+    "timestamps": "present",
+    "ordering": "present",
+    "session_grouping": "scenario_based",
+    "source_identity": "host_and_process_context"
+  },
+  "schema_vs_project": {
+    "scenario_id": "partial_external_scenarios",
+    "run_id": "absent_project_run_id",
+    "timestamp": "present",
+    "source": "partial",
+    "username": "variable",
+    "raw_log": "present_in_log_sources",
+    "event_role": "absent_project_roles",
+    "contextual_target": "incompatible_mitre_labels"
+  },
+  "domain_mismatches": {
+    "HOST_LOG_VS_NETWORK_FLOW": "LOW",
+    "LABEL_SEMANTICS": "HIGH",
+    "TIMESTAMP_CONTEXT": "MEDIUM",
+    "SCHEMA": "MEDIUM",
+    "OPERATING_SYSTEM": "LOW",
+    "AUTH_PROTOCOL": "MEDIUM",
+    "COLLECTION_ENVIRONMENT": "MEDIUM",
+    "CLASS_COVERAGE": "HIGH"
+  },
+  "leakage_risks": {
+    "fixed_source_ip": "MEDIUM",
+    "time_window_shortcut": "MEDIUM — attack scenarios often time-bounded",
+    "scenario_leakage": "HIGH — technique labels tied to scripted scenarios",
+    "duplicate_data": "UNKNOWN without download",
+    "label_leakage": "MEDIUM"
+  },
+  "license": {
+    "status": "LICENSE_REVIEW_REQUIRED",
+    "notes": "Confirm Zenodo license file before redistribution; academic use intended",
+    "citation_required": true
+  },
+  "download": {
+    "status": "METADATA_ONLY",
+    "download_approved": false,
+    "approx_size": "multi_GB",
+    "reason": "Label incompatibility for our three-class contextual targets already decisive; full download not justified in P5"
+  },
+  "sample_inspection": {
+    "mode": "official_zenodo_documentation",
+    "sample_path": "data/external/p5/samples/cam_lds_format_notes.md",
+    "notes": "Official materials describe multi-source Linux logs with MITRE ATT&CK labels including brute-force-related techniques. Not our NORMAL/SUSPICIOUS/BRUTE_FORCE ontology."
+  },
+  "decision": "EXTERNAL_LABELED_EVALUATION",
+  "p6_disposition": "EXTERNAL_ONLY",
+  "planned_uses": [
+    "external labeled Linux-log reference",
+    "future careful subset study if technique evidence supports PARTIAL mapping with review",
+    "NOT automatic merge into P4 supervised set"
+  ],
+  "direct_merge": false
+}

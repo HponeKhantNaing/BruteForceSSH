@@ -1,0 +1,39 @@
+# Controlled lab SSH configuration for project-owned Ubuntu test server.
+# Meaningful non-default / explicit choices are documented in docs/P1_UBUNTU_TEST_SERVER.md
+
+Port 22
+Protocol 2
+
+# Host keys generated at image build / startup via ssh-keygen -A
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Authentication policy (lab only)
+PermitRootLogin no
+PermitEmptyPasswords no
+PasswordAuthentication yes
+PubkeyAuthentication yes
+KbdInteractiveAuthentication no
+UsePAM yes
+
+# Logging — VERBOSE produces detailed auth attempt lines via syslog
+SyslogFacility AUTH
+LogLevel VERBOSE
+
+# Session / environment hardening suitable for a local lab
+X11Forwarding no
+AllowTcpForwarding no
+PermitTunnel no
+GatewayPorts no
+PrintMotd no
+AcceptEnv LANG LC_*
+
+# Limit auth noise without blocking deliberate failed-login tests
+MaxAuthTries 6
+LoginGraceTime 60
+
+# Keep container-friendly: do not fork away from entrypoint supervision model
+# (foreground launch is handled by entrypoint: sshd -D)
+
+Subsystem sftp /usr/lib/openssh/sftp-server

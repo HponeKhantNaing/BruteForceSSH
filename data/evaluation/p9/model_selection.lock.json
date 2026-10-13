@@ -1,0 +1,9 @@
+{
+  "selection_manifest_sha256": "919ad6cc46ea297c72fabd4971d29f03842bfb86a0b9b9e0ac151c163644b810",
+  "selected_model_id": "random_forest_behavior",
+  "selected_model_sha256": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d",
+  "split_manifest_sha256": "cef4dda39dc0996117ccc1fcd4980c46849a15f031f361fc27a1e1644726d8a3",
+  "locked_at": "2026-10-08T13:21:08.243922+00:00",
+  "test_evaluated": true,
+  "test_receipt_path": "data/evaluation/p9/test_evaluation_receipt.json"
+}

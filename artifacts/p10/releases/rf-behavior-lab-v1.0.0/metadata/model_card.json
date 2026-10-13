@@ -1,0 +1,55 @@
+{
+  "model_id": "random_forest_behavior",
+  "model_version": "1.0.0",
+  "release_id": "rf-behavior-lab-v1.0.0",
+  "model_family": "RandomForestClassifier",
+  "representation": "behavior_raw",
+  "training_phase": "P8",
+  "selected_in_phase": "P9",
+  "packaged_in_phase": "P10",
+  "maturity": "CONTROLLED_LAB_VALIDATED",
+  "release_channel": "lab",
+  "classes": [
+    "BRUTE_FORCE",
+    "NORMAL",
+    "SUSPICIOUS"
+  ],
+  "model_class_order": [
+    "BRUTE_FORCE",
+    "NORMAL",
+    "SUSPICIOUS"
+  ],
+  "feature_count": 22,
+  "training_samples": 45,
+  "validation_samples": 15,
+  "test_samples": 15,
+  "p9_selected_validation_metric": {
+    "name": "macro_f1",
+    "value": 1.0
+  },
+  "p9_final_test_result": {
+    "correct_over_total": "15/15",
+    "macro_f1": 1.0,
+    "note": "Frozen P9 result; not recomputed in P10."
+  },
+  "intended_use": "controlled-lab SSH authentication behavior classification for the project's real-time threat-monitoring prototype",
+  "out_of_scope_use": [
+    "universal IDS",
+    "internet-wide attack detector",
+    "production security guarantee",
+    "calibrated risk scoring"
+  ],
+  "known_limitations": [
+    "small training set (45 TRAIN samples)",
+    "controlled scenario bias",
+    "single lab environment / single primary source",
+    "limited username diversity",
+    "no INVALID_USER examples in training source",
+    "behavior features may reflect scenario design",
+    "held-out TEST covers only 3 scenario groups (15 runs)",
+    "uncalibrated Random Forest probabilities",
+    "The model was trained on bounded contextual scenario runs. Continuous real-time inference requires a defined runtime context/session policy before deployment."
+  ],
+  "probability_calibration": "UNCALIBRATED",
+  "custom_thresholds": false
+}

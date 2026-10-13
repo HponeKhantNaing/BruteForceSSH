@@ -1,0 +1,44 @@
+{
+  "runs_discovered_p4_primary": 75,
+  "runs_accepted": 75,
+  "runs_excluded": 0,
+  "events_discovered_p4": 1860,
+  "events_in_primary_joins": 1860,
+  "canonical_events": 1860,
+  "auth_relevant_events": 1680,
+  "noise_marked_events": 180,
+  "partial_parse_events": 0,
+  "logical_attempts": 395,
+  "attempt_outcomes": {
+    "FAILURE": 345,
+    "SUCCESS": 50
+  },
+  "timestamp_parse_failures": 0,
+  "raw_reference_failures": 0,
+  "unknown_run_events": 0,
+  "manifest_match_runs": 75,
+  "manifest_mismatch_runs": 0,
+  "explained_difference_runs": 0,
+  "manual_review_runs": 0,
+  "leakage_hits": 0,
+  "public_supervised_records": 0,
+  "event_role_counts": {
+    "CONNECTION_EVENT": 840,
+    "PAM_AUTH_FAILURE": 345,
+    "AUTH_FAILURE": 345,
+    "AUTH_SUCCESS": 50,
+    "SESSION_OPEN": 50,
+    "OTHER_AUTH": 140,
+    "SESSION_CLOSE": 50,
+    "UNCLASSIFIED": 40
+  },
+  "class_counts": {
+    "BRUTE_FORCE": 25,
+    "NORMAL": 30,
+    "SUSPICIOUS": 20
+  },
+  "auth_failure_events": 345,
+  "pam_auth_failure_events": 345,
+  "logical_failed_attempts": 345,
+  "logical_success_attempts": 50
+}

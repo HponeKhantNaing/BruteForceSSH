@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "unit": "canonical_contextual_run",
+  "preprocessing_version": "p6-v1",
+  "counts": {
+    "NORMAL": 30,
+    "SUSPICIOUS": 20,
+    "BRUTE_FORCE": 25
+  },
+  "total": 75,
+  "external_supervised_data_included": false
+}

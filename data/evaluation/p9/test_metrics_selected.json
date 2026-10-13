@@ -1,0 +1,69 @@
+{
+  "correct_count": 600,
+  "total_count": 600,
+  "accuracy": 1.0,
+  "balanced_accuracy": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "macro_f1": 1.0,
+  "weighted_f1": 1.0,
+  "minimum_class_recall": 1.0,
+  "per_class": {
+    "NORMAL": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 200,
+      "correct": 200,
+      "correct_over_support": "200/200"
+    },
+    "SUSPICIOUS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 200,
+      "correct": 200,
+      "correct_over_support": "200/200"
+    },
+    "BRUTE_FORCE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 200,
+      "correct": 200,
+      "correct_over_support": "200/200"
+    }
+  },
+  "confusion_matrix": {
+    "class_order": [
+      "NORMAL",
+      "SUSPICIOUS",
+      "BRUTE_FORCE"
+    ],
+    "matrix": [
+      [
+        200,
+        0,
+        0
+      ],
+      [
+        0,
+        200,
+        0
+      ],
+      [
+        0,
+        0,
+        200
+      ]
+    ],
+    "rows": "actual",
+    "columns": "predicted"
+  },
+  "normal_recall": 1.0,
+  "suspicious_recall": 1.0,
+  "brute_force_recall": 1.0,
+  "model_id": "random_forest_behavior",
+  "representation": "behavior_raw",
+  "correct_over_total": "600/600"
+}

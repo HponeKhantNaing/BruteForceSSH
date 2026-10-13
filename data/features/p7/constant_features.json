@@ -1,0 +1,11 @@
+{
+  "constant": [],
+  "near_constant": [
+    "unique_users_total",
+    "unique_users_60s_max",
+    "has_multiple_attempts",
+    "success_after_failure",
+    "first_attempt_failed",
+    "last_attempt_success"
+  ]
+}

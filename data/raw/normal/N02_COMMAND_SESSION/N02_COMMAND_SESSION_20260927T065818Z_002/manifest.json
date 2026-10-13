@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "collection_phase": "P2",
+  "collection_batch_id": "P2_BASELINE_20260927T070000Z",
+  "scenario_id": "N02_COMMAND_SESSION",
+  "run_id": "N02_COMMAND_SESSION_20260927T065818Z_002",
+  "scenario_intent": "normal",
+  "description": "Successful login, benign command, clean exit",
+  "started_at": "2026-09-27T06:58:18.992707+00:00",
+  "ended_at": "2026-09-27T06:58:20.156359+00:00",
+  "target_host": "127.0.0.1",
+  "target_port": 2222,
+  "service": "ssh",
+  "auth_method": "password",
+  "username_alias": "testuser",
+  "expected_behavior": [
+    "Accepted password",
+    "session opened",
+    "session closed"
+  ],
+  "actions": [
+    {
+      "type": "ssh_connect",
+      "result": "accepted",
+      "at": "2026-09-27T06:58:19.085650+00:00"
+    },
+    {
+      "type": "exec",
+      "command": "whoami",
+      "exit_code": 0,
+      "at": "2026-09-27T06:58:19.136670+00:00"
+    },
+    {
+      "type": "exec",
+      "command": "pwd",
+      "exit_code": 0,
+      "at": "2026-09-27T06:58:19.140360+00:00"
+    },
+    {
+      "type": "ssh_close",
+      "at": "2026-09-27T06:58:19.140569+00:00"
+    }
+  ],
+  "result": "success",
+  "raw_log_file": "auth.log",
+  "raw_log_line_count": 12,
+  "raw_log_sha256": "7f50c789d5253c3cf8b76376b3f860957a23d7d8e73619290a434f763e82ebc1",
+  "master_log_start_offset": 17481,
+  "master_log_end_offset": 18875,
+  "data_source": "local_lab",
+  "lab_container": "ai-security-ubuntu-lab",
+  "event_summary": {
+    "contains_accepted_password": true,
+    "contains_failed_password": false,
+    "contains_session_opened": true,
+    "contains_session_closed": true,
+    "accepted_password_count": 1,
+    "failed_password_count": 0,
+    "session_opened_count": 1,
+    "session_closed_count": 1
+  },
+  "notes": ""
+}

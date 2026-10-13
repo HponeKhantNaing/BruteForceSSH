@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "checks": {
+    "required_files": "PASS",
+    "manifest_model_sha": "PASS",
+    "byte_identity": "PASS",
+    "checksums": "PASS",
+    "scaler_required": "PASS",
+    "tfidf_required": "PASS",
+    "no_preprocessor_binaries": "PASS",
+    "model_load": "PASS",
+    "class_set": "PASS",
+    "class_order": "PASS",
+    "feature_count": "PASS",
+    "smoke_determinism": "PASS",
+    "smoke_expected_label": "PASS",
+    "smoke_prediction": "PASS",
+    "missing_feature": "PASS",
+    "non_finite": "PASS",
+    "invalid_range": "PASS",
+    "relational": "PASS",
+    "feature_order_policy": "PASS",
+    "no_raw_logs": "PASS",
+    "secret_scan": "PASS",
+    "fit_calls": "PASS"
+  },
+  "errors": [],
+  "model_sha256": "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d",
+  "smoke_prediction": {
+    "model_version": "rf-behavior-lab-v1.1.0",
+    "predicted_label": "SUSPICIOUS",
+    "class_probabilities": {
+      "NORMAL": 0.0,
+      "SUSPICIOUS": 0.9723333333333334,
+      "BRUTE_FORCE": 0.02766666666666667
+    },
+    "probability_type": "uncalibrated",
+    "model_class_order": [
+      "BRUTE_FORCE",
+      "NORMAL",
+      "SUSPICIOUS"
+    ],
+    "probability_vector_in_model_class_order": [
+      0.02766666666666667,
+      0.0,
+      0.9723333333333334
+    ]
+  },
+  "raw_logs": 0,
+  "secret_hits": 0,
+  "fit_calls": 0,
+  "representation": "behavior_raw",
+  "feature_count": 22,
+  "model_classes": [
+    "BRUTE_FORCE",
+    "NORMAL",
+    "SUSPICIOUS"
+  ],
+  "source_release_prediction_parity": "PASS",
+  "source_release_probability_parity": "PASS",
+  "fit_calls_during_export": 0,
+  "evaluation_recomputed_in_p10": false
+}

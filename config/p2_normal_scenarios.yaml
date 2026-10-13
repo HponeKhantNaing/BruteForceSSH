@@ -1,0 +1,93 @@
+# P2 — Normal authentication scenario collection (local lab only).
+# Secrets are NEVER stored here. Credentials come from environment variables.
+
+collection:
+  master_auth_log: "data/raw/auth/auth.log"
+  normal_output_dir: "data/raw/normal"
+  container_name: "ai-security-ubuntu-lab"
+  # Allowed SSH targets for P2 (hard safety boundary).
+  allowed_hosts:
+    - "127.0.0.1"
+    - "localhost"
+  target_host: "127.0.0.1"
+  # Port comes from LAB_SSH_PORT env (default 2222) unless overridden here as null.
+  target_port: null
+  log_flush_poll_ms: 250
+  log_flush_timeout_seconds: 5
+  log_flush_stable_rounds: 3
+  # Minimum pacing between successful reconnect sessions (anti burst).
+  min_gap_seconds: 3
+  credential_check_timeout_seconds: 15
+  ssh_timeout_seconds: 20
+
+scenarios:
+  N01_SINGLE_SUCCESS:
+    enabled: true
+    repetitions: 5
+    description: "Single successful SSH login and immediate clean logout"
+    expected_patterns:
+      - "Accepted password"
+      - "session opened"
+      - "session closed"
+
+  N02_COMMAND_SESSION:
+    enabled: true
+    repetitions: 5
+    description: "Successful login, benign command, clean exit"
+    commands:
+      - "whoami"
+      - "pwd"
+    expected_patterns:
+      - "Accepted password"
+      - "session opened"
+      - "session closed"
+
+  N03_SHORT_SESSION:
+    enabled: true
+    repetitions: 5
+    description: "Successful login, short hold, optional benign command, logout"
+    duration_seconds: 3
+    commands:
+      - "date"
+    expected_patterns:
+      - "Accepted password"
+      - "session opened"
+      - "session closed"
+
+  N04_LOW_FREQUENCY_REPEAT:
+    enabled: true
+    repetitions: 5
+    description: "Two successful sessions with a deliberate low-frequency gap"
+    sessions: 2
+    gap_seconds: 10
+    expected_patterns:
+      - "Accepted password"
+      - "session opened"
+      - "session closed"
+
+  N05_SESSION_RECONNECT:
+    enabled: true
+    repetitions: 5
+    description: "Login, normal session, logout, later reconnect, another normal session"
+    reconnect_gap_seconds: 10
+    commands_first:
+      - "whoami"
+    commands_second:
+      - "pwd"
+    expected_patterns:
+      - "Accepted password"
+      - "session opened"
+      - "session closed"
+
+  N06_ISOLATED_PASSWORD_MISTAKE:
+    enabled: true
+    repetitions: 5
+    description: "One accidental wrong password, pause, then successful login and logout"
+    max_failed_attempts: 1
+    recovery_delay_seconds: 5
+    wrong_password_suffix: "_wrong_once"
+    expected_patterns:
+      - "Failed password"
+      - "Accepted password"
+      - "session opened"
+      - "session closed"

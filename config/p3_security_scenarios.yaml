@@ -1,0 +1,136 @@
+# P3 — Controlled suspicious / brute-force-like SSH scenarios (localhost lab only).
+# Secrets are NEVER stored here. Valid credentials come from environment variables.
+#
+# Hard ceilings are enforced in code (src/collection/p3_security.py). YAML cannot exceed them.
+
+collection:
+  master_auth_log: "data/raw/auth/auth.log"
+  security_output_dir: "data/raw/security"
+  container_name: "ai-security-ubuntu-lab"
+  allowed_hosts:
+    - "127.0.0.1"
+    - "localhost"
+  target_host: "127.0.0.1"
+  target_port: null
+  log_flush_poll_ms: 250
+  log_flush_timeout_seconds: 5
+  log_flush_stable_rounds: 3
+  ssh_timeout_seconds: 20
+  credential_check_timeout_seconds: 15
+  # Extra disposable lab accounts for multi-username scenarios (created in-container if missing).
+  p3_lab_users:
+    - labuser1
+    - labuser2
+    - labuser3
+
+# ---------------------------------------------------------------------------
+# Suspicious: elevated / unusual but below brute-force intensity
+# ---------------------------------------------------------------------------
+suspicious_scenarios:
+  S01_FEW_REPEATED_FAILURES:
+    enabled: true
+    repetitions: 5
+    description: "Three spaced failed passwords against one lab user"
+    failed_attempts: 3
+    gap_seconds: 4.0
+    usernames: ["primary"]
+    expect_success: false
+    min_failed_events: 3
+    max_failed_events: 4
+
+  S02_FAILURES_THEN_SUCCESS:
+    enabled: true
+    repetitions: 5
+    description: "A few failures then a legitimate successful login"
+    failed_attempts: 3
+    gap_seconds: 3.0
+    recovery_delay_seconds: 3.0
+    usernames: ["primary"]
+    expect_success: true
+    min_failed_events: 3
+    max_failed_events: 4
+    min_accepted_events: 1
+
+  S03_MULTI_USERNAME_LOW_RATE:
+    enabled: true
+    repetitions: 5
+    description: "One source slowly tries three configured lab usernames (one fail each)"
+    failed_attempts_per_user: 1
+    gap_seconds: 4.0
+    usernames: ["labuser1", "labuser2", "labuser3"]
+    expect_success: false
+    min_failed_events: 3
+    max_failed_events: 5
+
+  S04_SMALL_FAILURE_CLUSTER:
+    enabled: true
+    repetitions: 5
+    description: "Compact cluster of five failures over tens of seconds"
+    failed_attempts: 5
+    gap_seconds: 2.0
+    usernames: ["primary"]
+    expect_success: false
+    min_failed_events: 5
+    max_failed_events: 7
+
+# ---------------------------------------------------------------------------
+# Brute-force-like: higher concentration / sustained bursts (still hard-capped)
+# ---------------------------------------------------------------------------
+brute_force_scenarios:
+  B01_SHORT_FAILURE_BURST:
+    enabled: true
+    repetitions: 5
+    description: "Short concentrated burst of failed passwords (one user)"
+    failed_attempts: 10
+    gap_seconds: 0.8
+    usernames: ["primary"]
+    expect_success: false
+    min_failed_events: 9
+    max_failed_events: 12
+
+  B02_SUSTAINED_FAILURE_WINDOW:
+    enabled: true
+    repetitions: 5
+    description: "Sustained failures over ~30–60s (one user)"
+    failed_attempts: 14
+    gap_seconds: 2.5
+    usernames: ["primary"]
+    expect_success: false
+    min_failed_events: 13
+    max_failed_events: 16
+
+  B03_MULTI_USERNAME_BURST:
+    enabled: true
+    repetitions: 5
+    description: "Burst across three configured lab usernames (4 fails each)"
+    failed_attempts_per_user: 4
+    gap_seconds: 0.8
+    usernames: ["labuser1", "labuser2", "labuser3"]
+    expect_success: false
+    min_failed_events: 11
+    max_failed_events: 15
+
+  B04_FAILURE_BURST_THEN_SUCCESS:
+    enabled: true
+    repetitions: 5
+    description: "Bounded failure burst then successful login"
+    failed_attempts: 8
+    gap_seconds: 0.8
+    recovery_delay_seconds: 2.0
+    usernames: ["primary"]
+    expect_success: true
+    min_failed_events: 7
+    max_failed_events: 10
+    min_accepted_events: 1
+
+  B05_TWO_SMALL_BURSTS:
+    enabled: true
+    repetitions: 5
+    description: "Two small failure bursts separated by a pause"
+    burst_attempts: 5
+    burst_gap_seconds: 0.8
+    between_bursts_seconds: 12.0
+    usernames: ["primary"]
+    expect_success: false
+    min_failed_events: 9
+    max_failed_events: 12

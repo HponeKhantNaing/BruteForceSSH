@@ -1,0 +1,33 @@
+{
+  "collection_phase": "P2",
+  "collection_batch_id": "P2_SMOKE",
+  "started_at": "2026-09-27T06:57:48.139274+00:00",
+  "ended_at": "2026-09-27T06:57:57.866138+00:00",
+  "target_host": "127.0.0.1",
+  "target_port": 2222,
+  "master_auth_log": "data/raw/auth/auth.log",
+  "normal_output_dir": "data/raw/normal",
+  "runs_attempted": 1,
+  "runs_passed": 1,
+  "runs_failed": 0,
+  "runs_interrupted": 0,
+  "total_captured_log_lines": 14,
+  "by_scenario": {
+    "N06_ISOLATED_PASSWORD_MISTAKE": {
+      "attempted": 1,
+      "passed": 1,
+      "failed": 0,
+      "interrupted": 0
+    }
+  },
+  "runs": [
+    {
+      "run_id": "N06_ISOLATED_PASSWORD_MISTAKE_20260927T065748Z_001",
+      "scenario_id": "N06_ISOLATED_PASSWORD_MISTAKE",
+      "result": "success",
+      "path": "data/raw/normal/N06_ISOLATED_PASSWORD_MISTAKE/N06_ISOLATED_PASSWORD_MISTAKE_20260927T065748Z_001",
+      "notes": ""
+    }
+  ],
+  "issues": []
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "collection_phase": "P2",
+  "collection_batch_id": "P2_BASELINE_20260927T070000Z",
+  "scenario_id": "N05_SESSION_RECONNECT",
+  "run_id": "N05_SESSION_RECONNECT_20260927T070003Z_003",
+  "scenario_intent": "normal",
+  "description": "Login, normal session, logout, later reconnect, another normal session",
+  "started_at": "2026-09-27T07:00:03.772482+00:00",
+  "ended_at": "2026-09-27T07:00:15.142837+00:00",
+  "target_host": "127.0.0.1",
+  "target_port": 2222,
+  "service": "ssh",
+  "auth_method": "password",
+  "username_alias": "testuser",
+  "expected_behavior": [
+    "Accepted password",
+    "session opened",
+    "session closed"
+  ],
+  "actions": [
+    {
+      "type": "ssh_connect",
+      "result": "accepted",
+      "at": "2026-09-27T07:00:03.866296+00:00"
+    },
+    {
+      "type": "exec",
+      "command": "whoami",
+      "exit_code": 0,
+      "at": "2026-09-27T07:00:03.917233+00:00"
+    },
+    {
+      "type": "ssh_close",
+      "at": "2026-09-27T07:00:03.917421+00:00"
+    },
+    {
+      "type": "reconnect_gap",
+      "seconds": 10.0,
+      "at": "2026-09-27T07:00:13.918245+00:00"
+    },
+    {
+      "type": "ssh_connect",
+      "result": "accepted",
+      "at": "2026-09-27T07:00:14.077644+00:00"
+    },
+    {
+      "type": "exec",
+      "command": "pwd",
+      "exit_code": 0,
+      "at": "2026-09-27T07:00:14.126780+00:00"
+    },
+    {
+      "type": "ssh_close",
+      "at": "2026-09-27T07:00:14.126948+00:00"
+    }
+  ],
+  "result": "success",
+  "raw_log_file": "auth.log",
+  "raw_log_line_count": 20,
+  "raw_log_sha256": "53966b8bfa865b44e6612b78a795fc628fdc2be1cc4730a4661791f1c257b6e1",
+  "master_log_start_offset": 44831,
+  "master_log_end_offset": 47123,
+  "data_source": "local_lab",
+  "lab_container": "ai-security-ubuntu-lab",
+  "event_summary": {
+    "contains_accepted_password": true,
+    "contains_failed_password": false,
+    "contains_session_opened": true,
+    "contains_session_closed": true,
+    "accepted_password_count": 2,
+    "failed_password_count": 0,
+    "session_opened_count": 2,
+    "session_closed_count": 2
+  },
+  "notes": ""
+}

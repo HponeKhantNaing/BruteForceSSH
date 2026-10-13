@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Server Threat Monitor</title>
+  <link rel="stylesheet" href="/static/dashboard.css" />
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>AI Server Threat Monitor</h1>
+      <p class="sub">CONTROLLED-LAB V1 — monitoring signals, not a production security guarantee</p>
+    </div>
+    <div class="badges" id="badges"></div>
+  </header>
+
+  <section class="banner" id="limitation">
+    Controlled-lab model. Results are monitoring signals, not a production security guarantee.
+    Probabilities shown are <strong>uncalibrated model scores</strong>, not certainty.
+  </section>
+
+  <section class="kpis" id="kpis"></section>
+
+  <section class="grid">
+    <article class="panel">
+      <h2>Live threat status</h2>
+      <div id="live"></div>
+    </article>
+    <article class="panel">
+      <h2>Model</h2>
+      <div id="model"></div>
+      <h2>Activity (recent)</h2>
+      <div id="chart" class="chart"></div>
+    </article>
+  </section>
+
+  <section class="panel">
+    <div class="toolbar">
+      <h2>Prediction history</h2>
+      <div class="filters">
+        <select id="f-label">
+          <option value="">All labels</option>
+          <option>NORMAL</option>
+          <option>SUSPICIOUS</option>
+          <option>BRUTE_FORCE</option>
+        </select>
+        <select id="f-snap">
+          <option value="">All snapshots</option>
+          <option value="ACTIVE_PREFIX">ACTIVE_PREFIX</option>
+          <option value="EPISODE_FINAL">EPISODE_FINAL</option>
+        </select>
+        <label><input type="checkbox" id="f-alerts" /> alerts only</label>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th><th>Source</th><th>Episode</th><th>Snapshot</th>
+            <th>Attempts</th><th>Prediction</th>
+            <th>NORMAL</th><th>SUSPICIOUS</th><th>BRUTE_FORCE</th><th>Alert</th>
+          </tr>
+        </thead>
+        <tbody id="pred-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Alert history</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th><th>Severity</th><th>Source</th><th>Episode</th>
+            <th>Prediction</th><th>Decision</th><th>Delivery</th><th>Retries</th>
+          </tr>
+        </thead>
+        <tbody id="alert-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <script>
+    window.P12_REFRESH_MS = {{ refresh_ms|int }};
+    window.P12_RELEASE = {{ release_id|tojson }};
+  </script>
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>

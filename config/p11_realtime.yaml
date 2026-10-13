@@ -1,0 +1,56 @@
+# P11 — real-time ML monitoring (integration only; no dashboard/Discord/prevention).
+schema_version: "1.0"
+realtime_version: "p11-v1"
+
+release:
+  root: "artifacts/p10/releases/rf-behavior-lab-v1.1.0"
+  expected_release_id: "rf-behavior-lab-v1.1.0"
+  expected_model_sha256: "f0c44d2afdb18855a52df23119cc105b08e87abb3870e429e864a1234d23781d"
+
+log_source:
+  path: "data/raw/auth/auth.log"
+  start_at: "end"
+  poll_interval_ms: 200
+
+attempt_reconstruction:
+  correlation_timeout_seconds: 2.0
+
+context:
+  group_by: "source"
+  # Derived from P8 TRAIN-only max inter-attempt gap (~15.56s) + safety margin.
+  # MUST NOT be tuned against VALIDATION/TEST model scores.
+  idle_timeout_seconds: 30.0
+  max_episode_duration_seconds: 300.0
+
+inference:
+  predict_on_completed_attempt: true
+  emit_episode_final: true
+  mark_active_prefix_provisional: true
+
+privacy:
+  persist_raw_ip: false
+  persist_raw_username: false
+
+outputs:
+  root: "data/runtime/p11"
+  predictions: "data/runtime/p11/predictions.jsonl"
+  runtime_events: "data/runtime/p11/runtime_events.jsonl"
+  status: "data/runtime/p11/status.json"
+  context_policy: "data/runtime/p11/context_policy.json"
+  feature_parity_report: "data/runtime/p11/feature_parity_report.json"
+  attempt_parity_report: "data/runtime/p11/attempt_parity_report.json"
+  latency_report: "data/runtime/p11/latency_report.json"
+
+inputs:
+  p6_events: "data/processed/p6/canonical_events.jsonl"
+  p6_attempts: "data/processed/p6/canonical_attempts.jsonl"
+  p6_runs: "data/processed/p6/canonical_runs.jsonl"
+  p6_sequences: "data/processed/p6/canonical_sequences.jsonl"
+  p7_behavioral: "data/features/p7/behavioral_features.jsonl"
+  p8_split_manifest: "data/modeling/p8/split_manifest.json"
+  p4_policy: "config/p4_labeling_policy.yaml"
+  p7_features_config: "config/p7_features.yaml"
+
+feature_parity:
+  abs_tol: 1.0e-9
+  expected_samples: 75

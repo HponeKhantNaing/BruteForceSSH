@@ -1,0 +1,105 @@
+# Environment
+.env
+.env.local
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+!web/dist/
+!web/dist/**
+build/
+
+# Node / frontend
+web/node_modules/
+web/.vite/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model / data artifacts that may become large (keep folder structure via .gitkeep)
+# data/interim/**
+# data/processed/**
+# !data/**/.gitkeep
+# models/**
+# !models/.gitkeep
+
+# P1 lab authentication logs (usernames, IPs, timestamps) — do not commit by default
+data/raw/auth/**
+!data/raw/auth/.gitkeep
+
+# P2 normal scenario captures (raw evidence) — keep README only
+data/raw/normal/**
+!data/raw/normal/README.md
+!data/raw/normal/.gitkeep
+
+# P3 suspicious / brute-force-like captures — keep README only
+data/raw/security/**
+!data/raw/security/README.md
+!data/raw/security/.gitkeep
+
+# P4 interim labeling outputs — keep README only
+data/interim/p4/**
+!data/interim/p4/README.md
+!data/interim/p4/.gitkeep
+!data/interim/p4/audit/.gitkeep
+
+# P5 external downloads (large third-party corpora) — keep metadata
+data/external/p5/downloads/**
+!data/external/p5/downloads/.gitkeep
+
+# P6 processed canonical dataset — keep README + schemas only
+data/processed/p6/**
+!data/processed/p6/README.md
+!data/processed/p6/schemas/
+!data/processed/p6/schemas/**
+
+# P7 generated features — keep README only
+data/features/p7/**
+!data/features/p7/README.md
+
+# P8 experimental binary model artifacts
+artifacts/p8/**/*.joblib
+
+# P9 evaluation outputs — keep README only
+data/evaluation/p9/**
+!data/evaluation/p9/README.md
+
+# P11 runtime outputs (predictions / status) — keep README + committed policy reports if present
+data/runtime/p11/**
+!data/runtime/p11/README.md
+!data/runtime/p11/context_policy.json
+!data/runtime/p11/feature_parity_report.json
+!data/runtime/p11/attempt_parity_report.json
+
+# P12 runtime DB / status
+data/runtime/p12/**
+!data/runtime/p12/README.md
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Netlify / local tooling
+.netlify/
+
+# Logs
+*.log
+logs/
+
+# Docker transient
+docker-data/

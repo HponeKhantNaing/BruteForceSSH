@@ -1,0 +1,12 @@
+2026-09-27T06:58:17.847669+00:00 dd9a612cdd6b sshd[1001]: Connection from 172.18.0.1 port 65060 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T06:58:17.920329+00:00 dd9a612cdd6b sshd[1001]: Accepted password for testuser from 172.18.0.1 port 65060 ssh2
+2026-09-27T06:58:17.921243+00:00 dd9a612cdd6b sshd[1001]: pam_unix(sshd:session): session opened for user testuser(uid=1001) by testuser(uid=0)
+2026-09-27T06:58:17.925264+00:00 dd9a612cdd6b sshd[1001]: User child is on pid 1012
+2026-09-27T06:58:17.970117+00:00 dd9a612cdd6b sshd[1012]: Starting session: command for testuser from 172.18.0.1 port 65060 id 0
+2026-09-27T06:58:17.975162+00:00 dd9a612cdd6b sshd[1012]: Close session: user testuser from 172.18.0.1 port 65060 id 0
+2026-09-27T06:58:17.975360+00:00 dd9a612cdd6b sshd[1012]: Starting session: command for testuser from 172.18.0.1 port 65060 id 1
+2026-09-27T06:58:17.977404+00:00 dd9a612cdd6b sshd[1012]: Connection closed by 172.18.0.1 port 65060
+2026-09-27T06:58:17.977422+00:00 dd9a612cdd6b sshd[1012]: Close session: user testuser from 172.18.0.1 port 65060 id 1
+2026-09-27T06:58:17.977433+00:00 dd9a612cdd6b sshd[1012]: Transferred: sent 2672, received 1512 bytes
+2026-09-27T06:58:17.977439+00:00 dd9a612cdd6b sshd[1012]: Closing connection to 172.18.0.1 port 65060
+2026-09-27T06:58:17.977662+00:00 dd9a612cdd6b sshd[1001]: pam_unix(sshd:session): session closed for user testuser

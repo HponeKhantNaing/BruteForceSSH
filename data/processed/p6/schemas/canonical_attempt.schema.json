@@ -1,0 +1,31 @@
+{
+  "title": "CanonicalAttempt",
+  "type": "object",
+  "required": [
+    "attempt_id",
+    "run_id",
+    "outcome",
+    "event_ids"
+  ],
+  "properties": {
+    "attempt_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "outcome": {
+      "enum": [
+        "SUCCESS",
+        "FAILURE",
+        "UNKNOWN"
+      ]
+    },
+    "event_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "collection_phase": "P2",
+  "collection_batch_id": "P2_BASELINE_20260927T070000Z",
+  "scenario_id": "N06_ISOLATED_PASSWORD_MISTAKE",
+  "run_id": "N06_ISOLATED_PASSWORD_MISTAKE_20260927T070106Z_004",
+  "scenario_intent": "normal",
+  "description": "One accidental wrong password, pause, then successful login and logout",
+  "started_at": "2026-09-27T07:01:06.973990+00:00",
+  "ended_at": "2026-09-27T07:01:16.689470+00:00",
+  "target_host": "127.0.0.1",
+  "target_port": 2222,
+  "service": "ssh",
+  "auth_method": "password",
+  "username_alias": "testuser",
+  "expected_behavior": [
+    "Failed password",
+    "Accepted password",
+    "session opened",
+    "session closed"
+  ],
+  "actions": [
+    {
+      "type": "ssh_auth_failed",
+      "intentional": true,
+      "attempts": 1,
+      "at": "2026-09-27T07:01:10.526796+00:00"
+    },
+    {
+      "type": "recovery_delay",
+      "seconds": 5.0,
+      "at": "2026-09-27T07:01:15.530768+00:00"
+    },
+    {
+      "type": "ssh_connect",
+      "result": "accepted",
+      "at": "2026-09-27T07:01:15.622234+00:00"
+    },
+    {
+      "type": "exec",
+      "command": "whoami",
+      "exit_code": 0,
+      "at": "2026-09-27T07:01:15.673079+00:00"
+    },
+    {
+      "type": "ssh_close",
+      "at": "2026-09-27T07:01:15.673278+00:00"
+    }
+  ],
+  "result": "success",
+  "raw_log_file": "auth.log",
+  "raw_log_line_count": 14,
+  "raw_log_sha256": "54b0a1b637a524fe5aba253d28ececc7d7840fb361cb529ec977f9f6b0724b6c",
+  "master_log_start_offset": 56825,
+  "master_log_end_offset": 58531,
+  "data_source": "local_lab",
+  "lab_container": "ai-security-ubuntu-lab",
+  "event_summary": {
+    "contains_accepted_password": true,
+    "contains_failed_password": true,
+    "contains_session_opened": true,
+    "contains_session_closed": true,
+    "accepted_password_count": 1,
+    "failed_password_count": 1,
+    "session_opened_count": 1,
+    "session_closed_count": 1
+  },
+  "notes": ""
+}

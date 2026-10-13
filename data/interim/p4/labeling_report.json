@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-09-27T08:00:28.935665+00:00",
+  "policy_version": "p4-label-policy-v1",
+  "schema_version": "1.0",
+  "p2_runs_discovered": 34,
+  "p3_runs_discovered": 49,
+  "eligible_primary_runs": 75,
+  "smoke_runs_excluded": 7,
+  "failed_runs_excluded": 0,
+  "integrity_failures": 0,
+  "duplicate_issues": 0,
+  "exclusion_reason_counts": {
+    "unknown_collection_role": 1,
+    "smoke_excluded": 7
+  },
+  "NORMAL_run_samples": 30,
+  "SUSPICIOUS_run_samples": 20,
+  "BRUTE_FORCE_run_samples": 25,
+  "event_annotation_count": 1860,
+  "unclassified_event_count": 40,
+  "scenario_coverage": {
+    "N01_SINGLE_SUCCESS": 5,
+    "N02_COMMAND_SESSION": 5,
+    "N03_SHORT_SESSION": 5,
+    "N04_LOW_FREQUENCY_REPEAT": 5,
+    "N05_SESSION_RECONNECT": 5,
+    "N06_ISOLATED_PASSWORD_MISTAKE": 5,
+    "B01_SHORT_FAILURE_BURST": 5,
+    "B02_SUSTAINED_FAILURE_WINDOW": 5,
+    "B03_MULTI_USERNAME_BURST": 5,
+    "B04_FAILURE_BURST_THEN_SUCCESS": 5,
+    "B05_TWO_SMALL_BURSTS": 5,
+    "S01_FEW_REPEATED_FAILURES": 5,
+    "S02_FAILURES_THEN_SUCCESS": 5,
+    "S03_MULTI_USERNAME_LOW_RATE": 5,
+    "S04_SMALL_FAILURE_CLUSTER": 5
+  },
+  "outputs": {
+    "run_labels": "data/interim/p4/run_labels.jsonl",
+    "event_annotations": "data/interim/p4/event_annotations.jsonl",
+    "excluded_runs": "data/interim/p4/excluded_runs.jsonl",
+    "class_distribution": "data/interim/p4/class_distribution.json",
+    "labeling_report": "data/interim/p4/labeling_report.json",
+    "audit": "data/interim/p4/audit/label_audit.jsonl"
+  }
+}

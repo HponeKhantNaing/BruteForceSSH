@@ -1,0 +1,12 @@
+2026-09-27T10:46:59.154905+00:00 754b7ea75b60 sshd[191]: Connection from 172.18.0.1 port 60068 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T10:46:59.203687+00:00 754b7ea75b60 sshd[191]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T10:47:01.626977+00:00 754b7ea75b60 sshd[191]: Failed password for testuser from 172.18.0.1 port 60068 ssh2
+2026-09-27T10:47:02.696314+00:00 754b7ea75b60 sshd[191]: Connection closed by authenticating user testuser 172.18.0.1 port 60068 [preauth]
+2026-09-27T10:47:06.724002+00:00 754b7ea75b60 sshd[206]: Connection from 172.18.0.1 port 60074 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T10:47:06.774897+00:00 754b7ea75b60 sshd[206]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T10:47:08.840592+00:00 754b7ea75b60 sshd[206]: Failed password for testuser from 172.18.0.1 port 60074 ssh2
+2026-09-27T10:47:10.270609+00:00 754b7ea75b60 sshd[206]: Connection closed by authenticating user testuser 172.18.0.1 port 60074 [preauth]
+2026-09-27T10:47:14.298318+00:00 754b7ea75b60 sshd[215]: Connection from 172.18.0.1 port 63238 on 172.18.0.2 port 22 rdomain ""
+2026-09-27T10:47:14.373009+00:00 754b7ea75b60 sshd[215]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.18.0.1  user=testuser
+2026-09-27T10:47:16.187723+00:00 754b7ea75b60 sshd[215]: Failed password for testuser from 172.18.0.1 port 63238 ssh2
+2026-09-27T10:47:17.855955+00:00 754b7ea75b60 sshd[215]: Connection closed by authenticating user testuser 172.18.0.1 port 63238 [preauth]

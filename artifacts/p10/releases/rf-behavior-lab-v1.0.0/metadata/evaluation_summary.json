@@ -1,0 +1,25 @@
+{
+  "evaluation_recomputed_in_p10": false,
+  "selected_model": "random_forest_behavior",
+  "validation_selection_rule": "highest validation macro_f1",
+  "validation_selected_metric": {
+    "name": "macro_f1",
+    "value": 1.0
+  },
+  "test_sample_count": 15,
+  "test_correct_count": 15,
+  "test_macro_f1": 1.0,
+  "validation_scenarios": {
+    "BRUTE_FORCE": "B04_FAILURE_BURST_THEN_SUCCESS",
+    "NORMAL": "N04_LOW_FREQUENCY_REPEAT",
+    "SUSPICIOUS": "S03_MULTI_USERNAME_LOW_RATE"
+  },
+  "test_scenarios": {
+    "BRUTE_FORCE": "B01_SHORT_FAILURE_BURST",
+    "NORMAL": "N03_SHORT_SESSION",
+    "SUSPICIOUS": "S01_FEW_REPEATED_FAILURES"
+  },
+  "test_evaluation_receipt_sha256": "71248ace741c28eccafae1ccf9fe68cb024a2c8b18ada2e0bd126240c3395882",
+  "selection_lock_sha256": "7493454d1f937e18f82effe5bdc79f42e0f3760c87ba67aff174f658867ee582",
+  "maturity_note": "CONTROLLED_LAB_VALIDATED \u2014 not production-proven"
+}

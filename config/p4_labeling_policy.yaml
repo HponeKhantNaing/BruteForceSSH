@@ -1,0 +1,141 @@
+# P4 ground-truth labeling policy.
+# Maps verified controlled-scenario provenance to contextual ML targets.
+# Does NOT invent confidence scores or keyword-based threat labels.
+
+schema_version: "1.0"
+label_policy_version: "p4-label-policy-v1"
+
+targets:
+  - NORMAL
+  - SUSPICIOUS
+  - BRUTE_FORCE
+
+scenario_mapping:
+  normal:
+    target: NORMAL
+  suspicious:
+    target: SUSPICIOUS
+  brute_force:
+    target: BRUTE_FORCE
+
+sources:
+  p2:
+    index: "data/raw/normal/index.jsonl"
+    root: "data/raw/normal"
+  p3:
+    index: "data/raw/security/index.jsonl"
+    root: "data/raw/security"
+
+output:
+  root: "data/interim/p4"
+  run_labels: "run_labels.jsonl"
+  event_annotations: "event_annotations.jsonl"
+  excluded_runs: "excluded_runs.jsonl"
+  class_distribution: "class_distribution.json"
+  labeling_report: "labeling_report.json"
+  audit_dir: "audit"
+
+eligibility:
+  require_run_result_success: true
+  require_manifest: true
+  require_raw_log: true
+  require_valid_sha256: true
+  include_smoke_runs: false
+  include_interrupted_runs: false
+  include_failed_runs: false
+  include_verification_runs: false
+  allowed_collection_roles:
+    - baseline
+
+# Batch ID substrings → collection_role
+collection_role_rules:
+  - match_substring: "SMOKE"
+    role: smoke
+  - match_substring: "REGRESSION"
+    role: verification
+  - match_substring: "BASELINE"
+    role: baseline
+
+unknown_scenario_policy: exclude
+unknown_intent_policy: exclude
+unknown_collection_role_policy: exclude
+
+# Known controlled scenarios (explicit allow-list)
+known_scenarios:
+  normal:
+    - N01_SINGLE_SUCCESS
+    - N02_COMMAND_SESSION
+    - N03_SHORT_SESSION
+    - N04_LOW_FREQUENCY_REPEAT
+    - N05_SESSION_RECONNECT
+    - N06_ISOLATED_PASSWORD_MISTAKE
+  suspicious:
+    - S01_FEW_REPEATED_FAILURES
+    - S02_FAILURES_THEN_SUCCESS
+    - S03_MULTI_USERNAME_LOW_RATE
+    - S04_SMALL_FAILURE_CLUSTER
+  brute_force:
+    - B01_SHORT_FAILURE_BURST
+    - B02_SUSTAINED_FAILURE_WINDOW
+    - B03_MULTI_USERNAME_BURST
+    - B04_FAILURE_BURST_THEN_SUCCESS
+    - B05_TWO_SMALL_BURSTS
+
+# Optional semantic consistency checks (manifest event_summary / counts)
+ground_truth_checks:
+  N06_ISOLATED_PASSWORD_MISTAKE:
+    require_failed_password_count_eq: 1
+    require_accepted_password_min: 1
+  S01_FEW_REPEATED_FAILURES:
+    require_failed_password_min: 2
+  B01_SHORT_FAILURE_BURST:
+    require_failed_password_min: 8
+
+# Atomic event roles (NOT threat classes)
+event_roles:
+  patterns:
+    - role: AUTH_SUCCESS
+      substrings:
+        - "Accepted password"
+      parser_rule: accepted_password_pattern
+    - role: AUTH_FAILURE
+      substrings:
+        - "Failed password"
+      parser_rule: failed_password_pattern
+    - role: INVALID_USER
+      substrings:
+        - "Invalid user"
+      parser_rule: invalid_user_pattern
+    - role: PAM_AUTH_FAILURE
+      substrings:
+        - "authentication failure"
+      parser_rule: pam_auth_failure_pattern
+    - role: SESSION_OPEN
+      substrings:
+        - "session opened"
+      parser_rule: session_opened_pattern
+    - role: SESSION_CLOSE
+      substrings:
+        - "session closed"
+      parser_rule: session_closed_pattern
+    - role: CONNECTION_EVENT
+      substrings:
+        - "Connection from"
+        - "Connection closed"
+        - "Disconnected from"
+        - "Closing connection"
+        - "Received disconnect"
+      parser_rule: connection_event_pattern
+    - role: OTHER_AUTH
+      substrings:
+        - "Starting session"
+        - "User child is on pid"
+        - "Transferred:"
+        - "Server listening"
+        - "banner exchange"
+        - "kex_exchange_identification"
+        - "error: send_error"
+        - "Received signal"
+      parser_rule: other_auth_pattern
+
+store_raw_line_in_annotations: false
